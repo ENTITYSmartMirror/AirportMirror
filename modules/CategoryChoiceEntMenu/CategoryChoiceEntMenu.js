@@ -33,7 +33,7 @@ Module.register("CategoryChoiceEntMenu",{
         // The default button 1. Add your buttons in the config.
         buttons: {
                     "1": {
-	                  		module: "ShowWebtoon",
+	                  		module: "MMM-B1",
 												img:"https://apprecs.org/gp/images/app-icons/300/ec/com.nhn.android.webtoon.jpg",
 												width:"50",
 												height:"50",
@@ -98,16 +98,16 @@ Module.register("CategoryChoiceEntMenu",{
 							}
 							//한 프레임에 두가지이상의 모듈이 뜨지 않게 하기.
 							
-							if (modules[i].name == 'ShowWebtoon') {
+							if (modules[i].name == 'MMM-B1') {
 								console.log("Hiding opend "+ modules[i].name+" ID: "+idnr[1]+"button number"+num);
 								modules[26].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								modules[28].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								setTimeout(function(){
-									modules[25].show(self.config.animationSpeed, {force: self.config.allowForce});
+									modules[41].show(self.config.animationSpeed, {force: self.config.allowForce});
 								},500);
 							}
 							else if (modules[i].name == 'CategoryChoiceYoutube') {
-								console.log("Hiding opend "+ modules[i].name+" ID: "+idnr[1]+"button number"+num);
+								console.log("Hiding opend "+ modules[28].name+" ID: "+idnr[1]+"button number"+num);
 								modules[25].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								setTimeout(function(){
 									modules[28].show(self.config.animationSpeed, {force: self.config.allowForce});
@@ -116,7 +116,7 @@ Module.register("CategoryChoiceEntMenu",{
 						}else{
 							// 모듈이 켜있는 상태일때 
 							modules[i].hide(self.config.animationSpeed, {force: self.config.allowForce});
-							console.log("Hiding "+modules[i].name+" ID: "+idnr[1]);
+							console.log("Hiding B1"+modules[i].name+" ID: "+idnr[1]);
 							// hideURL이 설정되 있을 때
 							if (data.hideUrl != null) {
 								fetch(data.hideUrl);

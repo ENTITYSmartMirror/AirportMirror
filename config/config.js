@@ -448,13 +448,11 @@ var config = {
 		{
 			module: "MMM-Remote-Control",
 			position: "center",
-			// uncomment the following line to show the URL of the remote control on the mirror
-			// , position: "center"
-			// you can hide this module afterwards from the remote control itself
+			
 			config: {
 				customCommand: {},  // Optional, See "Using Custom Commands" below
 				customMenu: "custom_menu.json", // Optional, See "Custom Menu Items" below
-				showModuleApiMenu: true, // Optional, Enable the Module Controls menu
+				showModuleApiMenu: true, // Optional, Enable the  Controls menu
 				apiKey: "",         // Optional, See API/README.md for details
 			}
 		},
@@ -502,8 +500,7 @@ var config = {
 								},
 						],
 				},
-		},
-
+		}, 
 		{
 			module: "MMM-Carousel",
 			position: "bottom_bar", // Required only for navigation controls
@@ -515,7 +512,7 @@ var config = {
 				slides: {
 					main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock"],
 					"Slide 2": ["clock","CategoryHairstyle", "CategoryManhair", "CategoryWomanhair", "CategoryChoicehairMenu","mm-hide-all"],
-					"Slide 3": ["CategoryChoiceYoutube","CategoryChoiceEntMenu","MMM-EmbedYoutube1","MMM-EmbedYoutube2","ShowWebtoon","mm-hide-all","clock"],
+					"Slide 3": ["CategoryChoiceYoutube","CategoryChoiceEntMenu","MMM-EmbedYoutube1","MMM-EmbedYoutube2","MMM-B1","mm-hide-all","clock"],
 					"Slide 4": ["clock","MMM-AfterImage","MMM-BeforeImage","MMM-BeforeAfter","MMM-DeleteImage"],
 				},
 				keyBindings: { 
@@ -530,6 +527,14 @@ var config = {
 			}
 			
 		},
+		{
+			module: "MMM-B1",
+			position: "middle_center",
+			header:"  B1 ! ",
+			config: {
+				imagePaths: ["modules/MMM-BeforeAfter/before"]
+			}
+		}, //41
 		
 	{
 	module: "MMM-soccer",
@@ -573,7 +578,7 @@ var config = {
 		  ownImagePath:"http://rammb.cira.colostate.edu/ramsdis/online/images/thumb/himawari-8/full_disk_ahi_natural_color.jpg",
 		  updateInterval: 10*60*1000
 	  }
-  },     
+	},    
 	{
 		module: "alert",
 	},
