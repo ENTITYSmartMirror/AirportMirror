@@ -515,11 +515,8 @@ var config = {
 				slides: {
 					main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock"],
 					"Slide 2": ["clock","CategoryHairstyle", "CategoryManhair", "CategoryWomanhair", "CategoryChoicehairMenu","mm-hide-all"],
-					"Slide 3": ["MMM-Testpython","MMM-Dynamic-Modules","mm-hide-all","clock","MMM-DeleteImage"],
+					"Slide 3": ["CategoryChoiceYoutube","CategoryChoiceEntMenu","MMM-EmbedYoutube1","MMM-EmbedYoutube2","ShowWebtoon","mm-hide-all","clock"],
 					"Slide 4": ["clock","MMM-AfterImage","MMM-BeforeImage","MMM-BeforeAfter","MMM-DeleteImage"],
-					"Slide 5": ["MMM-HistoryImage1","MMM-HistoryImage2","MMM-HistoryImage3","mm-hide-all","MMM-DeleteImage"],
-					"Slide 6": ["CategoryChoiceYoutube","CategoryChoiceEntMenu","MMM-EmbedYoutube1","MMM-EmbedYoutube2","ShowWebtoon","mm-hide-all","clock"],
-					"Slide 7": ["MMM-MovieInfo","ShowRemoteControl","mm-hide-all","clock"],
 				},
 				keyBindings: { 
 					enabled: true,
