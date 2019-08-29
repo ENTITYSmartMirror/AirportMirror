@@ -511,7 +511,8 @@ var config = {
 				showPageIndicators: true,
 				showPageControls: true,
 				slides: {
-					main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock"],
+					main: ["MMM-Avinor"],
+					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
 					"Slide 2": ["clock","CategoryHairstyle", "CategoryManhair", "CategoryWomanhair", "CategoryChoicehairMenu","mm-hide-all"],
 					"Slide 3": ["FirstAirport-2F","CategoryChoiceAirport","MMM-EmbedYoutube1","MMM-EmbedYoutube2","FirstAirport-1F","mm-hide-all","clock","The1Airport"],
 					"Slide 4": ["clock","MMM-AfterImage","MMM-BeforeImage","MMM-BeforeAfter","MMM-DeleteImage"],
@@ -704,6 +705,18 @@ var config = {
 					height: "1000", // height of iframe
 					frameWidth: "600", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe
 				}
+		},
+		{
+							 module: "MMM-Avinor",
+               position: "middle_center", //top_bar, top_left, top_center, top_right, upper_third, middle_center, lower_third, bottom_left, bottom_center, bottom_right, bottom_bar, fullscreen_above, and fullscreen_below
+               config: {
+                                refreshInterval: 5 * 60 * 1000, // every 5 minutes
+                                httpRequestURL: "https://flydata.avinor.no/XmlFeed.asp?TimeFrom=1&TimeTo=12&airport=OSL&lastUpdate=",
+                                tableLength: 5,
+                                minTimeDiff: 2,
+                                timeZone: 1,
+                                layout:2,
+                        }
 		},
 		
 		
