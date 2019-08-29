@@ -11,7 +11,7 @@
 
 //var request = require('request');
 
-Module.register("CategoryChoiceEntMenu",{
+Module.register("CategoryChoiceAirport",{
 	
 	requiresVersion: "2.1.0",
 	
@@ -102,7 +102,7 @@ Module.register("CategoryChoiceEntMenu",{
 							
 							if (modules[i].name == 'The1Airport') {
 								console.log("Hiding opend "+ modules[i].name+" ID: "+idnr[1]+"button number"+num);
-								modules[26].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								//modules[44].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								modules[28].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								setTimeout(function(){
 									modules[43].show(self.config.animationSpeed, {force: self.config.allowForce});

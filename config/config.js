@@ -336,7 +336,7 @@ var config = {
 			}
 		},
 		{
-			module: "ShowWebtoon", //24
+			module: "ShowWebtoon", //25
 			position: "bottom_center",	// This can be any of the regions.
 			config: {
 				// See "Configuration options" for more information.
@@ -363,6 +363,7 @@ var config = {
 		{
 			module: "CategoryChoiceEntMenu", //26
 			position: "top_left", 
+			header:"공항 지도",
 			classes: "default everyone",
 			config: {
 			}
@@ -512,7 +513,7 @@ var config = {
 				slides: {
 					main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock"],
 					"Slide 2": ["clock","CategoryHairstyle", "CategoryManhair", "CategoryWomanhair", "CategoryChoicehairMenu","mm-hide-all"],
-					"Slide 3": ["CategoryChoiceYoutube","CategoryChoiceEntMenu","MMM-EmbedYoutube1","MMM-EmbedYoutube2","MMM-B1","mm-hide-all","clock"],
+					"Slide 3": ["FirstAirport-2F","CategoryChoiceAirport","MMM-EmbedYoutube1","MMM-EmbedYoutube2","FirstAirport-1F","mm-hide-all","clock","The1Airport"],
 					"Slide 4": ["clock","MMM-AfterImage","MMM-BeforeImage","MMM-BeforeAfter","MMM-DeleteImage"],
 				},
 				keyBindings: { 
@@ -528,14 +529,37 @@ var config = {
 			
 		},
 		{
-			module: "MMM-B1",
+			module: "FirstAirport-1F",
 			position: "middle_center",
-			header:"  B1 ! ",
+			header:"  1Airport ",
 			config: {
 				imagePaths: ["modules/MMM-BeforeAfter/before"]
 			}
 		}, //41
+		{
+			module: "FirstAirport-2F",
+			position: "middle_center",
+			header:"  2Airport ",
+			config: {
+				imagePaths: ["modules/MMM-BeforeAfter/before"]
+			}
+		},//42
 		
+		{
+			module: "The1Airport", 
+			position: "top_left",
+			classes: "default everyone", 
+			config: {
+			}
+		},//43
+		{
+			module: "CategoryChoiceAirport", 
+			position: "top_left", 
+			header:"공항 지도",
+			classes: "default everyone",
+			config: {
+			}
+		}, //44
 	{
 	module: "MMM-soccer",
   	position: "top_left",
@@ -681,6 +705,7 @@ var config = {
 					frameWidth: "600", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe
 				}
 		},
+		
 		
 		
 			

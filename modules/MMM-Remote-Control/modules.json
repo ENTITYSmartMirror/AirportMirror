@@ -966,11 +966,18 @@
     "desc": "Display the next transports for any given STIB (Brussel/Belgium) station."
   },
   {
+    "longname": "MMM-stib2",
+    "id": "bendardenne/MMM-stib2",
+    "url": "https://github.com/bendardenne/MMM-stib2",
+    "author": "bendardenne",
+    "desc": "STIB waiting times. Re-write of danito's MMM-stib, using the official STIB API and no XML parsing."
+  },
+  {
     "longname": "MMM-swisstransport",
     "id": "Bangee44/MMM-swisstransport",
     "url": "https://github.com/Bangee44/MMM-swisstransport",
     "author": "Bangee44",
-    "desc": "Display train departures from your favourit trainstation."
+    "desc": "Display train departures from your favourite train station."
   },
   {
     "longname": "MMM-uber",
@@ -1680,6 +1687,13 @@
     "desc": "A module that displays standings from European Soccer (Football) leagues. (optional voice-control)"
   },
   {
+    "longname": "MMM-FortniteStats",
+    "id": "yourdawi/MMM-FortniteStats",
+    "url": "https://github.com/yourdawi/MMM-FortniteStats",
+    "author": "Dawi",
+    "desc": "Module to display Fortnite Stats."
+  },
+  {
     "longname": "MMM-Airtable",
     "id": "yashatgit/MMM-Airtable",
     "url": "https://github.com/yashatgit/MMM-Airtable",
@@ -1754,7 +1768,7 @@
     "id": "werthdavid/MMM-Bring",
     "url": "https://github.com/werthdavid/MMM-Bring",
     "author": "werthdavid",
-    "desc": "Display a Bring! shopping list in a flexible view"
+    "desc": "Display a Bring! shopping list in a flexible view and touch support"
   },
   {
     "longname": "MMM-BringList",
@@ -1937,6 +1951,13 @@
     "url": "https://github.com/Sickboy78/MMM-Homematic",
     "author": "Sickboy78",
     "desc": "Shows values and warnings from HomeMatic smart home components and system variables as text, icons or both."
+  },
+  {
+    "longname": "MMM-Homematic-Thermostats",
+    "id": "spitzlbergerj/MMM-Homematic-Thermostats",
+    "url": "https://github.com/spitzlbergerj/MMM-Homematic-Thermostats",
+    "author": "spitzlbergerj",
+    "desc": "Shows values from HomeMatic smart home radiator and wall thermostats."
   },
   {
     "longname": "MMM-Hover",
@@ -3675,6 +3696,13 @@
     "desc": "Display users currently connected on the mumble server (murmur)."
   },
   {
+    "longname": "MMM-APOD",
+    "id": "grenagit/MMM-APOD",
+    "url": "https://github.com/grenagit/MMM-APOD",
+    "author": "Grena",
+    "desc": "A Magic Mirror Module displaying the last Astronomy Picture Of the Day (APOD). This is an evolution of MMM-nasaastropic : supports image and video and display title, description and copyright."
+  },
+  {
     "longname": "MMM-nasaastropic",
     "id": "nebulx29/MMM-nasaastropic",
     "url": "https://github.com/nebulx29/MMM-nasaastropic",
@@ -3771,6 +3799,20 @@
     "url": "https://github.com/eouia/worldclock",
     "author": "eouia",
     "desc": "Display local time of several locations."
+  },
+  {
+    "longname": "MMM-Space",
+    "id": "grabenhenrich/MMM-Space",
+    "url": "https://github.com/grabenhenrich/MMM-Space",
+    "author": "grabenhenrich",
+    "desc": "Adds vertical space (as HTML div) between modules."
+  },
+  {
+    "longname": "MMM-DateOnly",
+    "id": "grabenhenrich/MMM-DateOnly",
+    "url": "https://github.com/grabenhenrich/MMM-DateOnly",
+    "author": "grabenhenrich",
+    "desc": "Shows the date without a clock (if you have one in another place)."
   },
   {
     "longname": "MMM-Nightscout",

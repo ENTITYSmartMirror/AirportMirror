@@ -27,8 +27,9 @@
  */
 
  
-var MMMB1;
-Module.register("MMM-B1", {
+var FirstAirport1F;
+
+Module.register("FirstAirport-1F", {
 
 	// Default module config.
 
@@ -83,7 +84,7 @@ Module.register("MMM-B1", {
     // load function
 
 	start: function () {
-		MMMB1 = this;
+		FirstAirport1F = this;
         // add identifier to the config
 
         this.config.identifier = this.identifier;
@@ -320,7 +321,7 @@ Module.register("MMM-B1", {
 					image.addEventListener("click", () => {
 						console.log(" image click !!!!!");
 						this.config.a=3;
-						MMMB1.sendNotification("BEFOREIMAGECLICK");
+						FirstAirport1F.sendNotification("BEFOREIMAGECLICK");
                                               });
 					
 					
@@ -400,7 +401,7 @@ Module.register("MMM-B1", {
 		Log.info(this.name + " - received notification: " + notification);
 		if(notification === "Modules All Change"){
 			//console.log("this a ", this.config.a)
-			//this.hide()
+			this.hide()
 
 		}
 		/*
