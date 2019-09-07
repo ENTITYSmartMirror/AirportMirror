@@ -36,23 +36,23 @@ Module.register("CategoryHairstyle",{
 			
 			"1": {
 				module: "CategoryManhair",
-				text:   "남자헤어",
-				img:"modules/CategoryHairstyle/man.jpg",
+				text:   "국내선",
+				img:"modules/CategoryHairstyle/plane.png",
 				width: "450",
 				height: "450",
 			},
 
 			"2": {
 				module: "CategoryWomanhair",
-				text:   "여자헤어",
-				img : "modules/CategoryHairstyle/women.jpg",
+				text:   "국제선",
+				img : "modules/CategoryHairstyle/plane.png",
 				width: "450",
 				height: "450",
 			}
 		}
 	},
 	start(){
-		CategoryHairStyle = this;	
+		CategoryHairStyle = this;
 	},
 	
 
@@ -71,9 +71,13 @@ Module.register("CategoryHairstyle",{
 		for (var num in this.config.buttons) {
 			menu.appendChild(this.createButton(this, num, this.config.buttons[num], this.config.picturePlacement));
 		}
-		
-        return menu;
-    },
+		return menu;
+	},
+
+	
+
+	
+
 
 	// Creates the buttons.
     createButton: function (self, num, data, placement) {
@@ -89,6 +93,7 @@ Module.register("CategoryHairstyle",{
 		// Collects all modules loaded in MagicMirror.
 		var modules = MM.getModules();
 		
+
 
 		// When a button is clicked, the module either gets hidden or shown depending on current module status.
 		item.addEventListener("click", function () {
@@ -112,6 +117,8 @@ Module.register("CategoryHairstyle",{
 								fetch(data.hideUrl);
 								// Prints the visited hideURL.
 								console.log("Visiting hide URL: "+data.hideUrl);
+								
+								
 							}
 							for (var k = 1; k < 18; k++){
 								console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[2]);
@@ -218,7 +225,8 @@ Module.register("CategoryHairstyle",{
         }
 		// All done. :)
         return item;
-    }
+	}
+	
 });	
 
 

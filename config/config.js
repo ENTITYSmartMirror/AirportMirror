@@ -37,7 +37,7 @@ var config = {
 		{
 			module: "CategoryHairstyle",
 			position: "lower_third", // This can be any of the regions.
-			header: "헤어스타일", // Optional
+			header: "이용노선을 선택하세요.", // Optional
 			classes: "default everyone", // Optional
 			config: {
 				// See "Configuration options" for more information.
@@ -46,7 +46,7 @@ var config = {
 		{
 			module: "CategoryManhair",
 			position: "middle_center", // This can be any of the regions.
-			header: "남자헤어", // Optional
+			header: "목적 도시를 선택하세요.", // Optional
 			classes: "default everyone", // Optional
 			config: {
 				hidden : "true",
@@ -56,11 +56,21 @@ var config = {
 		{
 			module: "CategoryWomanhair",
 			position: "middle_center", // This can be any of the regions.
-			header: "여자헤어", // Optional
+			header: "목적 대륙을 선택하세요.", // Optional
 			
 			classes: "default everyone", // Optional
 			config: {
 				hidden : "true",
+				// See "Configuration options" for more information.
+			}
+		},
+		{	
+			module: "CategoryChoiceCountry", //24
+			position: "middle_center", // This can be any of the regions.
+			header: "목적 국가를 선택하세요.", // Optional
+			classes: "default everyone", // Optional
+			config: {
+		
 				// See "Configuration options" for more information.
 			}
 		},
@@ -326,7 +336,7 @@ var config = {
 			}
 		},
 		{ 
-			module: "CategoryChoicehairMenu", //23
+			module: "CategoryChoicehairMenu", //24
 			position: "top_left", // This can be any of the regions.
 			header: "메뉴선택", // Optional
 			classes: "default everyone", // Optional
@@ -511,9 +521,9 @@ var config = {
 				showPageIndicators: true,
 				showPageControls: true,
 				slides: {
-					main: ["MMM-Avinor"],
+					main: ["clock","CategoryHairstyle","CategoryChoicehairMenu","mm-hide-all"],
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
-					"Slide 2": ["clock","CategoryHairstyle", "CategoryManhair", "CategoryWomanhair", "CategoryChoicehairMenu","mm-hide-all"],
+					"Slide 2": ["MMM-Avinor"],
 					"Slide 3": ["FirstAirport-2F","CategoryChoiceAirport","MMM-EmbedYoutube1","MMM-EmbedYoutube2","FirstAirport-1F","mm-hide-all","clock","The1Airport"],
 					"Slide 4": ["clock","MMM-AfterImage","MMM-BeforeImage","MMM-BeforeAfter","MMM-DeleteImage"],
 				},
@@ -717,7 +727,7 @@ var config = {
                                 timeZone: 1,
                                 layout:2,
                         }
-		},
+		}
 		
 		
 		

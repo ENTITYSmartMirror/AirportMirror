@@ -371,6 +371,10 @@ Module.register('MMM-Carousel', {
                 visible: 'false',
                 position: 'bottom_left',
               },
+              'CategotyWomanhair':{
+                visible: 'false',
+                position: 'bottom_left',
+              }
 
             });
        
@@ -455,6 +459,7 @@ Module.register('MMM-Carousel', {
             }
             return div;
         }
+    this.sendNotification("dfdf");
     },
     
 });

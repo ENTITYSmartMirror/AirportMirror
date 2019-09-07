@@ -64,7 +64,7 @@ Module.register("CategoryChoicehairMenu",{
 	notificationReceived: function(notification, payload){
 		Log.info(this.name + " - received norification : " + notification);
 		
-		if (notification === 'Modulebar1 is Clicked') {
+		if (notification === 'CategoryManhair is Clicked') {
 			module1 = 'Modulebar1 is Clicked';
 			Log.info(module1 + " adadadadad : " + notification);
 		}
@@ -246,7 +246,7 @@ Module.register("CategoryChoicehairMenu",{
         }
 		// All done. :)
         return item;
-    }
+	}
 });	
 
 

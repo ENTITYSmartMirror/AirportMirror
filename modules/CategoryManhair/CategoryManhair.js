@@ -33,8 +33,8 @@ Module.register("CategoryManhair",{
         // The default button 1. Add your buttons in the config.
 		buttons: {
             "1": {
-				module: "ManCutDandy",
-				text:   "댄디컷",
+				module: "ManCutdandy",
+				text:   "서울",
 				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
 				width: "50",
 				height: "50",
@@ -42,7 +42,7 @@ Module.register("CategoryManhair",{
 			
 			"2": {
 				module: "ManCutRegent",
-				text:   "리젠트컷",
+				text:   "부산",
 				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
 				width: "50",
 				height: "50",
@@ -50,7 +50,7 @@ Module.register("CategoryManhair",{
 
 			"3": {
 				module: "ManCutTwoBlock",
-				text:   "투블럭컷",
+				text:   "대전",
 				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
 				width: "50",
 				height: "50",
@@ -58,7 +58,7 @@ Module.register("CategoryManhair",{
 
 			"4": {
 				module: "ManCutPomade",
-				text:   "포마드",
+				text:   "인천",
 				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
 				width: "50",
 				height: "50",
@@ -66,7 +66,7 @@ Module.register("CategoryManhair",{
 			
 			"5": {
 				module: "ManPermPart",
-				text:   "가르마펌",
+				text:   "대구",
 				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
 				width: "50",
 				height: "50",
@@ -74,7 +74,7 @@ Module.register("CategoryManhair",{
 
 			"6": {
 				module: "ManPermRegent",
-				text:   "리젠트펌",
+				text:   "광주",
 				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
 				width: "50",
 				height: "50",
@@ -82,7 +82,7 @@ Module.register("CategoryManhair",{
 
 			"7": {
 				module: "ManPermIron",
-				text:   "아이롱펌",
+				text:   "제주도",
 				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
 				width: "50",
 				height: "50",
