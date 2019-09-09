@@ -35,7 +35,7 @@ var config = {
 			}
 		},
 		{
-			module: "CategoryHairstyle",
+			module: "CategoryHairstyle",  //1
 			position: "lower_third", // This can be any of the regions.
 			header: "이용노선을 선택하세요.", // Optional
 			classes: "default everyone", // Optional
@@ -44,7 +44,7 @@ var config = {
 			}
 		},
 		{
-			module: "CategoryManhair",
+			module: "CategoryManhair",   //2
 			position: "middle_center", // This can be any of the regions.
 			header: "목적 도시를 선택하세요.", // Optional
 			classes: "default everyone", // Optional
@@ -54,10 +54,9 @@ var config = {
 			}
 		},
 		{
-			module: "CategoryWomanhair",
+			module: "CategoryChoiceContinent",   //3
 			position: "middle_center", // This can be any of the regions.
 			header: "목적 대륙을 선택하세요.", // Optional
-			
 			classes: "default everyone", // Optional
 			config: {
 				hidden : "true",
@@ -65,9 +64,39 @@ var config = {
 			}
 		},
 		{	
-			module: "CategoryChoiceCountry", //24
+			module: "CategoryChoiceAsia", //4
 			position: "middle_center", // This can be any of the regions.
 			header: "목적 아시아 국가를 선택하세요.", // Optional
+			classes: "default everyone", // Optional
+			config: {
+		
+				// See "Configuration options" for more information.
+			}
+		},
+		{	
+			module: "CategoryChoiceEurope", //5
+			position: "middle_center", // This can be any of the regions.
+			header: "목적 유럽 국가를 선택하세요.", // Optional
+			classes: "default everyone", // Optional
+			config: {
+		
+				// See "Configuration options" for more information.
+			}
+		},
+		{	
+			module: "CategoryChoiceAmerica", //6
+			position: "middle_center", // This can be any of the regions.
+			header: "목적 아메리카대륙 국가를 선택하세요.", // Optional
+			classes: "default everyone", // Optional
+			config: {
+		
+				// See "Configuration options" for more information.
+			}
+		},
+		{	
+			module: "CategoryChoiceAfrica", //7
+			position: "middle_center", // This can be any of the regions.
+			header: "목적 아프리카 국가를 선택하세요.", // Optional
 			classes: "default everyone", // Optional
 			config: {
 		
@@ -336,7 +365,7 @@ var config = {
 			}
 		},
 		{ 
-			module: "CategoryChoicehairMenu", //24
+			module: "CategorySelectMain", //24
 			position: "top_left", // This can be any of the regions.
 			header: "메뉴선택", // Optional
 			classes: "default everyone", // Optional

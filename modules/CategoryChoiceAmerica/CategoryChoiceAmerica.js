@@ -8,10 +8,10 @@
  *
  * MIT Licensed.
  */
-
+var CategoryChoiceAmerica;
 //var request = require('request');
-var modulebar2;
-Module.register("CategoryWomanhair",{
+
+Module.register("CategoryChoiceAmerica",{
 	
 	requiresVersion: "2.1.0",
 	
@@ -32,44 +32,79 @@ Module.register("CategoryWomanhair",{
 		animationSpeed: 500,
         // The default button 1. Add your buttons in the config.
 		buttons: {
-			"1": {
-				module: "WomanCutLayered",
-				text:   "아시아/오세아니아",
-				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
+            "1": {
+				module: "ManCutdandy",
+				text:   "미국",
+				img: "modules/CategoryChoiceAmerica/225px-Flag_of_the_United_States.svg.png",
 				width: "50",
 				height: "50",
 			},
 			
 			"2": {
-				module: "WomanCutBob",
-				text:   "유럽",
-				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
+				module: "ManCutRegent",
+				text:   "캐나다",
+				img: "modules/CategoryChoiceAmerica/225px-Flag_of_Canada.svg.png",
 				width: "50",
 				height: "50",
 			},
 
 			"3": {
-				module: "WomanCutShort",
-				text:   "아메리카",
-				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
+				module: "ManCutTwoBlock",
+				text:   "브라질",
+				img: "modules/CategoryChoiceAmerica/225px-Flag_of_Brazil.svg.png",
 				width: "50",
 				height: "50",
 			},
+
 			"4": {
-				module: "MMM-iFrame13",
-				text:   "아프리카",
-				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
+				module: "ManCutPomade",
+				text:   "아르헨티나",
+				img: "modules/CategoryChoiceAmerica/225px-Flag_of_Argentina.svg.png",
 				width: "50",
 				height: "50",
 			},
+			
+			"5": {
+				module: "ManPermPart",
+				text:   "멕시코",
+				img: "modules/CategoryChoiceAmerica/225px-Flag_of_Mexico.svg.png",
+				width: "50",
+				height: "50",
+			},
+
+			"6": {
+				module: "ManPermRegent",
+				text:   "콜롬비아",
+				img: "modules/CategoryChoiceAmerica/225px-Flag_of_Colombia.svg.png",
+				width: "50",
+				height: "50",
+			},
+
+			"7": {
+				module: "ManPermIron",
+				text:   "베네수엘라",
+				img: "modules/CategoryChoiceAmerica/225px-Flag_of_Venezuela_(state).svg.png",
+				width: "50",
+				height: "50",
+			},
+
+			"8": {
+				module: "ManPermIron",
+				text:   "에콰도르",
+				img: "modules/CategoryChoiceAmerica/225px-Flag_of_Ecuador.svg.png",
+				width: "50",
+				height: "50",
+			},
+
 		}
-    },
+	},
+	start(){
+		CategoryChoiceAmerica = this;
+	},
+
     // Define required styles.
 	getStyles: function(){
 		return ["font-awesome.css", "MMM-Modulebar.css"];
-	},
-	start () {
-		modulebar2 = this;
 	},
 
     // Override dom generator.
@@ -82,9 +117,10 @@ Module.register("CategoryWomanhair",{
 		for (var num in this.config.buttons) {
 			menu.appendChild(this.createButton(this, num, this.config.buttons[num], this.config.picturePlacement));
 		}
-        return menu;
-    },
 
+
+		return menu;
+	},
 	// Creates the buttons.
     createButton: function (self, num, data, placement) {
 		// Creates the span elemet to contain all the buttons.
@@ -107,9 +143,8 @@ Module.register("CategoryWomanhair",{
 					// Splits out the module number of the module with the same name.
 					var idnr = modules[i].data.identifier.split("_");
 					// Checks if idnum is set in config.js. If it is, it only hides that module, if not hides all modules with the same name.
-					if (idnr[2] == data.idnum || data.idnum == null) {
-						// Check if the module is hidden.						if (!modules[i].hidden) {
-							// Hides the module.
+					if (idnr[1] == data.idnum || data.idnum == null) {
+						// Check if the module is hidden.
 						if (!modules[i].hidden) {
 							// Hides the module.
 							modules[i].hide(self.config.animationSpeed, {force: self.config.allowForce});
@@ -126,69 +161,70 @@ Module.register("CategoryWomanhair",{
 						else {
 							// Check if there is a "showURL" defined.
 							if (data.showUrl != null) {
-							// Visiting the show URL.
+								// Visiting the show URL.
 								fetch(data.showUrl);
 								// Prints the visited hideURL.
 								console.log("Visiting show URL: "+data.showUrl);
 							}
-							if (modules[i].name == 'WomanCutLayered') {
+							if (modules[i].name == 'ManCutDandy') {
+								
 								for(var num=1; num<18; num++ ){
 								console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 								modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 								}
-								console.log("Showing "+modules[11].name+" ID: "+idnr[1]);	
+								console.log("Showing "+modules[4].name+" ID: "+idnr[1]);	
 								setTimeout(function(){
 									modules[4].show(self.config.animationSpeed, {force: self.config.allowForce});
 								},500);
 							}
-							else if (modules[i].name == 'WomanCutBob') {
+							else if (modules[i].name == 'ManCutRegent') {
 								for(var num=1; num<18; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 									}
-									console.log("Showing "+modules[12].name+" ID: "+idnr[1]);	
+									console.log("Showing "+modules[5].name+" ID: "+idnr[1]);	
 									setTimeout(function(){
-										modules[12].show(self.config.animationSpeed, {force: self.config.allowForce});
+										modules[5].show(self.config.animationSpeed, {force: self.config.allowForce});
 									},500);
 							}
-							else if (modules[i].name == 'WomanCutShort') {
+							else if (modules[i].name == 'ManCutTwoBlock') {
 								for(var num=1; num<18; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 									}
-									console.log("Showing "+modules[13].name+" ID: "+idnr[1]);	
+									console.log("Showing "+modules[6].name+" ID: "+idnr[1]);	
 									setTimeout(function(){
-										modules[13].show(self.config.animationSpeed, {force: self.config.allowForce});
+										modules[6].show(self.config.animationSpeed, {force: self.config.allowForce});
 									},500);
 							}
-							else if (modules[i].name == 'MMM-iFrame13') {
+							else if (modules[i].name == 'ManCutPomade') {
 								for(var num=1; num<18; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 									}
-									console.log("Showing "+modules[14].name+" ID: "+idnr[1]);	
+									console.log("Showing "+modules[7].name+" ID: "+idnr[1]);	
 									setTimeout(function(){
-										modules[14].show(self.config.animationSpeed, {force: self.config.allowForce});
+										modules[7].show(self.config.animationSpeed, {force: self.config.allowForce});
 									},500);
 							}
-							else if (modules[i].name == 'WomanPermGlam') {
+							else if (modules[i].name == 'ManPermPart') {
 								for(var num=1; num<18; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 									}
-									console.log("Showing "+modules[15].name+" ID: "+idnr[1]);	
+									console.log("Showing "+modules[8].name+" ID: "+idnr[1]);	
 									setTimeout(function(){
-										modules[15].show(self.config.animationSpeed, {force: self.config.allowForce});
+										modules[8].show(self.config.animationSpeed, {force: self.config.allowForce});
 									},500);
 							}
-							else if (modules[i].name == 'WomanPermBody') {
+							else if (modules[i].name == 'ManPermRegent') {
 								for(var num=1; num<18; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 									}
-									console.log("Showing "+modules[16].name+" ID: "+idnr[1]);	
+									console.log("Showing "+modules[9].name+" ID: "+idnr[1]);	
 									setTimeout(function(){
-										modules[16].show(self.config.animationSpeed, {force: self.config.allowForce});
+										modules[9].show(self.config.animationSpeed, {force: self.config.allowForce});
 									},500);
 							}
 							else {
@@ -196,12 +232,12 @@ Module.register("CategoryWomanhair",{
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 									}
-								console.log("Showing "+modules[17].name+" ID: "+idnr[1]);	
+								console.log("Showing "+modules[10].name+" ID: "+idnr[1]);	
 								setTimeout(function(){
-									modules[17].show(self.config.animationSpeed, {force: self.config.allowForce});
+									modules[10].show(self.config.animationSpeed, {force: self.config.allowForce});
 								},500);
 							}
-							modulebar2.sendNotification("Modulebar2 is Clicked");
+							CategoryChoiceAmerica.sendNotification("CategoryChoiceAmerica is Clicked");
 						}
 					}
 				}
@@ -260,11 +296,11 @@ Module.register("CategoryWomanhair",{
             }
 			// Adds the text to the item.
             item.appendChild(text);
-        }
+		}
+		
 		// All done. :)
         return item;
 	},
-	
 	notificationReceived: function(notification, payload){
 		Log.info(this.name + " - received norification : " + notification);
 
@@ -275,6 +311,7 @@ Module.register("CategoryWomanhair",{
 		if(notification === 'dfdf'){
 			this.hide();
 		}
+
 	}
 });	
 

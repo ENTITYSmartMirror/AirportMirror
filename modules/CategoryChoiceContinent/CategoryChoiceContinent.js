@@ -8,10 +8,10 @@
  *
  * MIT Licensed.
  */
-var CategoryChoiceCountry;
-//var request = require('request');
 
-Module.register("CategoryChoiceCountry",{
+//var request = require('request');
+var CategoryChoiceContinent;
+Module.register("CategoryChoiceContinent",{
 	
 	requiresVersion: "2.1.0",
 	
@@ -32,79 +32,44 @@ Module.register("CategoryChoiceCountry",{
 		animationSpeed: 500,
         // The default button 1. Add your buttons in the config.
 		buttons: {
-            "1": {
-				module: "ManCutdandy",
-				text:   "대한민국",
-				img: "modules/CategoryChoiceCountry/1200px-Flag_of_South_Korea.svg.png",
+			"1": {
+				module: "CategoryChoiceAsia",
+				text:   "아시아/오세아니아",
+				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
 				width: "50",
 				height: "50",
 			},
 			
 			"2": {
-				module: "ManCutRegent",
-				text:   "중국",
-				img: "modules/CategoryChoiceCountry/225px-Flag_of_the_People's_Republic_of_China.svg.png",
+				module: "CategoryChoiceEurope",
+				text:   "유럽",
+				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
 				width: "50",
 				height: "50",
 			},
 
 			"3": {
-				module: "ManCutTwoBlock",
-				text:   "대만",
-				img: "modules/CategoryChoiceCountry/225px-Flag_of_the_Republic_of_China.svg.png",
+				module: "CategoryChoiceAmerica",
+				text:   "아메리카",
+				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
 				width: "50",
 				height: "50",
 			},
-
 			"4": {
-				module: "ManCutPomade",
-				text:   "필리핀",
-				img: "modules/CategoryChoiceCountry/225px-Flag_of_the_Philippines.svg.png",
+				module: "CategoryChoiceAfrica",
+				text:   "아프리카",
+				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
 				width: "50",
 				height: "50",
 			},
-			
-			"5": {
-				module: "ManPermPart",
-				text:   "태국",
-				img: "modules/CategoryChoiceCountry/225px-Flag_of_Thailand.svg.png",
-				width: "50",
-				height: "50",
-			},
-
-			"6": {
-				module: "ManPermRegent",
-				text:   "베트남",
-				img: "modules/CategoryChoiceCountry/225px-Flag_of_Vietnam.svg.webp",
-				width: "50",
-				height: "50",
-			},
-
-			"7": {
-				module: "ManPermIron",
-				text:   "캄보디아",
-				img: "modules/CategoryChoiceCountry/225px-Flag_of_Cambodia.svg.png",
-				width: "50",
-				height: "50",
-			},
-
-			"8": {
-				module: "ManPermIron",
-				text:   "호주",
-				img: "modules/CategoryChoiceCountry/225px-Flag_of_Australia.svg.png",
-				width: "50",
-				height: "50",
-			},
-
 		}
-	},
-	start(){
-		CategoryChoiceCountry = this;
-	},
-
+    },
     // Define required styles.
 	getStyles: function(){
 		return ["font-awesome.css", "MMM-Modulebar.css"];
+	},
+	start () {
+		CategoryChoiceContinent = this;
 	},
 
     // Override dom generator.
@@ -117,10 +82,9 @@ Module.register("CategoryChoiceCountry",{
 		for (var num in this.config.buttons) {
 			menu.appendChild(this.createButton(this, num, this.config.buttons[num], this.config.picturePlacement));
 		}
+        return menu;
+    },
 
-
-		return menu;
-	},
 	// Creates the buttons.
     createButton: function (self, num, data, placement) {
 		// Creates the span elemet to contain all the buttons.
@@ -143,8 +107,9 @@ Module.register("CategoryChoiceCountry",{
 					// Splits out the module number of the module with the same name.
 					var idnr = modules[i].data.identifier.split("_");
 					// Checks if idnum is set in config.js. If it is, it only hides that module, if not hides all modules with the same name.
-					if (idnr[1] == data.idnum || data.idnum == null) {
-						// Check if the module is hidden.
+					if (idnr[2] == data.idnum || data.idnum == null) {
+						// Check if the module is hidden.						if (!modules[i].hidden) {
+							// Hides the module.
 						if (!modules[i].hidden) {
 							// Hides the module.
 							modules[i].hide(self.config.animationSpeed, {force: self.config.allowForce});
@@ -161,23 +126,22 @@ Module.register("CategoryChoiceCountry",{
 						else {
 							// Check if there is a "showURL" defined.
 							if (data.showUrl != null) {
-								// Visiting the show URL.
+							// Visiting the show URL.
 								fetch(data.showUrl);
 								// Prints the visited hideURL.
 								console.log("Visiting show URL: "+data.showUrl);
 							}
-							if (modules[i].name == 'ManCutDandy') {
-								
+							if (modules[i].name == 'CategoryChoiceAsia') {
 								for(var num=1; num<18; num++ ){
 								console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 								modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 								}
-								console.log("Showing "+modules[4].name+" ID: "+idnr[1]);	
+								console.log("Showing "+modules[11].name+" ID: "+idnr[1]);	
 								setTimeout(function(){
 									modules[4].show(self.config.animationSpeed, {force: self.config.allowForce});
 								},500);
 							}
-							else if (modules[i].name == 'ManCutRegent') {
+							else if (modules[i].name == 'CategoryChoiceEurope') {
 								for(var num=1; num<18; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
@@ -187,7 +151,7 @@ Module.register("CategoryChoiceCountry",{
 										modules[5].show(self.config.animationSpeed, {force: self.config.allowForce});
 									},500);
 							}
-							else if (modules[i].name == 'ManCutTwoBlock') {
+							else if (modules[i].name == 'CategoryChoiceAmerica') {
 								for(var num=1; num<18; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
@@ -197,7 +161,7 @@ Module.register("CategoryChoiceCountry",{
 										modules[6].show(self.config.animationSpeed, {force: self.config.allowForce});
 									},500);
 							}
-							else if (modules[i].name == 'ManCutPomade') {
+							else if (modules[i].name == 'CategoryChoiceAfrica') {
 								for(var num=1; num<18; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
@@ -207,37 +171,7 @@ Module.register("CategoryChoiceCountry",{
 										modules[7].show(self.config.animationSpeed, {force: self.config.allowForce});
 									},500);
 							}
-							else if (modules[i].name == 'ManPermPart') {
-								for(var num=1; num<18; num++ ){
-									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
-									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-									}
-									console.log("Showing "+modules[8].name+" ID: "+idnr[1]);	
-									setTimeout(function(){
-										modules[8].show(self.config.animationSpeed, {force: self.config.allowForce});
-									},500);
-							}
-							else if (modules[i].name == 'ManPermRegent') {
-								for(var num=1; num<18; num++ ){
-									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
-									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-									}
-									console.log("Showing "+modules[9].name+" ID: "+idnr[1]);	
-									setTimeout(function(){
-										modules[9].show(self.config.animationSpeed, {force: self.config.allowForce});
-									},500);
-							}
-							else {
-								for(var num=1; num<18; num++ ){
-									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
-									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-									}
-								console.log("Showing "+modules[10].name+" ID: "+idnr[1]);	
-								setTimeout(function(){
-									modules[10].show(self.config.animationSpeed, {force: self.config.allowForce});
-								},500);
-							}
-							CategoryChoiceCountry.sendNotification("CategoryChoiceCountry is Clicked");
+							CategoryChoiceContinent.sendNotification("CategoryChoiceContinent is Clicked")
 						}
 					}
 				}
@@ -296,11 +230,11 @@ Module.register("CategoryChoiceCountry",{
             }
 			// Adds the text to the item.
             item.appendChild(text);
-		}
-		
+        }
 		// All done. :)
         return item;
 	},
+	
 	notificationReceived: function(notification, payload){
 		Log.info(this.name + " - received norification : " + notification);
 
@@ -311,7 +245,6 @@ Module.register("CategoryChoiceCountry",{
 		if(notification === 'dfdf'){
 			this.hide();
 		}
-
 	}
 });	
 
