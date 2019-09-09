@@ -431,7 +431,7 @@ var config = {
 				showPageIndicators: true,
 				showPageControls: true,
 				slides: {
-					main: ["camera","clock","CategoryHairstyle","CategoryChoicehairMenu"],
+					main: ["WhatAge","camera","clock","CategoryHairstyle","CategoryChoicehairMenu"],
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
 					"Slide 2": ["MMM-Avinor"],
 					"Slide 3": ["FirstAirport-2F","CategoryChoiceAirport","MMM-EmbedYoutube1","MMM-EmbedYoutube2","FirstAirport-1F","mm-hide-all","clock","The1Airport"],
@@ -612,6 +612,14 @@ var config = {
 						}
 					}
 				}
+		},
+		{
+			module: "WhatAge",
+			position: "middle_center",
+			header:"전 사진 ! ",
+			config: {
+				imagePaths: ["modules/MMM-BeforeAfter/before"]
+			}
 		},
 	]
 };
