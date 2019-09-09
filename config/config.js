@@ -460,11 +460,7 @@ var config = {
 				showPageIndicators: true,
 				showPageControls: true,
 				slides: {
-<<<<<<< HEAD
-					main: ["clock","CategoryHairstyle","CategorySelectMain"],
-=======
-					main: ["camera","clock","CategoryHairstyle","CategoryChoicehairMenu"],
->>>>>>> 45444eeb75ef318f2304a5159961592feb9be361
+					main: ["camera","clock","CategoryHairstyle","CategorySelectMain"],
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
 					"Slide 2": ["MMM-Avinor"],
 					"Slide 3": ["FirstAirport-2F","CategoryChoiceAirport","MMM-EmbedYoutube1","MMM-EmbedYoutube2","FirstAirport-1F","mm-hide-all","clock","The1Airport"],
