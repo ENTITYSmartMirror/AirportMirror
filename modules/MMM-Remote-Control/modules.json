@@ -406,6 +406,13 @@
     "desc": "Avinor flight schedule for airports in Norway"
   },
   {
+    "longname": "MMM-BartTimes",
+    "id": "falafel2222/MMM-BartTimes",
+    "url": "https://github.com/falafel2222/MMM-BartTimes",
+    "author": "Alex Goldstein",
+    "desc": "Bay Area Rapid Transit (BART) departure times"
+  },
+  {
     "longname": "MMM-BdxBus",
     "id": "kuitin/MMM-BdxBus",
     "url": "https://github.com/kuitin/MMM-BdxBus",
@@ -805,11 +812,25 @@
     "desc": "Displays some of your Tesla's data on your Mirror (early prototype)"
   },
   {
+    "longname": "MMM-TeslaMate",
+    "id": "denverquane/MMM-Teslamate",
+    "url": "https://github.com/denverquane/MMM-Teslamate",
+    "author": "denverquane",
+    "desc": "Display live Tesla status using the Teslamate self-hosted monitoring system and MQTT Broker"
+  },
+  {
     "longname": "MMM-TeslaStatus",
     "id": "aduyng/MMM-TeslaStatus",
     "url": "https://github.com/aduyng/MMM-TeslaStatus",
     "author": "aduyng",
     "desc": "Display my tesla status using data from firebase realtime database"
+  },
+  {
+    "longname": "MMM-TomTomTraffic",
+    "id": "bendardenne/MMM-TomTomTraffic",
+    "url": "https://github.com/bendardenne/MMM-TomTomTraffic",
+    "author": "bendardenne",
+    "desc": "Show a map of a given area with TomTom traffic information"
   },
   {
     "longname": "MMM-Toulouse-Transports",
@@ -837,7 +858,7 @@
     "id": "Bangee44/MMM-TrainConnections",
     "url": "https://github.com/Bangee44/MMM-TrainConnections",
     "author": "Bangee44",
-    "desc": "Display trains from your favourit departure station to any destination in Europe."
+    "desc": "Display trains from your favourite departure station to any destination in Europe."
   },
   {
     "longname": "MMM-Trains-Trafikverket",
@@ -1293,6 +1314,13 @@
     "url": "https://github.com/marska/MMM-Looko2-aq",
     "author": "marska",
     "desc": "Display the air quality index from [looko2](http://looko2.com/index.php) sensor."
+  },
+  {
+    "longname": "MMM-MarineWeather",
+    "id": "grenagit/MMM-MarineWeather",
+    "url": "https://github.com/grenagit/MMM-MarineWeather",
+    "author": "Grena",
+    "desc": "A Magic Mirror Module displaying the current marine weather (water and air temperatures, wind and wave conditions)."
   },
   {
     "longname": "MMM-MyDutchWeather",
@@ -2282,6 +2310,13 @@
     "desc": "Show QRCode image of encoded text."
   },
   {
+    "longname": "MMM-Ring",
+    "id": "DustinBryant/MMM-Ring",
+    "url": "https://github.com/DustinBryant/MMM-Ring",
+    "author": "Dustin Bryant",
+    "desc": "Displays a video stream of your Ring doorbell when someone rings your doorbell."
+  },
+  {
     "longname": "MMM-RPI-LED",
     "id": "idoodler/MMM-RPI-LED",
     "url": "https://github.com/idoodler/MMM-RPI-LED",
@@ -2630,6 +2665,13 @@
     "url": "https://github.com/sp4ceman/MMM-googlemaps",
     "author": "sp4ceman",
     "desc": "Displays a google map of an origin and destination"
+  },
+  {
+    "longname": "MMM-HomeAssistant",
+    "id": "zuo000/MMM-HomeAssistant",
+    "url": "https://github.com/zuo000/MMM-HomeAssistant",
+    "author": "zuo000",
+    "desc": "HomeAssistant frontend module using HA REST API, including Light, Switch, Sensor."
   },
   {
     "longname": "MMM-hass",
@@ -3260,6 +3302,13 @@
     "url": "https://github.com/AdamMoses-GitHub/MMM-ImageSlideshow",
     "author": "AdamMoses-GitHub",
     "desc": "Displays images one-at-a-time from local folders."
+  },
+  {
+    "longname": "MMM-PlexSlideshow",
+    "id": "PjTewkesbury/MMM-PlexSlideshow",
+    "url": "https://github.com/PjTewkesbury/MMM-PlexSlideshow",
+    "author": "PJTewkesbury-GitHub",
+    "desc": "Displays images in the bacground one at a time, pulling the images from a PLEX Media Server."
   },
   {
     "longname": "MMM-Inspirobot",

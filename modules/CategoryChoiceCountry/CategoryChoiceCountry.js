@@ -34,56 +34,64 @@ Module.register("CategoryChoiceCountry",{
 		buttons: {
             "1": {
 				module: "ManCutdandy",
-				text:   "서울",
-				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
+				text:   "대한민국",
+				img: "modules/CategoryChoiceCountry/1200px-Flag_of_South_Korea.svg.png",
 				width: "50",
 				height: "50",
 			},
 			
 			"2": {
 				module: "ManCutRegent",
-				text:   "부산",
-				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
+				text:   "중국",
+				img: "modules/CategoryChoiceCountry/225px-Flag_of_the_People's_Republic_of_China.svg.png",
 				width: "50",
 				height: "50",
 			},
 
 			"3": {
 				module: "ManCutTwoBlock",
-				text:   "대전",
-				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
+				text:   "대만",
+				img: "modules/CategoryChoiceCountry/225px-Flag_of_the_Republic_of_China.svg.png",
 				width: "50",
 				height: "50",
 			},
 
 			"4": {
 				module: "ManCutPomade",
-				text:   "인천",
-				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
+				text:   "필리핀",
+				img: "modules/CategoryChoiceCountry/225px-Flag_of_the_Philippines.svg.png",
 				width: "50",
 				height: "50",
 			},
 			
 			"5": {
 				module: "ManPermPart",
-				text:   "대구",
-				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
+				text:   "태국",
+				img: "modules/CategoryChoiceCountry/225px-Flag_of_Thailand.svg.png",
 				width: "50",
 				height: "50",
 			},
 
 			"6": {
 				module: "ManPermRegent",
-				text:   "광주",
-				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
+				text:   "베트남",
+				img: "modules/CategoryChoiceCountry/225px-Flag_of_Vietnam.svg.webp",
 				width: "50",
 				height: "50",
 			},
 
 			"7": {
 				module: "ManPermIron",
-				text:   "제주도",
-				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
+				text:   "캄보디아",
+				img: "modules/CategoryChoiceCountry/225px-Flag_of_Cambodia.svg.png",
+				width: "50",
+				height: "50",
+			},
+
+			"8": {
+				module: "ManPermIron",
+				text:   "호주",
+				img: "modules/CategoryChoiceCountry/225px-Flag_of_Australia.svg.png",
 				width: "50",
 				height: "50",
 			},

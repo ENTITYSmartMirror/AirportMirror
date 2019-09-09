@@ -34,7 +34,7 @@ Module.register("CategoryWomanhair",{
 		buttons: {
 			"1": {
 				module: "WomanCutLayered",
-				text:   "아시아",
+				text:   "아시아/오세아니아",
 				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
 				width: "50",
 				height: "50",
@@ -50,34 +50,18 @@ Module.register("CategoryWomanhair",{
 
 			"3": {
 				module: "WomanCutShort",
-				text:   "북미",
+				text:   "아메리카",
 				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
 				width: "50",
 				height: "50",
 			},
 			"4": {
 				module: "MMM-iFrame13",
-				text:   "남미",
-				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
-				width: "50",
-				height: "50",
-			},
-			"5": {
-				module: "WomanPermGlam",
-				text:   "오세아니아",
-				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
-				width: "50",
-				height: "50",
-			},
-			"6": {
-				module: "WomanPermBody",
 				text:   "아프리카",
 				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
 				width: "50",
 				height: "50",
 			},
-			
-
 		}
     },
     // Define required styles.
