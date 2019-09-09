@@ -1,17 +1,17 @@
 /* global Module */
 
 /* Magic Mirror 2
- * Module: CategoryHairstyle
+ * Module: MMM-Modulebar
  *
  * By Erik Pettersson
  * Based on the TouchNavigation Module by Brian Janssen
  *
  * MIT Licensed.
  */
-var CategoryHairStyle;
+var CategorySelectMain;
 //var request = require('request');
 
-Module.register("CategoryHairstyle",{
+Module.register("CategorySelectMain",{
 	
 	requiresVersion: "2.1.0",
 	
@@ -35,30 +35,67 @@ Module.register("CategoryHairstyle",{
 		buttons: {
 			
 			"1": {
-				module: "CategoryManhair",
-				text:   "국내선",
-				img:"modules/CategoryHairstyle/plane.png",
-				width: "450",
-				height: "450",
+				module: "CategoryHairstyle",
+				img:"https://image.flaticon.com/icons/svg/137/137531.svg",
+				width:"50",
+				height:"50",
+				text:   "뒤로가기",
 			},
 
 			"2": {
-				module: "CategoryChoiceContinent",
-				text:   "국제선",
-				img : "modules/CategoryHairstyle/plane.png",
-				width: "450",
-				height: "450",
+				module: "CategorySelectMain",
+				text:   "메인화면",
+				img:"https://image.flaticon.com/icons/svg/609/609803.svg",
+				width:"50",
+				height:"50",
 			}
 		}
 	},
 	start(){
-		CategoryHairStyle = this;
+		CategorySelectMain = this;	
 	},
 	
 
     // Define required styles.
 	getStyles: function(){
-		return ["font-awesome.css", "CategoryHairstyle.css"];
+		return ["font-awesome.css", "MMM-Modulebar.css"];
+	},
+
+	notificationReceived: function(notification, payload){
+		Log.info(this.name + " - received norification : " + notification);
+		
+		if (notification === 'CategoryManhair is Clicked') {
+			module1 = 'Modulebar1 is Clicked';
+			Log.info(module1 + " adadadadad : " + notification);
+		}
+		else if (notification === 'CategoryChoiceContinent is Clicked') {
+			module1 = 'Modulebar2 is Clicked';
+			Log.info(module1 + " adadadadad : " + notification);
+		}
+		else if (notification === 'CategoryChoiceAsia is Clicked') {
+			module1 = 'Modulebar2 is Clicked';
+			Log.info(module1 + " adadadadad : " + notification);
+		}
+		else if (notification === 'CategoryChoiceEurope is Clicked') {
+			module1 = 'Modulebar2 is Clicked';
+			Log.info(module1 + " adadadadad : " + notification);
+		}
+		else if (notification === 'CategoryChoiceAmerica is Clicked') {
+			module1 = 'Modulebar2 is Clicked';
+			Log.info(module1 + " adadadadad : " + notification);
+		}
+		else if (notification === 'CategoryChoiceAfrica is Clicked') {
+			module1 = 'Modulebar2 is Clicked';
+			Log.info(module1 + " adadadadad : " + notification);
+		}
+		else if (notification === 'Modulebar2 is Clicked') {
+			module1 = 'Modulebar2 is Clicked';
+			Log.info(module1 + " adadadadad : " + notification);
+		}
+		else if (notification === 'Modulebar0 is Clicked'){
+			module1 = 'Modulebar0 is Clicked';
+			Log.info(module1 + " adadadadad : " + notification);
+		}
 	},
 
     // Override dom generator.
@@ -71,13 +108,9 @@ Module.register("CategoryHairstyle",{
 		for (var num in this.config.buttons) {
 			menu.appendChild(this.createButton(this, num, this.config.buttons[num], this.config.picturePlacement));
 		}
-		return menu;
-	},
-
-	
-
-	
-
+		
+        return menu;
+    },
 
 	// Creates the buttons.
     createButton: function (self, num, data, placement) {
@@ -94,7 +127,6 @@ Module.register("CategoryHairstyle",{
 		var modules = MM.getModules();
 		
 
-
 		// When a button is clicked, the module either gets hidden or shown depending on current module status.
 		item.addEventListener("click", function () {
 			// Lists through all modules for testing.
@@ -104,24 +136,22 @@ Module.register("CategoryHairstyle",{
 					// Splits out the module number of the module with the same name.
 					var idnr = modules[i].data.identifier.split("_");
 					// Checks if idnum is set in config.js. If it is, it only hides that module, if not hides all modules with the same name.
-					if (idnr[2] == data.idnum || data.idnum == null) {
+					if (idnr[1] == data.idnum || data.idnum == null) {
 						// Check if the module is hidden.
 						if (!modules[i].hidden) {
 							// Hides the module.
 							modules[i].hide(self.config.animationSpeed, {force: self.config.allowForce});
 							// Prints in the console what just happend (adding the ID). 
-							console.log("Hiding "+modules[i].name+" ID: "+idnr[2]);
+							console.log("Hiding "+modules[i].name+" ID: "+idnr[1]);
 							// Check if there is a "hideURL" defined.
 							if (data.hideUrl != null) {
 								// Visiting the the URL.
 								fetch(data.hideUrl);
 								// Prints the visited hideURL.
 								console.log("Visiting hide URL: "+data.hideUrl);
-								
-								
 							}
 							for (var k = 1; k < 18; k++){
-								console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[2]);
+								console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[1]);
 								modules[k].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 							}
 						}
@@ -133,38 +163,49 @@ Module.register("CategoryHairstyle",{
 								// Prints the visited hideURL.
 								console.log("Visiting show URL: "+data.showUrl);
 							}
-							if (modules[i].name == 'CategoryChoiceContinent') {
-								console.log("Hiding opend "+ modules[2].name+" ID: "+idnr[2]);
-								modules[2].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-								
-								
+							if (modules[i].name === 'CategoryHairstyle') {
 								for (var k = 1; k < 18; k++){
-									console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[2]);
+									console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[1]);
 									modules[k].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 								}
 
-								console.log("Showing "+modules[i].name+" ID: "+idnr[2]);	
-								setTimeout(function(){
-									modules[3].show(self.config.animationSpeed, {force: self.config.allowForce});
-								},500);
-								CategoryHairStyle.sendNotification("Modulebar0 is Clicked");
+								if (module1 === 'Modulebar0 is Clicked') {
+								console.log("Showing0 "+modules[1].name+" ID: "+idnr[1]);
+								module1 = 'Modulebar0 is Clicked';	
+									setTimeout(function(){
+										modules[1].show(self.config.animationSpeed, {force: self.config.allowForce});
+									},500);
+								}
+
+								else if (module1 === 'Modulebar1 is Clicked') { 
+								console.log("Showing1 "+modules[2].name+" ID: "+idnr[1]);	
+								module1 = 'Modulebar0 is Clicked';
+									setTimeout(function(){
+										modules[2].show(self.config.animationSpeed, {force: self.config.allowForce});
+									},500);
+								}
+								
+								else if (module1 === 'Modulebar2 is Clicked'){
+								console.log("Showing2 "+modules[3].name+" ID: "+idnr[1]);	
+								module1 = 'Modulebar0 is Clicked';
+									setTimeout(function(){
+										modules[3].show(self.config.animationSpeed, {force: self.config.allowForce});
+									},500);
+								}					
 							}
 							else {
-								console.log("Hiding opend "+ modules[3].name+" ID: "+idnr[2]);			
+								console.log("Hiding opend "+ modules[3].name+" ID: "+idnr[1]);			
 								modules[3].hide(self.config.animationSpeed, {force: self.config.allowForce});
-
 								for (var k = 1; k < 18; k++){
-									console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[2]);
+									console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[1]);
 									modules[k].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 								}
-
-								console.log("Showing "+modules[i].name+" ID: "+idnr[2]);	
+								console.log("Showing "+modules[i].name+" ID: "+idnr[1]);	
 								setTimeout(function(){
-								modules[2].show(self.config.animationSpeed, {force: self.config.allowForce});
-								},500);
-								CategoryHairStyle.sendNotification("Modulebar0 is Clicked");
+								modules[1].show(self.config.animationSpeed, {force: self.config.allowForce});
+								},500);								
 							}
-						}
+						}					
 					}
 				}
 			}
@@ -226,7 +267,6 @@ Module.register("CategoryHairstyle",{
 		// All done. :)
         return item;
 	}
-	
 });	
 
 

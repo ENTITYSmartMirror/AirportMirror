@@ -1,17 +1,17 @@
 /* global Module */
 
 /* Magic Mirror 2
- * Module: CategoryHairstyle
+ * Module: MMM-Modulebar
  *
  * By Erik Pettersson
  * Based on the TouchNavigation Module by Brian Janssen
  *
  * MIT Licensed.
  */
-var CategoryHairStyle;
+var CategoryChoiceAsia;
 //var request = require('request');
 
-Module.register("CategoryHairstyle",{
+Module.register("CategoryChoiceAsia",{
 	
 	requiresVersion: "2.1.0",
 	
@@ -25,40 +25,86 @@ Module.register("CategoryHairstyle",{
         // The minimum height for all the buttons.
         minHeight: "0px",
         // The location of the symbol relative to the text. Options: left, right, top or bottom
-        picturePlacement: "top",
+        picturePlacement: "left",
         // The direction of the bar. Options: row, column, row-reverse or column-reverse
-        direction: "row",
+        direction: "column",
 		// The speed of the hide and show animation.
-		animationSpeed: 300,
-	
+		animationSpeed: 500,
         // The default button 1. Add your buttons in the config.
 		buttons: {
+            "1": {
+				module: "ManCutdandy",
+				text:   "대한민국",
+				img: "modules/CategoryChoiceAsia/1200px-Flag_of_South_Korea.svg.png",
+				width: "50",
+				height: "50",
+			},
 			
-			"1": {
-				module: "CategoryManhair",
-				text:   "국내선",
-				img:"modules/CategoryHairstyle/plane.png",
-				width: "450",
-				height: "450",
+			"2": {
+				module: "ManCutRegent",
+				text:   "중국",
+				img: "modules/CategoryChoiceAsia/225px-Flag_of_the_People's_Republic_of_China.svg.png",
+				width: "50",
+				height: "50",
 			},
 
-			"2": {
-				module: "CategoryChoiceContinent",
-				text:   "국제선",
-				img : "modules/CategoryHairstyle/plane.png",
-				width: "450",
-				height: "450",
-			}
+			"3": {
+				module: "ManCutTwoBlock",
+				text:   "대만",
+				img: "modules/CategoryChoiceAsia/225px-Flag_of_the_Republic_of_China.svg.png",
+				width: "50",
+				height: "50",
+			},
+
+			"4": {
+				module: "ManCutPomade",
+				text:   "필리핀",
+				img: "modules/CategoryChoiceAsia/225px-Flag_of_the_Philippines.svg.png",
+				width: "50",
+				height: "50",
+			},
+			
+			"5": {
+				module: "ManPermPart",
+				text:   "태국",
+				img: "modules/CategoryChoiceAsia/225px-Flag_of_Thailand.svg.png",
+				width: "50",
+				height: "50",
+			},
+
+			"6": {
+				module: "ManPermRegent",
+				text:   "베트남",
+				img: "modules/CategoryChoiceAsia/225px-Flag_of_Vietnam.svg.webp",
+				width: "50",
+				height: "50",
+			},
+
+			"7": {
+				module: "ManPermIron",
+				text:   "캄보디아",
+				img: "modules/CategoryChoiceAsia/225px-Flag_of_Cambodia.svg.png",
+				width: "50",
+				height: "50",
+			},
+
+			"8": {
+				module: "ManPermIron",
+				text:   "호주",
+				img: "modules/CategoryChoiceAsia/225px-Flag_of_Australia.svg.png",
+				width: "50",
+				height: "50",
+			},
+
 		}
 	},
 	start(){
-		CategoryHairStyle = this;
+		CategoryChoiceAsia = this;
 	},
-	
 
     // Define required styles.
 	getStyles: function(){
-		return ["font-awesome.css", "CategoryHairstyle.css"];
+		return ["font-awesome.css", "MMM-Modulebar.css"];
 	},
 
     // Override dom generator.
@@ -71,14 +117,10 @@ Module.register("CategoryHairstyle",{
 		for (var num in this.config.buttons) {
 			menu.appendChild(this.createButton(this, num, this.config.buttons[num], this.config.picturePlacement));
 		}
+
+
 		return menu;
 	},
-
-	
-
-	
-
-
 	// Creates the buttons.
     createButton: function (self, num, data, placement) {
 		// Creates the span elemet to contain all the buttons.
@@ -92,82 +134,9 @@ Module.register("CategoryHairstyle",{
         item.style.minHeight = self.config.minHeight;
 		// Collects all modules loaded in MagicMirror.
 		var modules = MM.getModules();
-		
-
-
 		// When a button is clicked, the module either gets hidden or shown depending on current module status.
 		item.addEventListener("click", function () {
-			// Lists through all modules for testing.
-			for (var i = 1; i < modules.length; i++) {
-				// Check if the curent module is the one.
-				if (modules[i].name === data.module) {
-					// Splits out the module number of the module with the same name.
-					var idnr = modules[i].data.identifier.split("_");
-					// Checks if idnum is set in config.js. If it is, it only hides that module, if not hides all modules with the same name.
-					if (idnr[2] == data.idnum || data.idnum == null) {
-						// Check if the module is hidden.
-						if (!modules[i].hidden) {
-							// Hides the module.
-							modules[i].hide(self.config.animationSpeed, {force: self.config.allowForce});
-							// Prints in the console what just happend (adding the ID). 
-							console.log("Hiding "+modules[i].name+" ID: "+idnr[2]);
-							// Check if there is a "hideURL" defined.
-							if (data.hideUrl != null) {
-								// Visiting the the URL.
-								fetch(data.hideUrl);
-								// Prints the visited hideURL.
-								console.log("Visiting hide URL: "+data.hideUrl);
-								
-								
-							}
-							for (var k = 1; k < 18; k++){
-								console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[2]);
-								modules[k].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-							}
-						}
-						else {
-							// Check if there is a "showURL" defined.
-							if (data.showUrl != null) {
-								// Visiting the show URL.
-								fetch(data.showUrl);
-								// Prints the visited hideURL.
-								console.log("Visiting show URL: "+data.showUrl);
-							}
-							if (modules[i].name == 'CategoryChoiceContinent') {
-								console.log("Hiding opend "+ modules[2].name+" ID: "+idnr[2]);
-								modules[2].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-								
-								
-								for (var k = 1; k < 18; k++){
-									console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[2]);
-									modules[k].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-								}
-
-								console.log("Showing "+modules[i].name+" ID: "+idnr[2]);	
-								setTimeout(function(){
-									modules[3].show(self.config.animationSpeed, {force: self.config.allowForce});
-								},500);
-								CategoryHairStyle.sendNotification("Modulebar0 is Clicked");
-							}
-							else {
-								console.log("Hiding opend "+ modules[3].name+" ID: "+idnr[2]);			
-								modules[3].hide(self.config.animationSpeed, {force: self.config.allowForce});
-
-								for (var k = 1; k < 18; k++){
-									console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[2]);
-									modules[k].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-								}
-
-								console.log("Showing "+modules[i].name+" ID: "+idnr[2]);	
-								setTimeout(function(){
-								modules[2].show(self.config.animationSpeed, {force: self.config.allowForce});
-								},500);
-								CategoryHairStyle.sendNotification("Modulebar0 is Clicked");
-							}
-						}
-					}
-				}
-			}
+			CategoryChoiceAsia.sendNotification("CategoryChoiceAsia is Clicked");
 		});
 		// Fixes the aligning.
         item.style.flexDirection = {
@@ -222,11 +191,23 @@ Module.register("CategoryHairstyle",{
             }
 			// Adds the text to the item.
             item.appendChild(text);
-        }
+		}
+		
 		// All done. :)
         return item;
+	},
+	notificationReceived: function(notification, payload){
+		Log.info(this.name + " - received norification : " + notification);
+
+		if(notification === 'Modules All Change'){
+			this.hide();
+		}
+		
+		if(notification === 'dfdf'){
+			this.hide();
+		}
+
 	}
-	
 });	
 
 

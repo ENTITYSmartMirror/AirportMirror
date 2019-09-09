@@ -8,10 +8,10 @@
  *
  * MIT Licensed.
  */
-var module1;
+var CategoryChoiceEurope;
 //var request = require('request');
 
-Module.register("CategoryChoicehairMenu",{
+Module.register("CategoryChoiceEurope",{
 	
 	requiresVersion: "2.1.0",
 	
@@ -25,57 +25,86 @@ Module.register("CategoryChoicehairMenu",{
         // The minimum height for all the buttons.
         minHeight: "0px",
         // The location of the symbol relative to the text. Options: left, right, top or bottom
-        picturePlacement: "top",
+        picturePlacement: "left",
         // The direction of the bar. Options: row, column, row-reverse or column-reverse
-        direction: "row",
+        direction: "column",
 		// The speed of the hide and show animation.
-		animationSpeed: 300,
-	
+		animationSpeed: 500,
         // The default button 1. Add your buttons in the config.
 		buttons: {
+            "1": {
+				module: "ManCutdandy",
+				text:   "프랑스",
+				img: "modules/CategoryChoiceEurope/225px-Flag_of_France.svg.png",
+				width: "50",
+				height: "50",
+			},
 			
-			"1": {
-				module: "CategoryHairstyle",
-				img:"https://image.flaticon.com/icons/svg/137/137531.svg",
-				width:"50",
-				height:"50",
-				text:   "뒤로가기",
+			"2": {
+				module: "ManCutRegent",
+				text:   "영국",
+				img: "modules/CategoryChoiceEurope/225px-Flag_of_the_United_Kingdom.svg.png",
+				width: "50",
+				height: "50",
 			},
 
-			"2": {
-				module: "CategoryWomanhair",
-				text:   "메인화면",
-				img:"https://image.flaticon.com/icons/svg/609/609803.svg",
-				width:"50",
-				height:"50",
-			}
+			"3": {
+				module: "ManCutTwoBlock",
+				text:   "스페인",
+				img: "modules/CategoryChoiceEurope/225px-Flag_of_Spain.svg.png",
+				width: "50",
+				height: "50",
+			},
+
+			"4": {
+				module: "ManCutPomade",
+				text:   "이탈리아",
+				img: "modules/CategoryChoiceEurope/215px-Flag_of_Italy.svg.png",
+				width: "50",
+				height: "50",
+			},
+			
+			"5": {
+				module: "ManPermPart",
+				text:   "독일",
+				img: "modules/CategoryChoiceEurope/225px-Flag_of_Germany.svg.png",
+				width: "50",
+				height: "50",
+			},
+
+			"6": {
+				module: "ManPermRegent",
+				text:   "체코",
+				img: "modules/CategoryChoiceEurope/225px-Flag_of_the_Czech_Republic.svg.png",
+				width: "50",
+				height: "50",
+			},
+
+			"7": {
+				module: "ManPermIron",
+				text:   "네덜란드",
+				img: "modules/CategoryChoiceEurope/225px-Flag_of_the_Netherlands.svg.png",
+				width: "50",
+				height: "50",
+			},
+
+			"8": {
+				module: "ManPermIron",
+				text:   "포르투갈",
+				img: "modules/CategoryChoiceEurope/225px-Flag_of_Portugal.svg.png",
+				width: "50",
+				height: "50",
+			},
+
 		}
 	},
 	start(){
-		CategoryChoicehairMenu = this;	
+		CategoryChoiceEurope = this;
 	},
-	
 
     // Define required styles.
 	getStyles: function(){
 		return ["font-awesome.css", "MMM-Modulebar.css"];
-	},
-
-	notificationReceived: function(notification, payload){
-		Log.info(this.name + " - received norification : " + notification);
-		
-		if (notification === 'CategoryManhair is Clicked') {
-			module1 = 'Modulebar1 is Clicked';
-			Log.info(module1 + " adadadadad : " + notification);
-		}
-		else if (notification === 'Modulebar2 is Clicked') {
-			module1 = 'Modulebar2 is Clicked';
-			Log.info(module1 + " adadadadad : " + notification);
-		}
-		else if (notification === 'Modulebar0 is Clicked'){
-			module1 = 'Modulebar0 is Clicked';
-			Log.info(module1 + " adadadadad : " + notification);
-		}
 	},
 
     // Override dom generator.
@@ -88,10 +117,10 @@ Module.register("CategoryChoicehairMenu",{
 		for (var num in this.config.buttons) {
 			menu.appendChild(this.createButton(this, num, this.config.buttons[num], this.config.picturePlacement));
 		}
-		
-        return menu;
-    },
 
+
+		return menu;
+	},
 	// Creates the buttons.
     createButton: function (self, num, data, placement) {
 		// Creates the span elemet to contain all the buttons.
@@ -105,90 +134,10 @@ Module.register("CategoryChoicehairMenu",{
         item.style.minHeight = self.config.minHeight;
 		// Collects all modules loaded in MagicMirror.
 		var modules = MM.getModules();
-		
-
 		// When a button is clicked, the module either gets hidden or shown depending on current module status.
 		item.addEventListener("click", function () {
 			// Lists through all modules for testing.
-			for (var i = 1; i < modules.length; i++) {
-				// Check if the curent module is the one.
-				if (modules[i].name === data.module) {
-					// Splits out the module number of the module with the same name.
-					var idnr = modules[i].data.identifier.split("_");
-					// Checks if idnum is set in config.js. If it is, it only hides that module, if not hides all modules with the same name.
-					if (idnr[1] == data.idnum || data.idnum == null) {
-						// Check if the module is hidden.
-						if (!modules[i].hidden) {
-							// Hides the module.
-							modules[i].hide(self.config.animationSpeed, {force: self.config.allowForce});
-							// Prints in the console what just happend (adding the ID). 
-							console.log("Hiding "+modules[i].name+" ID: "+idnr[1]);
-							// Check if there is a "hideURL" defined.
-							if (data.hideUrl != null) {
-								// Visiting the the URL.
-								fetch(data.hideUrl);
-								// Prints the visited hideURL.
-								console.log("Visiting hide URL: "+data.hideUrl);
-							}
-							for (var k = 1; k < 18; k++){
-								console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[1]);
-								modules[k].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-							}
-						}
-						else {
-							// Check if there is a "showURL" defined.
-							if (data.showUrl != null) {
-								// Visiting the show URL.
-								fetch(data.showUrl);
-								// Prints the visited hideURL.
-								console.log("Visiting show URL: "+data.showUrl);
-							}
-							if (modules[i].name === 'CategoryHairstyle') {
-								for (var k = 1; k < 18; k++){
-									console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[1]);
-									modules[k].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-								}
-
-								if (module1 === 'Modulebar0 is Clicked') {
-								console.log("Showing0 "+modules[1].name+" ID: "+idnr[1]);
-								module1 = 'Modulebar0 is Clicked';	
-									setTimeout(function(){
-										modules[1].show(self.config.animationSpeed, {force: self.config.allowForce});
-									},500);
-								}
-
-								else if (module1 === 'Modulebar1 is Clicked') { 
-								console.log("Showing1 "+modules[2].name+" ID: "+idnr[1]);	
-								module1 = 'Modulebar0 is Clicked';
-									setTimeout(function(){
-										modules[2].show(self.config.animationSpeed, {force: self.config.allowForce});
-									},500);
-								}
-								
-								else if (module1 === 'Modulebar2 is Clicked'){
-								console.log("Showing2 "+modules[3].name+" ID: "+idnr[1]);	
-								module1 = 'Modulebar0 is Clicked';
-									setTimeout(function(){
-										modules[3].show(self.config.animationSpeed, {force: self.config.allowForce});
-									},500);
-								}					
-							}
-							else {
-								console.log("Hiding opend "+ modules[3].name+" ID: "+idnr[1]);			
-								modules[3].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								for (var k = 1; k < 18; k++){
-									console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[1]);
-									modules[k].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-								}
-								console.log("Showing "+modules[i].name+" ID: "+idnr[1]);	
-								setTimeout(function(){
-								modules[1].show(self.config.animationSpeed, {force: self.config.allowForce});
-								},500);								
-							}
-						}					
-					}
-				}
-			}
+			CategoryChoiceEurope.sendNotification("CategoryChoiceEurope is Clicked");	
 		});
 		// Fixes the aligning.
         item.style.flexDirection = {
@@ -243,9 +192,22 @@ Module.register("CategoryChoicehairMenu",{
             }
 			// Adds the text to the item.
             item.appendChild(text);
-        }
+		}
+		
 		// All done. :)
         return item;
+	},
+	notificationReceived: function(notification, payload){
+		Log.info(this.name + " - received norification : " + notification);
+
+		if(notification === 'Modules All Change'){
+			this.hide();
+		}
+		
+		if(notification === 'dfdf'){
+			this.hide();
+		}
+
 	}
 });	
 
