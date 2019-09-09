@@ -452,27 +452,6 @@ var config = {
 			}
 		},
 		{
-				module: "MMM-GoogleMapsTraffic",
-				position: "top_center",
-				config: {
-						key: "AIzaSyCun0rD3ujduOli6jrYWJzFjKw9K1HKqww",
-						lat: 37.37988109409138,
-						lng: 126.9287487782795,
-						height: "300px",
-						width: "300px",
-						styledMapType: "transparent",
-						disableDefaultUI: true,
-						//backgroundColor: "hsla(0, 0%, 0%, 0)",
-						markers: [
-								{
-										lat: 37.37988109409138,
-										lng: 126.9287487782795,
-										fillColor: "#9966ff"
-								},
-						],
-				},
-		}, 
-		{
 			module: "MMM-Carousel",
 			position: "bottom_bar", // Required only for navigation controls
 			config: {
@@ -481,7 +460,11 @@ var config = {
 				showPageIndicators: true,
 				showPageControls: true,
 				slides: {
+<<<<<<< HEAD
 					main: ["clock","CategoryHairstyle","CategorySelectMain"],
+=======
+					main: ["camera","clock","CategoryHairstyle","CategoryChoicehairMenu"],
+>>>>>>> 45444eeb75ef318f2304a5159961592feb9be361
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
 					"Slide 2": ["MMM-Avinor"],
 					"Slide 3": ["FirstAirport-2F","CategoryChoiceAirport","MMM-EmbedYoutube1","MMM-EmbedYoutube2","FirstAirport-1F","mm-hide-all","clock","The1Airport"],
@@ -626,30 +609,6 @@ var config = {
 			position: "bottom_right"
 		},
 		{
-			module: "MMM-HistoryImage1",
-			position: "top_center",
-			header:"asdf",
-			config: {
-			imagePaths: ["modules/MMM-BeforeAfter/minsoo"]
-			}
-		},
-		{
-			module: "MMM-HistoryImage2",
-			position: "top_center",
-			header:" 최근 두번째 사진입니다. ",
-			config: {
-			imagePaths: ["modules/MMM-BeforeAfter/minsoo"]
-			}
-		},
-		{
-			module: "MMM-HistoryImage3",
-			position: "top_center",
-			header:" 최근 세번째 사진입니다. ",
-			config: {
-			imagePaths: ["modules/MMM-BeforeAfter/minsoo"]
-			}
-		},
-		{
 			module: "ShowRemoteControl", //24
 			position: "bottom_center",	// This can be any of the regions.
 			config: {
@@ -672,7 +631,21 @@ var config = {
 				timeZone: 1,
 				layout:2,
 			}
-		}
+		},
+		{
+			module: 'camera',
+			position: 'top_center',
+			config: {
+				selfieInterval: 3,  // Time interval in seconds before the photo will be taken.
+				emailConfig: {
+					service: 'Hotmail', // Email provider to use to send email with a photo.
+					auth: {
+						user: '<emrhssla@gmail.com>', // Your email account
+						pass: '<em89138913@#>'        // Your password for email account
+						}
+					}
+				}
+		},
 	]
 };
 
