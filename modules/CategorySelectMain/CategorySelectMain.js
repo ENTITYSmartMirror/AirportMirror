@@ -43,7 +43,7 @@ Module.register("CategorySelectMain",{
 			},
 
 			"2": {
-				module: "CategorySelectMain",
+				module: "CategoryChoiceContinent",
 				text:   "메인화면",
 				img:"https://image.flaticon.com/icons/svg/609/609803.svg",
 				width:"50",
