@@ -9,14 +9,14 @@ import cv2
 cap = cv2.VideoCapture(0)
 
 ret, frame = cap.read()
-cv2.imwrite('C:/Users/kms43/Desktop/hello/BeautyBeauty/modules/WhatAge/CognitiveFace.jpg', frame)
+cv2.imwrite('C:/AirportM/modules/WhatAge/CognitiveFace.jpg', frame)
 
 cap.release()
 cv2.destroyAllWindows()
 
 subscription_key = "d7cbf962fa5f4b2487b4891c0b5619a0"
 
-image_path = os.path.join('C:/Users/kms43/Desktop/hello/BeautyBeauty/modules/WhatAge/CognitiveFace.jpg')
+image_path = os.path.join('C:/AirportM/modules/WhatAge/CognitiveFace.jpg')
 
 assert subscription_key
 
