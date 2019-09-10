@@ -320,7 +320,7 @@ Module.register("WhatAge", {
 					image.addEventListener("click", () => {
 						console.log(" image click !!!!!");
 						this.config.a=3;
-						WhatAge.sendNotification("BEFOREIMAGECLICK");
+						WhatAge.sendSocketNotification("AGE_analysis");
                                               });
 					
 					
@@ -369,7 +369,8 @@ Module.register("WhatAge", {
 						image.src = this.imageList[this.imageList.length-2];
 						}
 					if(this.config.a==3){
-						image.src = this.imageList[2];
+						image.src = this.imageList[1];
+						console.log("ClickSuccess");
 						}
 					// ad the image to the dom
 					//var elem = document.getElementById("imageclick")

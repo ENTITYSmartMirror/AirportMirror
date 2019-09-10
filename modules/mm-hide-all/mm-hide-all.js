@@ -6,9 +6,12 @@
  * By EoF https://forum.magicmirror.builders/user/eof
  * MIT Licensed.
  */
-
+var hideall;
 Module.register("mm-hide-all",{
-
+	defaults: {},
+	start: function(){
+		hideall=this;
+	},
 	getScripts: function() {
 		return ["modules/mm-hide-all/js/jquery.js"];
 	},
@@ -44,7 +47,10 @@ Module.register("mm-hide-all",{
 				$(button).fadeTo(1000, 1);
 				$(text).html('Hide');
 				hidden = true;
+				
 			}
+			hideall.sendNotification("only_camera");
+				console.log("camera start");
 		});
 		
 		return wrapper;

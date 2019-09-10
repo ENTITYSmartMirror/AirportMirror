@@ -460,12 +460,12 @@ var config = {
 				showPageIndicators: true,
 				showPageControls: true,
 				slides: {
-
-					main: ["WhatAge","camera","clock","CategoryHairstyle","CategoryChoicehairMenu"],
+					main: ["mm-hide-all","WhatAge","camera","clock"],
+					//main: ["mm-hide-all","WhatAge","camera","clock","CategoryHairstyle","CategoryChoicehairMenu"],
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
 					"Slide 2": ["MMM-Avinor"],
 					"Slide 3": ["FirstAirport-2F","CategoryChoiceAirport","MMM-EmbedYoutube1","MMM-EmbedYoutube2","FirstAirport-1F","mm-hide-all","clock","The1Airport"],
-					"Slide 4": ["clock","MMM-AfterImage","MMM-BeforeImage","MMM-BeforeAfter","MMM-DeleteImage"],
+					//"Slide 4": ["clock","MMM-AfterImage","MMM-BeforeImage","MMM-BeforeAfter","MMM-DeleteImage"],
 				},
 				keyBindings: { 
 					enabled: true,
@@ -573,30 +573,6 @@ var config = {
 				showPublishDate: false
 			}
 		},
-		
-		{
-			module: "MMM-BeforeImage",
-			position: "middle_center",
-			header:"전 사진 ! ",
-			config: {
-				imagePaths: ["modules/MMM-BeforeAfter/before"]
-			}
-		},
-		{
-			module: "MMM-AfterImage",
-			position: "middle_center",
-			header:"후 사진! ",
-			config: {
-				imagePaths: ["modules/MMM-BeforeAfter/before"]
-			}
-		},
-		{
-			module: "MMM-BeforeAfter",
-			position: "bottom_right",
-			config:{
-				foo:"yellow"
-			}
-		},
 		{
 			module: "mm-hide-all",
 			position: "bottom_right"
@@ -631,7 +607,7 @@ var config = {
 		},
 		{
 			module: 'camera',
-			position: 'top_center',
+			position: 'bottom_center',
 			config: {
 				selfieInterval: 3,  // Time interval in seconds before the photo will be taken.
 				emailConfig: {
@@ -645,10 +621,10 @@ var config = {
 		},
 		{
 			module: "WhatAge",
-			position: "middle_center",
-			header:"전 사진 ! ",
+			position: "top_center",
+			header:"여기를 클릭",
 			config: {
-				imagePaths: ["modules/MMM-BeforeAfter/before"]
+				imagePaths: ["modules/WhatAge/Button"]
 			}
 		},
 	]
