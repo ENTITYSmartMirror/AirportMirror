@@ -35,7 +35,7 @@ Module.register("CategorySelectMain",{
 		buttons: {
 			
 			"1": {
-				module: "CategoryHairstyle",
+				module: "Man20s",
 				img:"https://image.flaticon.com/icons/svg/137/137531.svg",
 				width:"50",
 				height:"50",
@@ -43,7 +43,7 @@ Module.register("CategorySelectMain",{
 			},
 
 			"2": {
-				module: "CategoryChoiceContinent",
+				module: "Man10s",
 				text:   "메인화면",
 				img:"https://image.flaticon.com/icons/svg/609/609803.svg",
 				width:"50",
@@ -163,7 +163,7 @@ Module.register("CategorySelectMain",{
 								// Prints the visited hideURL.
 								console.log("Visiting show URL: "+data.showUrl);
 							}
-							if (modules[i].name === 'CategoryHairstyle') {
+							if (modules[i].name === 'Man20s') {
 								for (var k = 1; k < 18; k++){
 									console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[1]);
 									modules[k].hide(self.config.animationSpeed, {force: self.config.allowForce});	
@@ -193,14 +193,12 @@ Module.register("CategorySelectMain",{
 									},500);
 								}					
 							}
-							else {
-								console.log("Hiding opend "+ modules[3].name+" ID: "+idnr[1]);			
-								modules[3].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								for (var k = 1; k < 18; k++){
+							if (modules[i].name === 'Man10s') {
+								for (var k = 1; k < 10; k++){
 									console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[1]);
 									modules[k].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 								}
-								console.log("Showing "+modules[i].name+" ID: "+idnr[1]);	
+								console.log("mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm");
 								setTimeout(function(){
 								modules[1].show(self.config.animationSpeed, {force: self.config.allowForce});
 								},500);								
