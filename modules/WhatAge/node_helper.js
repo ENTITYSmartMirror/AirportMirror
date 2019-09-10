@@ -132,10 +132,10 @@ module.exports = NodeHelper.create({
         }
         else if (notification === "AGE_analysis") {
             console.log("notification : " + notification)
-            PythonShell.run('C:/AirportM/modules/WhatAge/FCF.py', null, function (err, result) {
+            PythonShell.run('C:/AirportHelper/modules/WhatAge/FCF.py', null, function (err, result) {
                 if (err) throw err;
                 console.log("gender : " + result);          
-                socketTestpython.sendSocketNotification("Anaysis_success",result);
+                socketWhatAge.sendSocketNotification("Anaysis_success",result);
               });
     }
     },
