@@ -13,8 +13,10 @@
  */
 
 // call in the required classes
+var {PythonShell} = require('python-shell');
 var NodeHelper = require("node_helper");
 var FileSystemImageSlideshow = require("fs");
+var socketWhatAge;
 
 // the main module helper create
 module.exports = NodeHelper.create({
@@ -128,6 +130,14 @@ module.exports = NodeHelper.create({
             // send the image list back
             this.sendSocketNotification('IMAGESLIDESHOW_FILELIST', returnPayload );
         }
+        else if (notification === "AGE_analysis") {
+            console.log("notification : " + notification)
+            PythonShell.run('C:/BeautyM/modules/WhatAge/FCF.py', null, function (err, result) {
+                if (err) throw err;
+                console.log("gender : " + result);          
+                socketTestpython.sendSocketNotification("Anaysis_success",result);
+              });
+    }
     },
 });
 
