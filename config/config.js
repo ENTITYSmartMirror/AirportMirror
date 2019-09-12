@@ -374,19 +374,7 @@ var config = {
 				// See "Configuration options" for more information.
 			}
 		},
-		{
-			module: "ShowWebtoon", //25
-			position: "bottom_center",	// This can be any of the regions.
-			config: {
-				// See "Configuration options" for more information.
-					url: ["https://comic.naver.com/webtoon/weekday.nhn"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
-					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
-					width: "1000", // width of iframe
-					height: "1800", // height of iframe
-					frameWidth: "980", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe
-					hide: "true",
-				}
-		},
+		
 
 		//1
 		/*{
@@ -422,7 +410,7 @@ var config = {
 		},
 		{
 			module: "MMM-Testpython",
-			position: "top_right",
+			position: "bottom_center",
 			config:{
 			}
 			
@@ -461,7 +449,7 @@ var config = {
 				showPageIndicators: true,
 				showPageControls: true,
 				slides: {
-					main: ["mm-hide-all","WhatAge","camera","clock"],
+					main: ["mm-hide-all","WhatAge","camera","clock","MMM-Testpython"],
 					//main: [/*"mm-hide-all","WhatAge","camera",*/"clock","CategoryHairstyle","CategorySelectMain"],
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
 					"Slide 2": ["MMM-Avinor"],
@@ -581,18 +569,6 @@ var config = {
 		{
 			module: "MMM-DeleteImage",
 			position: "bottom_right"
-		},
-		{
-			module: "ShowRemoteControl", //24
-			position: "bottom_center",	// This can be any of the regions.
-			config: {
-				// See "Configuration options" for more information.
-					url: ["http://127.0.0.1:9000/remote.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
-					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
-					width: "1000", // width of iframe
-					height: "1000", // height of iframe
-					frameWidth: "600", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe
-				}
 		},
 		{
 			module: "MMM-Avinor",
