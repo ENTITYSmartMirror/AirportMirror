@@ -54,7 +54,7 @@ for face in faces:
 _ = plt.axis("off")
 
 fig = plt.gcf()
-fig.savefig('C:/AirportHelper/modules/WhatAge/cognitiveface.jpg')
+fig.savefig('C:/AirportHelper/modules/WhatAge/Button/cognitiveface.jpg')
 
 print(fa["gender"])
 print(fa["age"])

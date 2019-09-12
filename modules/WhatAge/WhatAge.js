@@ -184,6 +184,7 @@ Module.register("WhatAge", {
 		}
 		else if(notification =="Anaysis_success")
 		{
+			this.config.a=1;
 			console.log("fufufufufufufufufu");
 		}
 
