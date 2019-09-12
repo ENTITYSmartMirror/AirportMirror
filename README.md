@@ -1,4 +1,4 @@
-![MagicMirror²: The open source modular smart mirror platform. ](.github/header.png)
+﻿![MagicMirror²: The open source modular smart mirror platform. ](.github/header.png)
 
 <p align="center">
 	<a href="https://david-dm.org/MichMich/MagicMirror"><img src="https://david-dm.org/MichMich/MagicMirror.svg" alt="Dependency Status"></a>
@@ -14,7 +14,7 @@
 
 BeautyMirror² focuses on a modular plugin system and uses [Electron](http://electron.atom.io/) as an application wrapper. So no more web server or browser installs necessary!
 A
-B
+Bd
 C
 F
 g
