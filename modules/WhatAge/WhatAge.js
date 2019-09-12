@@ -292,6 +292,7 @@ Module.register("WhatAge", {
 					image.addEventListener("click", () => {
 						console.log(" image click !!!!!");
 						this.config.a=3;
+						WhatAge.sendNotification("camera_stop");
 						WhatAge.sendSocketNotification("AGE_analysis");
                                               });
 					
