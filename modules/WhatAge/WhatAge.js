@@ -151,69 +151,40 @@ Module.register("WhatAge", {
 		// if an update was received
 
 		if (notification === "IMAGESLIDESHOW_FILELIST") {
-
 			// check this is for this module based on the woeid
-
 			if (payload.identifier === this.identifier)
-
 			{
-
 				// extract new list
-
 				var newImageList = payload.imageList;
-
-				
-
 				// check if anything has changed. return if not.
-
 				if (newImageList.length == this.imageList.length) {
-
 					var unchanged = true;
-
 					for (var i = 0 ; i < newImageList.length; i++) {
-
 						unchanged = this.imageList[i] == newImageList[i];
-
 						if (!unchanged)
-
 							break;
-
 					}
-
 					if (unchanged)
-
 						return;
-
 				}
-
 				// set the image list
-
 				this.imageList = payload.imageList;
-
                 // if image list actually contains images
-
                 // set loaded flag to true and update dom
-
                 if (this.imageList.length > 0 && !this.loaded) {
-
                     this.loaded = true;
-
                     this.updateDom();
-
 					// set the timer schedule to the slideshow speed			
-
 					var self = this;
-
 					this.interval = setInterval(function() {
-
 						self.updateDom();
-
 						}, this.config.slideshowSpeed);					
-
                 }
-
 			}
-
+		}
+		else if(notification =="Anaysis_success")
+		{
+			console.log("fufufufufufufufufu");
 		}
 
     },    

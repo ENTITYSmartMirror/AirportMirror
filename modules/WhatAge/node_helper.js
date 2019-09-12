@@ -109,6 +109,17 @@ module.exports = NodeHelper.create({
     },
     // subclass socketNotificationReceived, received notification from module
     socketNotificationReceived: function(notification, payload) {
+        switch(notification) {
+            case "AGE_analysis":
+                    var selv = this;
+                    console.log("notification : " + notification)
+                    PythonShell.run('C:/AirportHelper/modules/WhatAge/FCF.py', null, function (err, result) {
+                        if (err) throw err;
+                        console.log("gender : " + result);          
+                        selv.sendSocketNotification('Anaysis_success',result);
+                      });
+                      break
+                    }
         //console.log("MMM-ImageSlideshow node_helper received notification");
         if (notification === "IMAGESLIDESHOW_REGISTER_CONFIG") {
             // add the current config to an array of all configs used by the helper
@@ -130,14 +141,7 @@ module.exports = NodeHelper.create({
             // send the image list back
             this.sendSocketNotification('IMAGESLIDESHOW_FILELIST', returnPayload );
         }
-        else if (notification === "AGE_analysis") {
-            console.log("notification : " + notification)
-            PythonShell.run('C:/AirportHelper/modules/WhatAge/FCF.py', null, function (err, result) {
-                if (err) throw err;
-                console.log("gender : " + result);          
-                socketWhatAge.sendSocketNotification("Anaysis_success",result);
-              });
-    }
+        
     },
 });
 
