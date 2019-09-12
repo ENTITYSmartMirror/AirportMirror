@@ -35,7 +35,7 @@ Module.register("CategoryChoiceContinent",{
 			"1": {
 				module: "CategoryChoiceAsia",
 				text:   "아시아/오세아니아",
-				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
+				img: "modules/CategoryChoiceContinent/450px-Asia_(orthographic_projection).svg.png",
 				width: "50",
 				height: "50",
 			},
@@ -43,7 +43,7 @@ Module.register("CategoryChoiceContinent",{
 			"2": {
 				module: "CategoryChoiceEurope",
 				text:   "유럽",
-				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
+				img: "modules/CategoryChoiceContinent/450px-Europe_(orthographic_projection).svg.png",
 				width: "50",
 				height: "50",
 			},
@@ -51,14 +51,14 @@ Module.register("CategoryChoiceContinent",{
 			"3": {
 				module: "CategoryChoiceAmerica",
 				text:   "아메리카",
-				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
+				img: "modules/CategoryChoiceContinent/Americas_(orthographic_projection).svg.png",
 				width: "50",
 				height: "50",
 			},
 			"4": {
 				module: "CategoryChoiceAfrica",
 				text:   "아프리카",
-				img: "https://image.flaticon.com/icons/svg/1751/1751349.svg",
+				img: "modules/CategoryChoiceContinent/450px-Africa_(orthographic_projection).svg.png",
 				width: "50",
 				height: "50",
 			},

@@ -15,8 +15,8 @@ Module.register("MMM-EmbedYoutube1", {
 		controls : true,
 		disablekb: false,
 		fs: true,
-		height: 800,
-		width: 1000,
+		height: 600,
+		width: 900,
 		loop: false,
 		modestbranding: false,
 		rel : false,
@@ -24,7 +24,7 @@ Module.register("MMM-EmbedYoutube1", {
 		video_id : "r6A7Fsci7Ds",
 		playlist: "",
 		
-		searchlist1: "쯔위"
+		searchlist1: "베이징"
 	},
 	getDom: function () {
 		var wrapper = document.createElement("div");
@@ -60,9 +60,7 @@ Module.register("MMM-EmbedYoutube1", {
 	notificationReceived: function(notification, payload) {
 		Log.info(this.name + " - received notification: " + notification);
 		
-		if(notification === "Modules All Change"){
-			this.hide()
-		}
+		
 		
 		if(notification === "PLAYLISTCHANGE"){
 			var payload1=payload.split("_");

@@ -391,10 +391,10 @@ var config = {
 		//1
 		{
 			module: "MMM-EmbedYoutube1",  //25
-			position: "bottom_bar",	
+			position: "top_center",	
 			config: {
-				video_id: "w3jLJU7DT5E",
-				searchlist1: "쯔위",
+				video_id: "aizhVEOx-q0",
+				searchlist1: "베이징",
 				loop: true
 			}
 		},
@@ -465,7 +465,7 @@ var config = {
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
 					"Slide 2": ["MMM-Avinor"],
 					"Slide 3": ["FirstAirport-2F","CategoryChoiceAirport","MMM-EmbedYoutube1","MMM-EmbedYoutube2","FirstAirport-1F","mm-hide-all","clock","The1Airport"],
-					//"Slide 4": ["clock","MMM-AfterImage","MMM-BeforeImage","MMM-BeforeAfter","MMM-DeleteImage"],
+					"Slide 4": ["MMM-ImageSlideshow","MMM-ImageSlideshow1","MMM-ImageSlideshow2","MMM-EmbedYoutube1"],
 				},
 				keyBindings: { 
 					enabled: true,
@@ -627,6 +627,27 @@ var config = {
 				imagePaths: ["modules/WhatAge/Button"]
 			}
 		},
+		{
+			module: 'MMM-ImageSlideshow',
+			position: 'bottom_left',
+			config: {
+				imagePaths: ['modules/CategoryChoiceAfrica']
+			}
+		},
+		{
+			module: 'MMM-ImageSlideshow1',
+			position: 'bottom_left',
+			config: {
+				imagePaths: ['modules/CategoryChoiceAsia']
+			}
+		},
+		{
+			module: 'MMM-ImageSlideshow2',
+			position: 'bottom_right',
+			config: {
+				imagePaths: ['modules/CategoryChoiceAmerica']
+			}
+		}			
 	]
 };
 
