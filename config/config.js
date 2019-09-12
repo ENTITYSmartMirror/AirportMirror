@@ -389,7 +389,7 @@ var config = {
 		},
 
 		//1
-		{
+		/*{
 			module: "MMM-EmbedYoutube1",  //25
 			position: "top_center",	
 			config: {
@@ -398,6 +398,7 @@ var config = {
 				loop: true
 			}
 		},
+*/
 		//2	
 		{
 			module: "CategoryChoiceEntMenu", //26
@@ -460,12 +461,12 @@ var config = {
 				showPageIndicators: true,
 				showPageControls: true,
 				slides: {
-					//main: ["mm-hide-all","WhatAge","camera","clock"],
-					main: [/*"mm-hide-all","WhatAge","camera",*/"clock","CategoryHairstyle","CategorySelectMain"],
+					main: ["mm-hide-all","WhatAge","camera","clock"],
+					//main: [/*"mm-hide-all","WhatAge","camera",*/"clock","CategoryHairstyle","CategorySelectMain"],
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
 					"Slide 2": ["MMM-Avinor"],
 					"Slide 3": ["FirstAirport-2F","CategoryChoiceAirport","MMM-EmbedYoutube1","MMM-EmbedYoutube2","FirstAirport-1F","mm-hide-all","clock","The1Airport"],
-					"Slide 4": ["MMM-ImageSlideshow","MMM-ImageSlideshow1","MMM-ImageSlideshow2","MMM-EmbedYoutube1"],
+					//"Slide 4": ["MMM-ImageSlideshow","MMM-ImageSlideshow1","MMM-ImageSlideshow2","MMM-EmbedYoutube1"],
 				},
 				keyBindings: { 
 					enabled: true,
