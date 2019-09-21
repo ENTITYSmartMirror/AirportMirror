@@ -34,14 +34,14 @@ Module.register("CategoryChoiceAirport",{
         buttons: {
                     "1": {
 	                  		module: "The1Airport",
-												img:"https://apprecs.org/gp/images/app-icons/300/ec/com.nhn.android.webtoon.jpg",
+												//img:"https://apprecs.org/gp/images/app-icons/300/ec/com.nhn.android.webtoon.jpg",
 												width:"50",
 												height:"50",
 												text:"제1여객터미널",
                           },
 										"2": {
 												module: "MMM-2Airport",
-												img:"https://cdn1.iconfinder.com/data/icons/logotypes/32/youtube-256.png",
+												//img:"https://cdn1.iconfinder.com/data/icons/logotypes/32/youtube-256.png",
 												width:"50",
 												height:"50",
 												text:"제2여객터미널",
@@ -98,14 +98,17 @@ Module.register("CategoryChoiceAirport",{
 								fetch(data.showUrl);
 								console.log("Visiting show URL: "+data.showUrl);
 							}
+							modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
+							// Prints in the console what just happend (adding the ID). 
+							console.log("sshowing "+modules[i].name+" ID: "+idnr[1]);
 							//한 프레임에 두가지이상의 모듈이 뜨지 않게 하기.
-							
+							/*
 							if (modules[i].name == 'The1Airport') {
 								console.log("Hiding opend "+ modules[i].name+" ID: "+idnr[1]+"button number"+num);
 								//modules[44].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[28].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								//modules[28].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								setTimeout(function(){
-									modules[43].show(self.config.animationSpeed, {force: self.config.allowForce});
+									modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
 								},500);
 							}
 							else if (modules[i].name == 'MMM-2Airport') {
@@ -114,7 +117,7 @@ Module.register("CategoryChoiceAirport",{
 								setTimeout(function(){
 									modules[42].show(self.config.animationSpeed, {force: self.config.allowForce});
 								},500);
-							}
+							}*/
 						}else{
 							// 모듈이 켜있는 상태일때 
 							modules[i].hide(self.config.animationSpeed, {force: self.config.allowForce});

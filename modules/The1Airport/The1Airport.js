@@ -252,7 +252,7 @@ Module.register("The1Airport",{
 	
 	notificationReceived: function(notification, payload) {
 		if(notification === 'Modules All Change'){
-			this.hide()
+			//this.hide()
 		}
 	}
 	

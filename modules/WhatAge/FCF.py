@@ -14,7 +14,7 @@ cv2.imwrite('C:/AirportHelper/modules/WhatAge/face.jpg', frame)
 cap.release()
 cv2.destroyAllWindows()
 
-subscription_key = "d7cbf962fa5f4b2487b4891c0b5619a0"
+subscription_key = "0faaaaaf79744c0bbc821c60ba21bb14"
 
 image_path = os.path.join('C:/AirportHelper/modules/WhatAge/face.jpg')
 

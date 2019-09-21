@@ -598,7 +598,7 @@ var config = {
 		},
 		{
 			module: "WhatAge",
-			position: "top_center",
+			position: "upper_third",
 			header:"여기를 클릭",
 			config: {
 				imagePaths: ["modules/WhatAge/Button"]

@@ -34,14 +34,14 @@ Module.register("CategoryChoiceEntMenu",{
         buttons: {
                     "1": {
 	                  		module: "The1Airport",
-												img:"https://apprecs.org/gp/images/app-icons/300/ec/com.nhn.android.webtoon.jpg",
+												
 												width:"50",
 												height:"50",
 												text:"제1여객터미널",
                           },
 										"2": {
 												module: "MMM-2Airport",
-												img:"https://cdn1.iconfinder.com/data/icons/logotypes/32/youtube-256.png",
+												
 												width:"50",
 												height:"50",
 												text:"제2여객터미널",
