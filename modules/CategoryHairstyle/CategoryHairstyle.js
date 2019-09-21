@@ -37,17 +37,19 @@ Module.register("CategoryHairstyle",{
 			"1": {
 				module: "CategoryManhair",
 				text:   "국내선",
-				img:"modules/CategoryHairstyle/plane.png",
-				width: "450",
-				height: "450",
+				img:"modules/CategoryHairstyle/korea.png",
+				width: "600",
+				height: "600",
+				size:"5",
 			},
 
 			"2": {
 				module: "CategoryChoiceContinent",
 				text:   "국제선",
-				img : "modules/CategoryHairstyle/plane.png",
-				width: "450",
-				height: "450",
+				img : "modules/CategoryHairstyle/globe.png",
+				width: "600",
+				height: "600",
+				size:"1",
 			}
 		}
 	},

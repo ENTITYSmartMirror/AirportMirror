@@ -36,7 +36,7 @@ var config = {
 		},
 		{
 			module: "CategoryHairstyle",  //1
-			position: "lower_third", // This can be any of the regions.
+			position: "middle_center", // This can be any of the regions.
 			header: "이용노선을 선택하세요.", // Optional
 			classes: "default everyone", // Optional
 			config: {
@@ -449,8 +449,8 @@ var config = {
 				showPageIndicators: true,
 				showPageControls: true,
 				slides: {
-					main: ["mm-hide-all","WhatAge","camera","clock","MMM-Testpython"],
-					//main: [/*"mm-hide-all","WhatAge","camera",*/"clock","CategoryHairstyle","CategorySelectMain"],
+					//main: ["mm-hide-all","WhatAge","camera","clock","MMM-Testpython"],
+					main: [/*"mm-hide-all","WhatAge","camera",*/"clock","CategoryHairstyle","CategorySelectMain"],
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
 					"Slide 2": ["MMM-Avinor"],
 					"Slide 3": ["FirstAirport-2F","CategoryChoiceAirport","MMM-EmbedYoutube1","MMM-EmbedYoutube2","FirstAirport-1F","mm-hide-all","clock","The1Airport"],
