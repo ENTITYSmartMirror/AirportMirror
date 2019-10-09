@@ -40,7 +40,9 @@ Module.register("MMM-Testpython", {
       break;
       case "Modules All Change" :
       var ele2 = document.getElementById("showage")
-      ele2.innerHTML =  "이 곳에 예상 나이가 표시됩니다."
+      ele2.innerHTML =  "관광지를 추천 !"
+      var elemk = document.getElementById("clickid1")
+      elemk.innerHTML = "외모 나이에 따라."
       break;
       case "agecomplete":
         console.log("payload what"+payload)

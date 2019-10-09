@@ -194,6 +194,7 @@ Module.register("WhatAge", {
 			this.sendNotification("agecomplete",payload);
 			console.log("fufufufufufufufufu");
 		}
+		
 
     },    
 
@@ -395,6 +396,11 @@ Module.register("WhatAge", {
 		if(notification === "LOADINGBEFORE"){
 			//console.log("this a ", this.config.a)
 			this.config.a=3;
+		}
+		if(notification =="Modules All Change")
+		{
+			this.config.a=0;
+			
 		}
 /*
 		if(notification === "LOADINGAFTER"){

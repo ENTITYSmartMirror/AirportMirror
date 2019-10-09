@@ -371,6 +371,13 @@
     "desc": "Displays the last post from Les Joies Du Code, or TheCodingLove (The english version)."
   },
   {
+    "longname": "MMM-nyc-transit",
+    "id": "elaniobro/MMM-nyc-transit",
+    "url": "https://github.com/elaniobro/MMM-nyc-transit",
+    "author": "Elaniobro",
+    "desc": "Real-time MTA subway countdown clock for stations you choose. Configurable for marquee and or list view"
+  },
+  {
     "longname": "MMM-EMTValencia",
     "id": "TheRaulXP/MMM-EMTValencia",
     "url": "https://github.com/TheRaulXP/MMM-EMTValencia",
@@ -411,6 +418,13 @@
     "url": "https://github.com/j-hiller/MMM-AC-aseag",
     "author": "j-hiller",
     "desc": "Displays departures for ASEAG busses in Aachen, Germany."
+  },
+  {
+    "longname": "MMM-AtbSanntid",
+    "id": "Springvar/MMM-AtbSanntid",
+    "url": "https://github.com/Springvar/MMM-AtbSanntid",
+    "author": "Springvar",
+    "desc": "Unofficial module showing departure times from given stops for the public transport service in Trøndelag, Norway - AtB"
   },
   {
     "longname": "MMM-Avinor",
@@ -656,13 +670,6 @@
     "url": "https://github.com/ottopaulsen/MMM-NesteBussAtB",
     "author": "ottopaulsen",
     "desc": "A Magic Mirror Module that shows how many minutes until the next bus(es) goes from given bus stops."
-  },
-  {
-    "longname": "MMM-nyc-transit",
-    "id": "elaniobro/MMM-nyc-transit",
-    "url": "https://github.com/elaniobro/MMM-nyc-transit",
-    "author": "Elaniobro",
-    "desc": "Real-time MTA subway countdown clock"
   },
   {
     "longname": "MMM-OakBus",
@@ -1071,6 +1078,13 @@
     "desc": "Show status for your Volkswagen electric car, based on VW We Connect software formerly Car-Net)"
   },
   {
+    "longname": "MMM-imhdsk",
+    "id": "Adman/MMM-imhdsk",
+    "url": "https://github.com/Adman/MMM-imhdsk",
+    "author": "Adman",
+    "desc": "Display real-time estimations for public transport stops in Bratislava, Slovakia"
+  },
+  {
     "longname": "MMM-AlexaOnOff",
     "id": "shbatm/MMM-AlexaOnOff",
     "url": "https://github.com/shbatm/MMM-AlexaOnOff",
@@ -1223,6 +1237,13 @@
     "url": "https://github.com/mstarzec386/MMM-Airly",
     "author": "mstarzec386",
     "desc": "Air pollution in Polish cities. Data from airly (https://airly.eu/)"
+  },
+  {
+    "longname": "MMM-AQI",
+    "id": "ryck/MMM-AQI",
+    "url": "https://github.com/ryck/MMM-AQI",
+    "author": "ryck",
+    "desc": "MagigMirror module to get the Air Quality Index (AQI) using the World Air Quality Index project API."
   },
   {
     "longname": "MMM-BMW-DS",
@@ -3883,6 +3904,20 @@
     "url": "https://github.com/grabenhenrich/MMM-DateOnly",
     "author": "grabenhenrich",
     "desc": "Shows the date without a clock (if you have one in another place)."
+  },
+  {
+    "longname": "MMM-Reddito",
+    "id": "bittiez/MMM-Reddito",
+    "url": "https://github.com/bittiez/MMM-Reddito",
+    "author": "bittiez",
+    "desc": "Shows specified subreddits(Text only), can have multiple instances."
+  },
+  {
+    "longname": "MMM-WordOfTheDay",
+    "id": "bittiez/MMM-MWWordOfTheDay",
+    "url": "https://github.com/bittiez/MMM-MWWordOfTheDay",
+    "author": "bittiez",
+    "desc": "Shows the word of the day from the Merriam Webster's dictionary."
   },
   {
     "longname": "MMM-Nightscout",
