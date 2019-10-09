@@ -227,7 +227,7 @@ Module.register("CategoryHairstyle",{
         }
 		// All done. :)
         return item;
-	}
+	},
 	
 });	
 

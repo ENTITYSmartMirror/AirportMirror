@@ -6,6 +6,7 @@ Module.register("MMM-Testpython", {
         Testpythons = this;
     },
 
+
   getDom: function() {
     var element = document.createElement("div")
     element.className = "myContent"

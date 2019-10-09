@@ -104,12 +104,12 @@ var config = {
 			}
 		},
 		{
-			module: "ManCutdandy",
+			module: "ManCutdandy", //8
 			position: "bottom_left",	// This can be any of the regions.
 			hide : "true",
 			config: {
 				// See "Configuration options" for more information.
-					url: ["http://s3.us-east-2.amazonaws.com/beautymirror.com/demo/남자컷댄디.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
+					url: ["http://s3.us-east-2.amazonaws.com/beautymirror.com/demo/jeju.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
 					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
 					width: "1000", // width of iframe
 					height: "1000", // height of iframe
@@ -449,11 +449,11 @@ var config = {
 				showPageIndicators: true,
 				showPageControls: true,
 				slides: {
-					//main: ["mm-hide-all","WhatAge","camera","clock","MMM-Testpython"],
-					main: [/*"mm-hide-all","WhatAge","camera",*/"clock","CategoryHairstyle","CategorySelectMain"],
+					main: ["mm-hide-all","WhatAge","clock","MMM-Testpython"],
+					"Slide 2": ["mm-hide-all","clock","CategoryHairstyle","CategorySelectMain"],
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
-					"Slide 2": ["MMM-Avinor"],
-					"Slide 3": ["FirstAirport-2F","CategoryChoiceAirport","MMM-EmbedYoutube1","MMM-EmbedYoutube2","FirstAirport-1F","mm-hide-all","clock","The1Airport"],
+					"Slide 3": ["MMM-Avinor"],
+					"Slide 4": ["FirstAirport-2F","CategoryChoiceAirport","MMM-EmbedYoutube1","MMM-EmbedYoutube2","FirstAirport-1F","mm-hide-all","clock","The1Airport"],
 					//"Slide 4": ["MMM-ImageSlideshow","MMM-ImageSlideshow1","MMM-ImageSlideshow2","MMM-EmbedYoutube1"],
 				},
 				keyBindings: { 

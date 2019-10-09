@@ -84,6 +84,10 @@ Module.register("WhatAge", {
 
 	start: function () {
 		WhatAge = this;
+
+		
+		
+		WhatAge.sendNotification("CAROUSEL_NEXT");
         // add identifier to the config
 
         this.config.identifier = this.identifier;
@@ -100,7 +104,7 @@ Module.register("WhatAge", {
 
 			this.errorMessage = "MMM-ImageSlideshow: Missing required parameter."
 
-        }
+		}
 
         else {
 

@@ -35,7 +35,7 @@ Module.register("CategoryManhair",{
             "1": {
 				module: "ManCutdandy",
 				text:   "서울",
-				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
+				img: "modules/CategoryManhair/seoul.png",
 				width: "50",
 				height: "50",
 			},
@@ -43,7 +43,7 @@ Module.register("CategoryManhair",{
 			"2": {
 				module: "ManCutRegent",
 				text:   "부산",
-				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
+				img: "modules/CategoryManhair/busan.png",
 				width: "50",
 				height: "50",
 			},
@@ -51,7 +51,7 @@ Module.register("CategoryManhair",{
 			"3": {
 				module: "ManCutTwoBlock",
 				text:   "대전",
-				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
+				img: "modules/CategoryManhair/daejeon.png",
 				width: "50",
 				height: "50",
 			},
@@ -59,7 +59,7 @@ Module.register("CategoryManhair",{
 			"4": {
 				module: "ManCutPomade",
 				text:   "인천",
-				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
+				img: "modules/CategoryManhair/incheon.png",
 				width: "50",
 				height: "50",
 			},
@@ -67,7 +67,7 @@ Module.register("CategoryManhair",{
 			"5": {
 				module: "ManPermPart",
 				text:   "대구",
-				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
+				img: "modules/CategoryManhair/daegu.png",
 				width: "50",
 				height: "50",
 			},
@@ -75,7 +75,7 @@ Module.register("CategoryManhair",{
 			"6": {
 				module: "ManPermRegent",
 				text:   "광주",
-				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
+				img: "modules/CategoryManhair/gwangju.png",
 				width: "50",
 				height: "50",
 			},
@@ -83,7 +83,7 @@ Module.register("CategoryManhair",{
 			"7": {
 				module: "ManPermIron",
 				text:   "제주도",
-				img: "https://image.flaticon.com/icons/svg/1751/1751524.svg",
+				img: "modules/CategoryManhair/jeju.jpg",
 				width: "50",
 				height: "50",
 			},
@@ -158,7 +158,7 @@ Module.register("CategoryManhair",{
 								// Prints the visited hideURL.
 								console.log("Visiting show URL: "+data.showUrl);
 							}
-							if (modules[i].name == 'ManCutDandy') {
+							if (modules[i].name == 'ManPermIron') {
 								
 								for(var num=1; num<18; num++ ){
 								console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
@@ -166,69 +166,10 @@ Module.register("CategoryManhair",{
 								}
 								console.log("Showing "+modules[4].name+" ID: "+idnr[1]);	
 								setTimeout(function(){
-									modules[4].show(self.config.animationSpeed, {force: self.config.allowForce});
+									modules[8].show(self.config.animationSpeed, {force: self.config.allowForce});
 								},500);
 							}
-							else if (modules[i].name == 'ManCutRegent') {
-								for(var num=1; num<18; num++ ){
-									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
-									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-									}
-									console.log("Showing "+modules[5].name+" ID: "+idnr[1]);	
-									setTimeout(function(){
-										modules[5].show(self.config.animationSpeed, {force: self.config.allowForce});
-									},500);
-							}
-							else if (modules[i].name == 'ManCutTwoBlock') {
-								for(var num=1; num<18; num++ ){
-									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
-									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-									}
-									console.log("Showing "+modules[6].name+" ID: "+idnr[1]);	
-									setTimeout(function(){
-										modules[6].show(self.config.animationSpeed, {force: self.config.allowForce});
-									},500);
-							}
-							else if (modules[i].name == 'ManCutPomade') {
-								for(var num=1; num<18; num++ ){
-									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
-									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-									}
-									console.log("Showing "+modules[7].name+" ID: "+idnr[1]);	
-									setTimeout(function(){
-										modules[7].show(self.config.animationSpeed, {force: self.config.allowForce});
-									},500);
-							}
-							else if (modules[i].name == 'ManPermPart') {
-								for(var num=1; num<18; num++ ){
-									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
-									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-									}
-									console.log("Showing "+modules[8].name+" ID: "+idnr[1]);	
-									setTimeout(function(){
-										modules[8].show(self.config.animationSpeed, {force: self.config.allowForce});
-									},500);
-							}
-							else if (modules[i].name == 'ManPermRegent') {
-								for(var num=1; num<18; num++ ){
-									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
-									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-									}
-									console.log("Showing "+modules[9].name+" ID: "+idnr[1]);	
-									setTimeout(function(){
-										modules[9].show(self.config.animationSpeed, {force: self.config.allowForce});
-									},500);
-							}
-							else {
-								for(var num=1; num<18; num++ ){
-									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
-									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-									}
-								console.log("Showing "+modules[10].name+" ID: "+idnr[1]);	
-								setTimeout(function(){
-									modules[10].show(self.config.animationSpeed, {force: self.config.allowForce});
-								},500);
-							}
+							
 							CategoryManhair.sendNotification("CategoryManhair is Clicked");
 						}
 					}
