@@ -2387,6 +2387,13 @@
     "desc": "Provides seamless integration with Google Drive™ to display compliments and images from Drive on the MagicMirror² interface."
   },
   {
+    "longname": "MMM-RepRapFirmware",
+    "id": "MMM-RepRapFirmware/",
+    "url": "https://github.com/arirobinson/MMM-RepRapFirmware/",
+    "author": "arirobinson",
+    "desc": "Display live info from your 3D printer running [RepRapFirmware](https://github.com/dc42/RepRapFirmware). This firmware is mainly used on [Duet3D control boards (Duet Wifi & Ethernet)](https://www.duet3d.com/)."
+  },
+  {
     "longname": "MMM-RescueTime",
     "id": "Duske/MMM-RescueTime",
     "url": "https://github.com/Duske/MMM-RescueTime",

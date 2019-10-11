@@ -452,7 +452,7 @@ var config = {
 					main: ["mm-hide-all","WhatAge","clock","MMM-Testpython","camera"],
 					"Slide 2": ["mm-hide-all","clock","CategoryHairstyle","CategorySelectMain"],
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
-					"Slide 3": ["MMM-Avinor"],
+					"Slide 3": ["MMM-AirTest"],
 					"Slide 4": ["FirstAirport-2F","CategoryChoiceAirport","MMM-EmbedYoutube1","MMM-EmbedYoutube2","FirstAirport-1F","mm-hide-all","clock","The1Airport"],
 					//"Slide 4": ["MMM-ImageSlideshow","MMM-ImageSlideshow1","MMM-ImageSlideshow2","MMM-EmbedYoutube1"],
 				},
@@ -624,6 +624,13 @@ var config = {
 			config: {
 				imagePaths: ['modules/CategoryChoiceAmerica']
 			}
+		},
+		{
+			module: "MMM-AirTest",
+			position: "bottom_right",
+			config:{
+			}
+			
 		}			
 	]
 };
