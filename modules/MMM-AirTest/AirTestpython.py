@@ -6,8 +6,14 @@ xmldoc = parse(var_url)
 
 for item in xmldoc.iterfind('body/items/item'):
     airFln = item.findtext('airFln')
-    airlineKorean = item.findtext('airlineKorean')
-    arrivedKor = item.findtext('arrivedKor')
+    airlineEnglish = item.findtext('airlineEnglish')
+    arrivedEng = item.findtext('arrivedEng')
     std = item.findtext('std')
 
-    print(airFln+' '+airlineKorean+' '+arrivedKor+' '+std)
+    print(airFln+';'+airlineEnglish+';'+arrivedEng+';'+std)
+    '''
+    print(airFln)
+    print(std)
+    print(arrivedEng)
+    print(std)
+    '''

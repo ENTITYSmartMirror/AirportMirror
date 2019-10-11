@@ -69,22 +69,34 @@ Module.register("MMM-AirTest", {
     switch(notification) {
       case "I_airDID":
         console.log("success " + payload);
-        /*
-        var payload3;
-        payload3=payload.toString().split(",");
-        console.log("Socket recevied 1: " + payload3);
-        var elemk = document.getelementById("airtestid")
-        var elemk2 = document.getelementById("showageair");
-        var gender = payload3[0];
-        console.log("Socket recevied 1: " + gender);
-        var age = payload3[1];
-        console.log("Socket recevied 1: " + age);
-        var change; 
-        */
-       var elemk = document.getElementById("airtestid");
-       var elemk2 = document.getElementById("showageair");
-       elemk.innerHTML = "";
-       elemk2.innerHTML = "고객님의 예상나이는" + payload + "입니다.";   
+
+        var body = document.getElementsByTagName('body')[0];
+        var tbl = document.createElement('table');
+        tbl.style.width = '100%';
+        tbl.setAttribute('border', '1');
+        var tbdy = document.createElement('tbody');
+        for (var i = 0; i < 4; i++) {
+          var tr = document.createElement('tr');
+          for (var j = 0; j < 11; j++) {
+            if (i == 3 && j == 10) {
+              break
+            } else {
+                var td = document.createElement('td');
+                td.appendChild(document.createTextNode('\u0020'))
+                i == 1 && j == 1 ? td.setAttribute('rowSpan', '2') : null;
+                tr.appendChild(td)
+            }
+        }
+        tbdy.appendChild(tr);
+      }
+      tbl.appendChild(tbdy);
+      body.appendChild(tbl)
+      
+      
+      var elemk = document.getElementById("airtestid");
+      var elemk2 = document.getElementById("showageair");
+      elemk.innerHTML = "비행기 번호";
+      //elemk2.innerHTML =   payload;   
         
       break
     }
