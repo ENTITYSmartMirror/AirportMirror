@@ -1,1 +1,1 @@
-print("kim")
+print("김찬영")

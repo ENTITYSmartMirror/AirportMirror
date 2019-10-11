@@ -54,7 +54,7 @@ Module.register("MMM-AirTest", {
 			  var gender = payload3[0];
         var age = payload3[1];
         */
-        var elemk = document.getelementById("airtestid")
+        var elemk = document.getElementById("airtestid")
         //var elemk2 = document.getelementById("showageair");
         elemk.innerHTML = "switch button";
         //elemk2.innerHTML = "고객님의 예상나이는" + age + "살 입니다."; 
@@ -80,9 +80,12 @@ Module.register("MMM-AirTest", {
         var age = payload3[1];
         console.log("Socket recevied 1: " + age);
         var change; 
-        elemk.innerHTML = "";
-        elemk2.innerHTML = "고객님의 예상나이는" + age + "입니다.";   
         */
+       var elemk = document.getElementById("airtestid");
+       var elemk2 = document.getElementById("showageair");
+       elemk.innerHTML = "";
+       elemk2.innerHTML = "고객님의 예상나이는" + payload + "입니다.";   
+        
       break
     }
   }
