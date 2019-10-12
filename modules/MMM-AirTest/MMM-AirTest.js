@@ -6,7 +6,9 @@ Module.register("MMM-AirTest", {
         AirTest = this;
     },
 
-
+    getStyles: function() {
+      return ["MMM-AirTest.css"];
+    },
   getDom: function() {
     var elementair = document.createElement("div")
     elementair.className = "myContentair"
@@ -81,13 +83,17 @@ Module.register("MMM-AirTest", {
         //여기까지하면 payloadcoomma[0]은 A;B;C payloadcomma[1]은 D;E;F 로 되고
         payload1=payloadcomma[0]
         payload2=payloadcomma[1]
+        payload3=payloadcomma[2]
+        payload4=payloadcomma[3]
+        payload5=payloadcomma[4]
+        payload6=payloadcomma[5]
         //이걸로 인자를 이동시키고
         payload1split=payload1.toString().split(";")
         payload2split=payload2.toString().split(";")
-        payload1split1=payload1split[0]
-        payload1split2=payload1split[1]
-        payload1split3=payload1split[2]
-        payload1split4=payload1split[3]
+        payload3split=payload3.toString().split(";")
+        payload4split=payload4.toString().split(";")
+        payload5split=payload5.toString().split(";")
+        payload6split=payload6.toString().split(";")
         //이렇게 나누면
         //payload1[0]=A
         //payload1[1]=B
@@ -100,7 +106,7 @@ Module.register("MMM-AirTest", {
         
         console.log("payload2: " + payload1);
         
-        console.log("payload1[0] " + payload1split1);
+        console.log("payload1[0] " + payload1split);
         
        var elemk = document.getElementById("airtestid");
        var elemk2 = document.getElementById("showageair");
@@ -132,19 +138,32 @@ Module.register("MMM-AirTest", {
        tbdy.appendChild(tdbyth);
        
        
-       for (var i = 0; i < 3; i++) {
+       for (var i = 0; i < 5; i++) {
            var tr = document.createElement('tr');
            for (var j = 0; j < 4; j++) {
-               if (i == 4 && j == 3) {
+               if (i == 7 && j == 3) {
                    break
                } else {
                    var td = document.createElement('td');
+                   td.className="Mytd"
                    //td.appendChild(document.createTextNode('\u0020'))
                    if(i==0){
                     td.innerHTML=payload1split[j];
                    }
                    else if(i==1){
                     td.innerHTML=payload2split[j];
+                   }
+                   else if(i==2){
+                    td.innerHTML=payload3split[j];
+                   }
+                   else if(i==3){
+                    td.innerHTML=payload4split[j];
+                   }
+                   else if(i==4){
+                    td.innerHTML=payload5split[j];
+                   }
+                   else if(i==5){
+                    td.innerHTML=payload6split[j];
                    }
                    //i == 1 && j == 1 ? td.setAttribute('rowSpan', '2') : null;
                    tr.appendChild(td)
