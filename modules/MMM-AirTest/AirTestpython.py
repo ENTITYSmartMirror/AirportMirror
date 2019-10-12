@@ -9,9 +9,13 @@ for item in xmldoc.iterfind('body/items/item'):
     airlineEnglish = item.findtext('airlineEnglish')
     arrivedEng = item.findtext('arrivedEng')
     std = item.findtext('std')
-   
-    print(airFln+';'+airlineEnglish+';'+arrivedEng+';'+std)
+    std1 = int(std)
+    std2 = std1%100
+    std3 = std1/100
+    std4 = int(std3)
+    print(airFln+';'+airlineEnglish+';'+arrivedEng+';'+"{}".format(std4)+": {}".format(std2))
     '''
+    print(airFln+';'+airlineEnglish+';'+arrivedEng+';'+std1)
     print(airFln)
     print(std)
     print(arrivedEng)
