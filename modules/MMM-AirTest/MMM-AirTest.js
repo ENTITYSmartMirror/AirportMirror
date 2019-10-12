@@ -113,6 +113,25 @@ Module.register("MMM-AirTest", {
        tbl.style.width = '100%';
        tbl.setAttribute('border', '1');
        var tbdy = document.createElement('tbody');
+       
+       var tdbyth = document.createElement('th');
+       tdbyth.className = "Myth";
+       tdbyth.innerHTML = "airFln";
+       tbdy.appendChild(tdbyth);
+       var tdbyth = document.createElement('th');
+       tdbyth.className = "Myth";
+       tdbyth.innerHTML = "airline";
+       tbdy.appendChild(tdbyth);
+       var tdbyth = document.createElement('th');
+       tdbyth.className = "Myth";
+       tdbyth.innerHTML = "Arrived";
+       tbdy.appendChild(tdbyth);
+       var tdbyth = document.createElement('th');
+       tdbyth.className = "Myth";
+       tdbyth.innerHTML = "starttime";
+       tbdy.appendChild(tdbyth);
+       
+       
        for (var i = 0; i < 3; i++) {
            var tr = document.createElement('tr');
            for (var j = 0; j < 4; j++) {
