@@ -1939,13 +1939,6 @@
     "desc": "See your docker swarm running in real time through docker-swarm-visualizer"
   },
   {
-    "longname": "MMM-Domoticz",
-    "id": "spoturdeal/MMM-Domoticz",
-    "url": "https://github.com/spoturdeal/MMM-Domoticz",
-    "author": "Carl",
-    "desc": "A module to display data from your [domoticz.com](https://www.domoticz.com/) home automation system."
-  },
-  {
     "longname": "MMM-edgerouter-throughput",
     "id": "mscharl/MMM-edgerouter-throughput",
     "url": "https://github.com/mscharl/MMM-edgerouter-throughput",

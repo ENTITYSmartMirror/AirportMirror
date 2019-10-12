@@ -102,8 +102,9 @@ Module.register("MMM-AirTest", {
         payload1=payloadcomma[0]
         payload2=payloadcomma[1]
         //이걸로 인자를 이동시키고
-        payload1.toString().split(";")
-        payload2.toString().split(";")
+        payload1split=payload1.toString().split(";")
+        payload2split=payload2.toString().split(";")
+        payload1split1=payload1split[0]
         //이렇게 나누면
         //payload1[0]=A
         //payload1[1]=B
@@ -114,9 +115,9 @@ Module.register("MMM-AirTest", {
         
         console.log("payloadcomma: " + payloadcomma);
         
-        console.log("payload2: " + payload2);
+        console.log("payload2: " + payload1);
         
-        console.log("payload1[0] " + payload1[0]);
+        console.log("payload1[0] " + payload1split1);
         
        var elemk = document.getElementById("airtestid");
        var elemk2 = document.getElementById("showageair");
