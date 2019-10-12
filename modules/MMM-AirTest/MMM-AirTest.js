@@ -69,18 +69,32 @@ Module.register("MMM-AirTest", {
     switch(notification) {
       case "I_airDID":
         console.log("success " + payload);
-        /*
-        var payload3;
-        payload3=payload.toString().split(",");
-        console.log("Socket recevied 1: " + payload3);
-        var elemk = document.getelementById("airtestid")
-        var elemk2 = document.getelementById("showageair");
-        var gender = payload3[0];
-        console.log("Socket recevied 1: " + gender);
-        var age = payload3[1];
-        console.log("Socket recevied 1: " + age);
-        var change; 
-        */
+        
+        //예를들어 print(A;B;C) print(D;E;F)를 파이썬에서 출력했다고 할때
+        //console창에선 A;B;C,D;E;F 로 결과가 뜨고 이걸 return해서 payload 인자로 받음
+        //이 인자를 A B C 따로따로 어케 나누냐
+        var payloadcomma;
+        payloadcomma=payload.toString().split(",");
+        //여기까지하면 payloadcoomma[0]은 A;B;C payloadcomma[1]은 D;E;F 로 되고
+        payload1=payloadcomma[0]
+        payload2=payloadcomma[1]
+        //이걸로 인자를 이동시키고
+        payload1.toString().split(";")
+        payload2.toString().split(";")
+        //이렇게 나누면
+        //payload1[0]=A
+        //payload1[1]=B
+        //payload1[2]=C
+        //payload1[0]=D
+        //payload1[1]=E
+        //payload1[2]=F
+        
+        console.log("payloadcomma: " + payloadcomma);
+        
+        console.log("payload2: " + payload2);
+        
+        console.log("payload1[0] " + payload1[0]);
+        
        var elemk = document.getElementById("airtestid");
        var elemk2 = document.getElementById("showageair");
        elemk.innerHTML = "";
