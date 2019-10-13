@@ -1,7 +1,18 @@
 from urllib.request import urlopen
 from xml.etree.ElementTree import parse
+from datetime import datetime
 
-var_url = urlopen('http://openapi.airport.co.kr/service/rest/FlightStatusList/getFlightStatusList?serviceKey=wHP%2BDtLICbhZ5HS1kuRTV4zXVjyuNgmSelChKsogFgLcXenf4DdlUd5lJmR9vnl4ddrBrtFu%2FaFoxhBxJr23Vg%3D%3D&schLineType=I&schIOType=O&schAirCode=GMP&schStTime=0600&schEdTime=1800')
+now = datetime.now()
+
+url = 'http://openapi.airport.co.kr/service/rest/FlightStatusList/getFlightStatusList?serviceKey=wHP%2BDtLICbhZ5HS1kuRTV4zXVjyuNgmSelChKsogFgLcXenf4DdlUd5lJmR9vnl4ddrBrtFu%2FaFoxhBxJr23Vg%3D%3D&schLineType=I&schIOType=O&schAirCode=GMP&schStTime='
+
+b ='&schEdTime=2400'
+hour = now.hour
+minute = now.minute
+
+x = url + str(hour)  + str(minute) + b
+
+var_url = urlopen(x)
 xmldoc = parse(var_url)
 
 for item in xmldoc.iterfind('body/items/item'):
@@ -14,10 +25,5 @@ for item in xmldoc.iterfind('body/items/item'):
     std3 = std1/100
     std4 = int(std3)
     print(airFln+';'+airlineEnglish+';'+arrivedEng+';'+"{}".format(std4)+": {}".format(std2))
-    '''
-    print(airFln+';'+airlineEnglish+';'+arrivedEng+';'+std1)
-    print(airFln)
-    print(std)
-    print(arrivedEng)
-    print(std)
-    '''
+
+
