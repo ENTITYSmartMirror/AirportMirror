@@ -10,7 +10,13 @@ b ='&schEdTime=2400'
 hour = now.hour
 minute = now.minute
 
-x = url + str(hour)  + str(minute) + b
+if hour < 10 :
+    c = "0" +  str(hour)
+    x = url + c + str(minute) + b
+
+if hour > 9 :
+    x = url + str(hour)  + str(minute) + b
+
 
 var_url = urlopen(x)
 xmldoc = parse(var_url)
