@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-#AirportBording.py
 from urllib.request import urlopen
 from xml.etree.ElementTree import parse
 from datetime import datetime
