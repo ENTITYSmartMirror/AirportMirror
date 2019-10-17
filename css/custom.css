@@ -11,6 +11,7 @@
 
  /* Aenderungen Wetter Icon */
 /* Aenderungen aktuelles Wetter */
+@import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
 
 body {
 
@@ -183,4 +184,19 @@ content: url("/css/icons/cloudy-night-1.svg");
 height: 50px;
 padding-left: 5px;
 padding-top: 7px;
+}
+
+.module.clockhour{
+  font-family: 'Jua', sans-serif;
+  color: rgb(255, 255, 255);  
+}
+
+.clockMinute{
+  font-family: 'Jua', sans-serif;
+  color: rgb(255, 255, 255);  
+}
+
+.clockSecond{
+  font-family: 'Jua', sans-serif;
+  color: rgb(255, 255, 255);  
 }

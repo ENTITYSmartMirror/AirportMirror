@@ -1,0 +1,128 @@
+/*****************************************************
+ * Magic Mirror 2                                    *
+ * Custom CSS for MMM-modulebar                      *
+ *                                                   *
+ * By Erik Pettersson                                *
+ * Based on the TouchNavigation CSS by Brian Janssen *
+ * MIT Licensed.                                     *
+ *                                                   *
+ *****************************************************/
+ @import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
+.modulebar-menu {
+    display: flex;
+    align-items: stretch;
+}
+
+.modulebar-button {
+    z-index: 1;
+    /* Border */
+    border-style: solid;
+    border-width: 2px;
+    border-color: #aaa;
+    border-radius: 15px;
+
+    /* as container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 2px;
+    padding: 6px 6px;
+
+    font-family: 'Jua', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.modulebar-picture {
+    margin: 1px 1px;
+/*    width: 60px;*/
+/*    height: 60px;*/
+}
+
+.modulebar-text {
+    margin: -5px 0;
+}
+
+.CategoryHairstyle header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.CategoryHairstyle header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.CategoryManhair header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.CategoryChoiceContinent header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.CategoryChoiceAsia header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.CategoryChoiceEurope header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.CategoryChoiceAmerica header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.CategoryChoiceAfrica header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.CategorySelectMain header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.CategoryChoiceEntMenu header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.CategoryChoiceAirport header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.WhatAge header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.FirstAirport-1F header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.FirstAirport-2F header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}

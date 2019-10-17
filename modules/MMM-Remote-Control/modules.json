@@ -840,6 +840,13 @@
     "desc": "Display live Tesla status using the Teslamate self-hosted monitoring system and MQTT Broker"
   },
   {
+    "longname": "MMM-TeslaFi",
+    "id": "f00d4tehg0dz/MMM-TeslaFi",
+    "url": "https://github.com/f00d4tehg0dz/MMM-TeslaFi",
+    "author": "f00d4tehg0dz",
+    "desc": "Displays your Tesla data, live on your Mirror, using the Teslafi.com API. Subscription required"
+  },
+  {
     "longname": "MMM-TeslaStatus",
     "id": "aduyng/MMM-TeslaStatus",
     "url": "https://github.com/aduyng/MMM-TeslaStatus",
@@ -2014,6 +2021,13 @@
     "url": "https://github.com/Sickboy78/MMM-Homematic",
     "author": "Sickboy78",
     "desc": "Shows values and warnings from HomeMatic smart home components and system variables as text, icons or both."
+  },
+  {
+    "longname": "MMM-Homematic-Rooms",
+    "id": "JFWenisch/MMM-Homematic-Rooms",
+    "url": "https://github.com/JFWenisch/MMM-Homematic-Rooms",
+    "author": "JFWenisch",
+    "desc": "Requests device information from the HomeMatic CCU and displays them grouped by the assigned room."
   },
   {
     "longname": "MMM-Homematic-Thermostats",
@@ -3554,6 +3568,13 @@
     "url": "https://github.com/RobertShippey/MMM-PlexDeck",
     "author": "RobertShippey",
     "desc": "Show \"On Deck\" titles from your local Plex Media Server"
+  },
+  {
+    "longname": "MMM-PlexNowPlaying",
+    "id": "glitch452/MMM-PlexNowPlaying",
+    "url": "https://github.com/glitch452/MMM-PlexNowPlaying",
+    "author": "glitch452",
+    "desc": "Displays the list of playback sessions for a Plex Media Server"
   },
   {
     "longname": "MMM-Podcast2",

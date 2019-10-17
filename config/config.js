@@ -25,13 +25,17 @@ var config = {
 	language: "en",
 	timeFormat: 24,
 	units: "metric",
-
+	
+	getStyles: function () {
+		return ["font-awesome.css", "CategoryHairstyle.css"];
+	},
+	
 	modules: [
 		{
 			module: "clock",
 			position: "top_left",
 			config : {
-			display:"none", 
+				display:"none", 
 			}
 		},
 		{
