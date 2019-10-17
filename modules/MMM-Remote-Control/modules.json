@@ -371,6 +371,13 @@
     "desc": "Displays the last post from Les Joies Du Code, or TheCodingLove (The english version)."
   },
   {
+    "longname": "MMM-MataChuan",
+    "id": "Hcreak/MMM-MataChuan",
+    "url": "https://github.com/Hcreak/MMM-MataChuan",
+    "author": "Hcreak",
+    "desc": "Chinese online godfather NM$L Sun Xiaochuan"
+  },
+  {
     "longname": "MMM-nyc-transit",
     "id": "elaniobro/MMM-nyc-transit",
     "url": "https://github.com/elaniobro/MMM-nyc-transit",

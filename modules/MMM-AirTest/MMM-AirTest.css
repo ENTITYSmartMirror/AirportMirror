@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
+.myContentair{
+    overflow-x:hidden;
+    overflow-y:scroll;
+    width:1200px;
+    height:1500px;
+}
 .Myth {
     border-bottom:1px solid white;
     text-align: center;
@@ -13,6 +18,7 @@
     padding-right: 10px;
     text-align: center;
 }
+<<<<<<< HEAD
 .myContentair{
     overflow-x:hidden;
     overflow-y:scroll;
@@ -21,4 +27,6 @@
     font-family: 'Jua', sans-serif;
     color: rgb(255, 255, 255);
 }
+=======
+>>>>>>> 68f730f9975af65bf9af3ac8dad9e183cd839aff
 
