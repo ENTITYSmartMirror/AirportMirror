@@ -7,18 +7,30 @@ now = datetime.now()
 url = 'http://openapi.airport.co.kr/service/rest/FlightStatusList/getFlightStatusList?serviceKey=wHP%2BDtLICbhZ5HS1kuRTV4zXVjyuNgmSelChKsogFgLcXenf4DdlUd5lJmR9vnl4ddrBrtFu%2FaFoxhBxJr23Vg%3D%3D&schLineType=I&schIOType=I&schAirCode=GMP&schStTime='
 
 b ='&schEdTime=2400'
+d = '&numOfRows=100'
+
+
 hour = now.hour
 minute = now.minute
 
+'''
+hour = "06"
+minute = "00"
+x = url + hour + minute + b + d
+'''
+
 if hour < 10 :
     c = "0" +  str(hour)
-    x = url + c + str(minute) + b
+    x = url + c + str(minute) + b + d
+
 
 if hour > 9 :
-    x = url + str(hour)  + str(minute) + b
+    x = url + str(hour)  + str(minute) + b + d
+
 
 
 var_url = urlopen(x)
+
 xmldoc = parse(var_url)
 
 for item in xmldoc.iterfind('body/items/item'):
@@ -31,32 +43,5 @@ for item in xmldoc.iterfind('body/items/item'):
     std3 = std1/100
     std4 = int(std3)
     print(airFln+';'+airlineEnglish+';'+arrivedEng+';'+"{}".format(std4)+": {}".format(std2))
-
-
-
-'''
-from urllib.request import urlopen 
-from bs4 import BeautifulSoup 
-
-review_list=[]
-
-url='http://openapi.airport.co.kr/service/rest/FlightStatusList/getFlightStatusList?serviceKey=wHP%2BDtLICbhZ5HS1kuRTV4zXVjyuNgmSelChKsogFgLcXenf4DdlUd5lJmR9vnl4ddrBrtFu%2FaFoxhBxJr23Vg%3D%3D&schLineType=I&schIOType=O&schAirCode=GMP&schStTime=0600&schEdTime=1800'
-webpage=urlopen(url)
-source = BeautifulSoup(webpage,'html.parser',from_encoding='utf-8')
-
-reviews = source.findAll('item')
-
-for review in reviews:
-    review_list.append(review.get_text().strip().replace('\n','').replace('\t','').replace('\r',''))
-    print(review.get_text().strip())
-
-file = open('C:\\Users\\kms43\\Desktop\\jujang.txt','w',encoding='utf-8')
-
-for review in review_list:
-    file.write(review+'\n')
-
-file.close()
-
-'''
 
 

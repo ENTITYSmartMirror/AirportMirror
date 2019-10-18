@@ -6,6 +6,9 @@ Module.register("MMM-Testpython", {
         Testpythons = this;
     },
 
+    getStyles: function() {
+      return ["MMM-Testpython.css"];
+    },
 
   getDom: function() {
     var element = document.createElement("div")
@@ -13,13 +16,13 @@ Module.register("MMM-Testpython", {
     element.id="divid1"
     element.font = 4
     var subElement = document.createElement("p")
-    subElement.innerHTML = "외모나이에 따라 "
+    subElement.innerHTML = "제가 알려드립니다! "
     subElement.id = "clickid1"
     subElement.className = "click"
     subElement.style.fontSize = "2em"
     element.appendChild(subElement)
     var subelement2 = document.createElement("p")
-    subelement2.innerHTML = "관광지를 추천 !"
+    subelement2.innerHTML = "당신의 관광지를!"
     subelement2.id = "showage"
     subelement2.className = "showage"
     subelement2.style.fontSize = "2em"
@@ -36,13 +39,13 @@ Module.register("MMM-Testpython", {
       case "camera_stop":
         var elem = document.getElementById("clickid1")
         var showage2 = document.getElementById("showage")
-        showage2.innerHTML = "당신의 나이를 분석중입니다."  
+        showage2.innerHTML = "당신의 나이를 분석중입니다!"  
       break;
       case "Modules All Change" :
       var ele2 = document.getElementById("showage")
-      ele2.innerHTML =  "관광지를 추천 !"
+      ele2.innerHTML =  "당신의 관광지를!"
       var elemk = document.getElementById("clickid1")
-      elemk.innerHTML = "외모 나이에 따라."
+      elemk.innerHTML = "제가 알려드립니다!"
       break;
       case "agecomplete":
         console.log("payload what"+payload)

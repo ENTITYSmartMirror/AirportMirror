@@ -25,13 +25,17 @@ var config = {
 	language: "en",
 	timeFormat: 24,
 	units: "metric",
-
+	
+	getStyles: function () {
+		return ["font-awesome.css", "CategoryHairstyle.css"];
+	},
+	
 	modules: [
 		{
 			module: "clock",
 			position: "top_left",
 			config : {
-			display:"none", 
+				display:"none", 
 			}
 		},
 		{
@@ -600,7 +604,7 @@ var config = {
 		{
 			module: "WhatAge",
 			position: "upper_third",
-			header:"여기를 클릭",
+			header:"어디를 갈지 고민이신가요?",
 			config: {
 				imagePaths: ["modules/WhatAge/Button"]
 			}
