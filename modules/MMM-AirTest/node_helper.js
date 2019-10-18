@@ -9,14 +9,23 @@ module.exports = NodeHelper.create({
   
   socketNotificationReceived: function(notification, payload) {
     switch(notification) {
-      case "AIRTESTpy":
+      case "AIRTESTdomesticboardingpy":
         console.log("notification : " + notification)
-	    PythonShell.run('C:/AirportHelper/modules/MMM-AirTest/AirTestpython.py', null, function (err, result) {
+	    PythonShell.run('C:/AirportHelper/modules/MMM-AirTest/AirportDomesticBoarding.py', null, function (err, result) {
             if (err) throw err;
             console.log("gender : " + result);          
             socketTestpython.sendSocketNotification("I_airDID",result);
           });
 	       
+        break
+      case "AIRTESTdomesticarrivedpy":
+        console.log("notification : " + notification)
+      PythonShell.run('C:/AirportHelper/modules/MMM-AirTest/AirportDomesticArrived.py', null, function (err, result) {
+            if (err) throw err;
+            console.log("gender : " + result);          
+            socketTestpython.sendSocketNotification("I_airDID",result);
+          });
+          
         break
     }
   }

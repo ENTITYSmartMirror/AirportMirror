@@ -7,7 +7,6 @@ Module.register("MMM-AirTest", {
     },
     start: function (){
         AirTest = this;
-        //this.config.aaa=0;
         
     },
 
@@ -24,6 +23,7 @@ Module.register("MMM-AirTest", {
     subelementair.id = "airtestid"
     subelementair.className = "click"
     subelementair.addEventListener("click", () => {
+      console.log("ddddddddddddddddddd"+AirTest.config.aaa);
       if(this.config.aaa==0){
         subelementair.innerHTML = "국내선 출발 운항정보"
         AirTest.config.aaa=1;
@@ -31,13 +31,15 @@ Module.register("MMM-AirTest", {
        }
       else if(this.config.aaa==1){
         //국내선 출발운항정보
-        AirTest.sendSocketNotification("AIRTESTpy")
+        AirTest.sendSocketNotification("AIRTESTdomesticboardingpy")
+        AirTest.config.aaa=0;
        }
        else if(this.config.aaa==2){
+        AirTest.config.aaa=0;
          //두번째 파이썬 국제선 출발
         //AirTest.sendSocketNotification("AIRTESTpy")
        }
-      console.log("ddddddddddddddddddd"+AirTest.config.aaa);
+      
       //AirTest.sendSocketNotification("AIRTESTpy")
       //console.log("airtestairtest")
       
@@ -49,6 +51,7 @@ Module.register("MMM-AirTest", {
     subelement2.id = "showageair"
     subelement2.className = "showageair"
     subelement2.addEventListener("click", () => {
+      console.log("sese"+AirTest.config.aaa);
       if(this.config.aaa==0){
         subelementair.innerHTML = "국제선 출발 운항정보"
         AirTest.config.aaa=2;
@@ -56,12 +59,14 @@ Module.register("MMM-AirTest", {
        }
       else if(this.config.aaa==1){
         //국내선 도착파이썬
-        AirTest.sendSocketNotification("AIRTESTpy")
+        AirTest.sendSocketNotification("AIRTESTdomesticarrivedpy")
+        AirTest.config.aaa=0;
        }
        else if(this.config.aaa==2){
-         
+        AirTest.config.aaa=0;
          //두번째 파이썬 국제도착
         //AirTest.sendSocketNotification("AIRTESTpy")
+        AirTest.config.aaa=0;
        }
       console.log("ddddddddddddddddddd"+AirTest.config.aaa);
       //AirTest.sendSocketNotification("AIRTESTpy")
@@ -97,13 +102,17 @@ Module.register("MMM-AirTest", {
         */
        
        
-       if(this.config.aaa!=0){
+       if(this.config.aaa==0){
+        
         var li3 = document.getElementById("divid2");
+        var tblidd = document.getElementById("tblid")
         var elemk = document.getElementById("airtestid")
         elemk.innerHTML = "실시간 국내 운항정보 !";
         var elemk1 = document.getElementById("showageair")
         elemk1.innerHTML = "실시간 국제 항공정보 !";
-        li3.removeChild(elemk);
+        li3.removeChild(tblidd);
+        AirTest.config.aaa=0;
+        
        }
        
        console.log("sesesesese"+AirTest.config.aaa);
@@ -193,6 +202,7 @@ Module.register("MMM-AirTest", {
        
        var body = document.getElementById("divid2")
        var tbl = document.createElement('table');
+       tbl.id="tblid";
        tbl.style.width = '100%';
        tbl.setAttribute('border', '1');
        var tbdy = document.createElement('tbody');
