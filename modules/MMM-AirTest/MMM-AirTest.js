@@ -2,7 +2,7 @@ var AirTest;
 Module.register("MMM-AirTest", {
 
     defaults: {
-      aaa:0
+      state:0
       
     },
     start: function (){
@@ -14,28 +14,28 @@ Module.register("MMM-AirTest", {
       return ["MMM-AirTest.css"];
     },
   getDom: function() {
-    var elementair = document.createElement("div")
-    elementair.className = "myContentair"
-    elementair.id="divid2"
-    elementair.font = 4
-    var subelementair = document.createElement("p")
-    subelementair.innerHTML = "실시간 국내 운항정보 !"
-    subelementair.id = "airtestid"
-    subelementair.className = "click"
-    subelementair.addEventListener("click", () => {
-      console.log("ddddddddddddddddddd"+AirTest.config.aaa);
-      if(this.config.aaa==0){
-        subelementair.innerHTML = "국내선 출발 운항정보"
-        AirTest.config.aaa=1;
-        subelement2.innerHTML = "국내선 도착 운항정보"
+    var elementdiv_air = document.createElement("div")
+    elementdiv_air.className = "myContentair"
+    elementdiv_air.id="div_id"
+    elementdiv_air.font = 4
+    var subelementdiv_p1 = document.createElement("p")
+    subelementdiv_p1.innerHTML = "실시간 국내 운항정보 !"
+    subelementdiv_p1.id = "p1_id"
+    subelementdiv_p1.className = "p1_class"
+    subelementdiv_p1.addEventListener("click", () => {
+      console.log("ddddddddddddddddddd"+AirTest.config.state);
+      if(this.config.state==0){
+        subelementdiv_p1.innerHTML = "국내선 출발 운항정보"
+        AirTest.config.state=1;
+        subelementdiv_p2.innerHTML = "국내선 도착 운항정보"
        }
-      else if(this.config.aaa==1){
+      else if(this.config.state==1){
         //국내선 출발운항정보
         AirTest.sendSocketNotification("AIRTESTdomesticboardingpy")
-        AirTest.config.aaa=0;
+        AirTest.config.state=0;
        }
-       else if(this.config.aaa==2){
-        AirTest.config.aaa=0;
+       else if(this.config.state==2){
+        AirTest.config.state=0;
          //두번째 파이썬 국제선 출발
         //AirTest.sendSocketNotification("AIRTESTpy")
        }
@@ -44,38 +44,38 @@ Module.register("MMM-AirTest", {
       //console.log("airtestairtest")
       
     })
-    //subelementair.style.fontSize = "2em"
-    elementair.appendChild(subelementair)
-    var subelement2 = document.createElement("p")
-    subelement2.innerHTML = "실시간 국제 운항정보 !"
-    subelement2.id = "showageair"
-    subelement2.className = "showageair"
-    subelement2.addEventListener("click", () => {
-      console.log("sese"+AirTest.config.aaa);
-      if(this.config.aaa==0){
-        subelementair.innerHTML = "국제선 출발 운항정보"
-        AirTest.config.aaa=2;
-        subelement2.innerHTML = "국제선 도착 운항정보"
+    //subelementdiv_air.style.fontSize = "2em"
+    elementdiv_air.appendChild(subelementdiv_p1)
+    var subelementdiv_p2 = document.createElement("p")
+    subelementdiv_p2.innerHTML = "실시간 국제 운항정보 !"
+    subelementdiv_p2.id = "p2_id"
+    subelementdiv_p2.className = "p2_class"
+    subelementdiv_p2.addEventListener("click", () => {
+      console.log("sese"+AirTest.config.state);
+      if(this.config.state==0){
+        subelementdiv_p1.innerHTML = "국제선 출발 운항정보"
+        AirTest.config.state=2;
+        subelementdiv_p2.innerHTML = "국제선 도착 운항정보"
        }
-      else if(this.config.aaa==1){
+      else if(this.config.state==1){
         //국내선 도착파이썬
         AirTest.sendSocketNotification("AIRTESTdomesticarrivedpy")
-        AirTest.config.aaa=0;
+        AirTest.config.state=0;
        }
-       else if(this.config.aaa==2){
-        AirTest.config.aaa=0;
+       else if(this.config.state==2){
+        AirTest.config.state=0;
          //두번째 파이썬 국제도착
         //AirTest.sendSocketNotification("AIRTESTpy")
-        AirTest.config.aaa=0;
+        AirTest.config.state=0;
        }
-      console.log("ddddddddddddddddddd"+AirTest.config.aaa);
+      console.log("ddddddddddddddddddd"+AirTest.config.state);
       //AirTest.sendSocketNotification("AIRTESTpy")
       //console.log("airtestairtest")
       
     })
     //subelement2.style.fontSize = "2em"
-    elementair.appendChild(subelement2)
-    return elementair
+    elementdiv_air.appendChild(subelementdiv_p2)
+    return elementdiv_air
   },
   
 
@@ -84,7 +84,7 @@ Module.register("MMM-AirTest", {
       case "DOM_OBJECTS_CREATED":
         //this.hide()
         /*
-        var elemk = document.getelementById("airtestid")
+        var elemk = document.getelementById("p2_id")
         elemk.addEventListener("click", () => {
           AirTest.sendSocketNotification("AIRTESTpy")
           console.log("airtestairtest")
@@ -102,20 +102,20 @@ Module.register("MMM-AirTest", {
         */
        
        
-       if(this.config.aaa==0){
+       if(this.config.state==0){
         
-        var li3 = document.getElementById("divid2");
+        var li3 = document.getElementById("div_id");
         var tblidd = document.getElementById("tblid")
-        var elemk = document.getElementById("airtestid")
+        var elemk = document.getElementById("p1_id")
         elemk.innerHTML = "실시간 국내 운항정보 !";
-        var elemk1 = document.getElementById("showageair")
+        var elemk1 = document.getElementById("p2_id")
         elemk1.innerHTML = "실시간 국제 항공정보 !";
         li3.removeChild(tblidd);
-        AirTest.config.aaa=0;
+        AirTest.config.state=0;
         
        }
        
-       console.log("sesesesese"+AirTest.config.aaa);
+       console.log("sesesesese"+AirTest.config.state);
        
         //elemk2.innerHTML = "고객님의 예상나이는" + age + "살 입니다."; 
 
@@ -194,13 +194,13 @@ Module.register("MMM-AirTest", {
         
         console.log("payload1[0] " + payload1split);
         
-       var elemk = document.getElementById("airtestid");
-       var elemk2 = document.getElementById("showageair");
+       var elemk = document.getElementById("p2_id");
+       var elemk2 = document.getElementById("p1_id");
        elemk.innerHTML = "";
        elemk2.innerHTML = payload1; 
        
        
-       var body = document.getElementById("divid2")
+       var body = document.getElementById("div_id")
        var tbl = document.createElement('table');
        tbl.id="tblid";
        tbl.style.width = '100%';
