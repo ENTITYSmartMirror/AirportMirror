@@ -41,7 +41,7 @@ Module.register("CategoryChoiceAsia",{
 			},
 			
 			"2": {
-				module: "ManCutRegent",
+				module: "Asia-China",
 				text:   "중국",
 				img: "modules/CategoryChoiceAsia/225px-Flag_of_the_People's_Republic_of_China.svg.png",
 				width: "50",
@@ -57,7 +57,7 @@ Module.register("CategoryChoiceAsia",{
 			},
 
 			"4": {
-				module: "ManCutPomade",
+				module: "ManPermPart",
 				text:   "필리핀",
 				img: "modules/CategoryChoiceAsia/225px-Flag_of_the_Philippines.svg.png",
 				width: "50",
@@ -165,7 +165,7 @@ Module.register("CategoryChoiceAsia",{
 								// Prints the visited hideURL.
 								console.log("Visiting show URL: "+data.showUrl);
 							}
-								if (modules[i].name == 'ManCutRegent') {
+								if (modules[i].name == 'Asia-China') {
 									
 									for(var num=1; num<18; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);

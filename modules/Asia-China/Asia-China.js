@@ -7,7 +7,7 @@
  * MIT Licensed.
  */
 
-Module.register("ManCutTwoBlock",{
+Module.register("Asia-China",{
 		// Default module config.
 		defaults: {
                                 frameWidth: "1500",

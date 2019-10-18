@@ -33,7 +33,7 @@ Module.register("CategoryManhair",{
         // The default button 1. Add your buttons in the config.
 		buttons: {
             "1": {
-				module: "ManCutdandy",
+				module: "Man10s",
 				text:   "서울",
 				img: "modules/CategoryManhair/seoul.png",
 				width: "50",
@@ -41,7 +41,7 @@ Module.register("CategoryManhair",{
 			},
 			
 			"2": {
-				module: "ManCutRegent",
+				module: "Man20s",
 				text:   "부산",
 				img: "modules/CategoryManhair/busan.png",
 				width: "50",
@@ -49,7 +49,7 @@ Module.register("CategoryManhair",{
 			},
 
 			"3": {
-				module: "ManCutTwoBlock",
+				module: "Man30s",
 				text:   "대전",
 				img: "modules/CategoryManhair/daejeon.png",
 				width: "50",
@@ -57,7 +57,7 @@ Module.register("CategoryManhair",{
 			},
 
 			"4": {
-				module: "ManCutPomade",
+				module: "Man40s",
 				text:   "인천",
 				img: "modules/CategoryManhair/incheon.png",
 				width: "50",
@@ -65,7 +65,7 @@ Module.register("CategoryManhair",{
 			},
 			
 			"5": {
-				module: "ManPermPart",
+				module: "Man50s",
 				text:   "대구",
 				img: "modules/CategoryManhair/daegu.png",
 				width: "50",
@@ -73,7 +73,7 @@ Module.register("CategoryManhair",{
 			},
 
 			"6": {
-				module: "ManPermRegent",
+				module: "Woman10s",
 				text:   "광주",
 				img: "modules/CategoryManhair/gwangju.png",
 				width: "50",
@@ -81,7 +81,7 @@ Module.register("CategoryManhair",{
 			},
 
 			"7": {
-				module: "ManPermIron",
+				module: "jeju-2",
 				text:   "제주도",
 				img: "modules/CategoryManhair/jeju.jpg",
 				width: "50",
@@ -158,35 +158,35 @@ Module.register("CategoryManhair",{
 								// Prints the visited hideURL.
 								console.log("Visiting show URL: "+data.showUrl);
 							}
-							if (age == 'teen'){
-								if (modules[i].name == 'ManPermIron') {
-									
-									for(var num=1; num<18; num++ ){
-									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
-									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-									}
-									console.log("Showing "+modules[4].name+" ID: "+idnr[1]);	
-									setTimeout(function(){
-										modules[8].show(self.config.animationSpeed, {force: self.config.allowForce});
-									},500);
-								}
-							}
-
-							if (age == 'adult'){
-								if (modules[i].name == 'ManPermIron') {
-									
-									for(var num=1; num<18; num++ ){
-									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
-									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
-									}
-									console.log("Showing "+modules[4].name+" ID: "+idnr[1]);	
-									setTimeout(function(){
-										modules[9].show(self.config.animationSpeed, {force: self.config.allowForce});
-									},500);
-								}
-							}
 							
+								if (modules[i].name == 'jeju-2') {
+
+									if (age === 'teen'){
+										for(var num=1; num<18; num++ ){
+										console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
+										modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
+										}
+										console.log("Showing "+modules[4].name+" ID: "+idnr[1]);	
+										setTimeout(function(){
+											modules[8].show(self.config.animationSpeed, {force: self.config.allowForce});
+										},500);
+									}
+
+									if (age === 'adult'){
+										for(var num=1; num<18; num++ ){
+										console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
+										modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
+										}
+										console.log("Showing "+modules[4].name+" ID: "+idnr[1]);	
+										setTimeout(function(){
+											modules[9].show(self.config.animationSpeed, {force: self.config.allowForce});
+										},500);
+									}
+								}
+
 							CategoryManhair.sendNotification("CategoryManhair is Clicked");
+							
+							console.log(age);
 						}
 					}
 				}
@@ -253,9 +253,6 @@ Module.register("CategoryManhair",{
 	notificationReceived: function(notification, payload){
 		Log.info(this.name + " - received norification : " + notification);
 
-		if(notification === 'Modules All Change'){
-			this.hide();
-		}
 		
 		if(notification === 'teen'){
 			age = 'teen';
