@@ -18,62 +18,82 @@ Module.register("MMM-AirTest", {
     elementdiv_air.className = "myContentair"
     elementdiv_air.id="div_id"
     elementdiv_air.font = 4
+
+
+    //p1버튼
     var subelementdiv_p1 = document.createElement("p")
     subelementdiv_p1.innerHTML = "실시간 국내 운항정보 !"
     subelementdiv_p1.id = "p1_id"
     subelementdiv_p1.className = "p1_class"
+    //p1 버튼 클릭시
     subelementdiv_p1.addEventListener("click", () => {
-      console.log("ddddddddddddddddddd"+AirTest.config.state);
+      //초기화면은 state=0 이다.
+      //초기화면에서 p1버튼(실시간 국내 운항정보) 클릭시
       if(this.config.state==0){
+        //p1버튼이 "국내 운항정보" -> "국내출발운항정보"로 text가 바뀐다
         subelementdiv_p1.innerHTML = "국내선 출발 운항정보"
-        AirTest.config.state=1;
+        //p2버튼이 "국내 운항정보" -> "국내도착운항정보"로 text가 바뀐다.
         subelementdiv_p2.innerHTML = "국내선 도착 운항정보"
+        //국내 출발 도착 버튼이 뜨는 인터페이스일때 state=1
+        AirTest.config.state=1;
        }
+       //국내출발 국내도착 버튼이 뜨는 인터페이스일때
+       //p1버튼(국내선 출발운항정보)을 클릭시
       else if(this.config.state==1){
-        //국내선 출발운항정보
+        //*************************국내선 출발 운항정보 python실행**************************
         AirTest.sendSocketNotification("AIRTESTdomesticboardingpy")
+        //state는 0으로 초기화해준다
+        //다음 이벤트발생시 초기화면으로 돌아간다
         AirTest.config.state=0;
        }
+       //국제출발 국제도착 버튼이 뜨는 인터페이스일때
+       //p1버튼(국제선 출발운항정보)을 클릭시
        else if(this.config.state==2){
-        AirTest.config.state=0;
-         //두번째 파이썬 국제선 출발
+         //*************************국제선 출발 운항정보 python실행**************************
         //AirTest.sendSocketNotification("AIRTESTpy")
+        //state는 0으로 초기화해준다
+        //다음 이벤트발생시 초기화면으로 돌아간다
+        AirTest.config.state=0;
        }
-      
-      //AirTest.sendSocketNotification("AIRTESTpy")
-      //console.log("airtestairtest")
-      
     })
-    //subelementdiv_air.style.fontSize = "2em"
     elementdiv_air.appendChild(subelementdiv_p1)
+
+    //p2버튼
     var subelementdiv_p2 = document.createElement("p")
     subelementdiv_p2.innerHTML = "실시간 국제 운항정보 !"
     subelementdiv_p2.id = "p2_id"
     subelementdiv_p2.className = "p2_class"
+    //p2 버튼 클릭시
     subelementdiv_p2.addEventListener("click", () => {
-      console.log("sese"+AirTest.config.state);
+      //초기화면은 state=0 이다.
+      //초기화면에서 p1버튼(실시간 국제 운항정보) 클릭시
       if(this.config.state==0){
+        //p1버튼이 "국제 운항정보" -> "국제출발운항정보"로 text가 바뀐다
         subelementdiv_p1.innerHTML = "국제선 출발 운항정보"
-        AirTest.config.state=2;
+        //p2버튼이 "국제 운항정보" -> "국제도착운항정보"로 text가 바뀐다.
         subelementdiv_p2.innerHTML = "국제선 도착 운항정보"
+        //국내 출발 도착 버튼이 뜨는 인터페이스일때 state=2
+        AirTest.config.state=2;
        }
+       //국내출발 국내도착 버튼이 뜨는 인터페이스일때
+       //p2버튼(국내선 도착운항정보)을 클릭시
       else if(this.config.state==1){
-        //국내선 도착파이썬
+        //*************************국내선 도착 운항정보 python실행**************************
         AirTest.sendSocketNotification("AIRTESTdomesticarrivedpy")
+        //state는 0으로 초기화해준다
+        //다음 이벤트발생시 초기화면으로 돌아간다
         AirTest.config.state=0;
        }
+       //국제출발 국제도착 버튼이 뜨는 인터페이스일때
+       //p1버튼(국제선 도착운항정보)을 클릭시
        else if(this.config.state==2){
-        AirTest.config.state=0;
-         //두번째 파이썬 국제도착
+         //*************************국제선 도착 운항정보 python실행**************************
         //AirTest.sendSocketNotification("AIRTESTpy")
+        //state는 0으로 초기화해준다
+        //다음 이벤트발생시 초기화면으로 돌아간다
         AirTest.config.state=0;
        }
-      console.log("ddddddddddddddddddd"+AirTest.config.state);
-      //AirTest.sendSocketNotification("AIRTESTpy")
-      //console.log("airtestairtest")
-      
     })
-    //subelement2.style.fontSize = "2em"
     elementdiv_air.appendChild(subelementdiv_p2)
     return elementdiv_air
   },
@@ -83,13 +103,6 @@ Module.register("MMM-AirTest", {
     switch(notification) {
       case "DOM_OBJECTS_CREATED":
         //this.hide()
-        /*
-        var elemk = document.getelementById("p2_id")
-        elemk.addEventListener("click", () => {
-          AirTest.sendSocketNotification("AIRTESTpy")
-          console.log("airtestairtest")
-          
-        })*/
       break;
       
       case "Modules All Change" :
