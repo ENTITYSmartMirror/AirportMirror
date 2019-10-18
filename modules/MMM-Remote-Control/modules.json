@@ -168,6 +168,13 @@
     "desc": "Cleanly shutdown (or reboot) your mirror, edit which modules are shown on your mirror and turn your monitor off and on from a simple website, i.e. from your smartphone."
   },
   {
+    "longname": "MMM-SendNotificationButton",
+    "id": "ralberth/MMM-SendNotificationButton",
+    "url": "https://github.com/ralberth/MMM-SendNotificationButton",
+    "author": "ralberth",
+    "desc": "Web form to send arbitrary messages via `this.sendNotification()`"
+  },
+  {
     "longname": "MMM-Simple-Swiper",
     "id": "Bee-Mar/MMM-Simple-Swiper",
     "url": "https://github.com/Bee-Mar/MMM-Simple-Swiper",
@@ -369,6 +376,13 @@
     "url": "https://github.com/Tomadelostacos/MMM-LesJoiesDuCode",
     "author": "Tomadelostacos",
     "desc": "Displays the last post from Les Joies Du Code, or TheCodingLove (The english version)."
+  },
+  {
+    "longname": "MMM-MataChuan",
+    "id": "Hcreak/MMM-MataChuan",
+    "url": "https://github.com/Hcreak/MMM-MataChuan",
+    "author": "Hcreak",
+    "desc": "Chinese online godfather NM$L Sun Xiaochuan"
   },
   {
     "longname": "MMM-nyc-transit",
@@ -672,11 +686,18 @@
     "desc": "A Magic Mirror Module that shows how many minutes until the next bus(es) goes from given bus stops."
   },
   {
-    "longname": "MMM-OakBus",
-    "id": "IbrahimIrfan/MMM-OakBus",
-    "url": "https://github.com/IbrahimIrfan/MMM-OakBus",
-    "author": "IbrahimIrfan",
-    "desc": "Real-time bus tracking for Oakville, ON Bus transit."
+    "longname": "MMM-NesteBussAtB",
+    "id": "ottopaulsen/MMM-NesteBussAtB",
+    "url": "https://github.com/ottopaulsen/MMM-NesteBussAtB",
+    "author": "ottopaulsen",
+    "desc": "A Magic Mirror Module that shows how many minutes until the next bus(es) goes from given bus stops."
+  },
+  {
+    "longname": "MMM-nstreinen",
+    "id": "qistoph/MMM-nstreinen",
+    "url": "https://github.com/qistoph/MMM-nstreinen",
+    "author": "qistoph",
+    "desc": "Shows information on trains departuring a configurable Dutch trainstation."
   },
   {
     "longname": "MMM-oebb-station-board",
@@ -838,6 +859,13 @@
     "url": "https://github.com/denverquane/MMM-Teslamate",
     "author": "denverquane",
     "desc": "Display live Tesla status using the Teslamate self-hosted monitoring system and MQTT Broker"
+  },
+  {
+    "longname": "MMM-TeslaFi",
+    "id": "f00d4tehg0dz/MMM-TeslaFi",
+    "url": "https://github.com/f00d4tehg0dz/MMM-TeslaFi",
+    "author": "f00d4tehg0dz",
+    "desc": "Displays your Tesla data, live on your Mirror, using the Teslafi.com API. Subscription required"
   },
   {
     "longname": "MMM-TeslaStatus",
@@ -2014,6 +2042,13 @@
     "url": "https://github.com/Sickboy78/MMM-Homematic",
     "author": "Sickboy78",
     "desc": "Shows values and warnings from HomeMatic smart home components and system variables as text, icons or both."
+  },
+  {
+    "longname": "MMM-Homematic-Rooms",
+    "id": "JFWenisch/MMM-Homematic-Rooms",
+    "url": "https://github.com/JFWenisch/MMM-Homematic-Rooms",
+    "author": "JFWenisch",
+    "desc": "Requests device information from the HomeMatic CCU and displays them grouped by the assigned room."
   },
   {
     "longname": "MMM-Homematic-Thermostats",
@@ -3554,6 +3589,13 @@
     "url": "https://github.com/RobertShippey/MMM-PlexDeck",
     "author": "RobertShippey",
     "desc": "Show \"On Deck\" titles from your local Plex Media Server"
+  },
+  {
+    "longname": "MMM-PlexNowPlaying",
+    "id": "glitch452/MMM-PlexNowPlaying",
+    "url": "https://github.com/glitch452/MMM-PlexNowPlaying",
+    "author": "glitch452",
+    "desc": "Displays the list of playback sessions for a Plex Media Server"
   },
   {
     "longname": "MMM-Podcast2",

@@ -158,16 +158,32 @@ Module.register("CategoryManhair",{
 								// Prints the visited hideURL.
 								console.log("Visiting show URL: "+data.showUrl);
 							}
-							if (modules[i].name == 'ManPermIron') {
-								
-								for(var num=1; num<18; num++ ){
-								console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
-								modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
+							if (age == 'teen'){
+								if (modules[i].name == 'ManPermIron') {
+									
+									for(var num=1; num<18; num++ ){
+									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
+									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
+									}
+									console.log("Showing "+modules[4].name+" ID: "+idnr[1]);	
+									setTimeout(function(){
+										modules[8].show(self.config.animationSpeed, {force: self.config.allowForce});
+									},500);
 								}
-								console.log("Showing "+modules[4].name+" ID: "+idnr[1]);	
-								setTimeout(function(){
-									modules[8].show(self.config.animationSpeed, {force: self.config.allowForce});
-								},500);
+							}
+
+							if (age == 'adult'){
+								if (modules[i].name == 'ManPermIron') {
+									
+									for(var num=1; num<18; num++ ){
+									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
+									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
+									}
+									console.log("Showing "+modules[4].name+" ID: "+idnr[1]);	
+									setTimeout(function(){
+										modules[9].show(self.config.animationSpeed, {force: self.config.allowForce});
+									},500);
+								}
 							}
 							
 							CategoryManhair.sendNotification("CategoryManhair is Clicked");
@@ -239,6 +255,14 @@ Module.register("CategoryManhair",{
 
 		if(notification === 'Modules All Change'){
 			this.hide();
+		}
+		
+		if(notification === 'teen'){
+			age = 'teen';
+		}
+		
+		if(notification === 'adult'){
+			age = 'adult';
 		}
 	}
 });	

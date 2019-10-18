@@ -54,6 +54,12 @@ Module.register("MMM-Testpython", {
         var elemk2 = document.getElementById("showage");
         elemk.innerHTML = "여기를 클릭하면 나이에 따른 여행코스를 추천해드립니다.";
         elemk2.innerHTML = "고객님의 예상나이는" + age + "살 입니다."; 
+        if (age < 20){
+          this.sendNotification("teen");
+        }
+        else {
+          this.sendNotification("adult");
+        }
         elemk.addEventListener("click", () => {
           //Testpythons.sendNotification("gotoairport")
           console.log("airairairair")
