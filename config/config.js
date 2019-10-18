@@ -604,7 +604,7 @@ var config = {
 		{
 			module: "WhatAge",
 			position: "upper_third",
-			header:"여기를 클릭",
+			header:"어디를 갈지 고민이신가요?",
 			config: {
 				imagePaths: ["modules/WhatAge/Button"]
 			}
