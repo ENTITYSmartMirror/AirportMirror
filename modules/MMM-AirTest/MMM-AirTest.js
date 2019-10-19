@@ -24,7 +24,7 @@ Module.register("MMM-AirTest", {
     var subelementdiv_p1 = document.createElement("p")
     subelementdiv_p1.innerHTML = "실시간 국내 운항정보 !"
     subelementdiv_p1.id = "p1_id"
-    subelementdiv_p1.className = "p1_class"
+    subelementdiv_p1.className = "p_class"
     //p1 버튼 클릭시
     subelementdiv_p1.addEventListener("click", () => {
       //초기화면은 state=0 이다.
@@ -65,7 +65,7 @@ Module.register("MMM-AirTest", {
     var subelementdiv_p2 = document.createElement("p")
     subelementdiv_p2.innerHTML = "실시간 국제 운항정보 !"
     subelementdiv_p2.id = "p2_id"
-    subelementdiv_p2.className = "p2_class"
+    subelementdiv_p2.className = "p_class"
     //p2 버튼 클릭시
     subelementdiv_p2.addEventListener("click", () => {
       //초기화면은 state=0 이다.
@@ -102,11 +102,11 @@ Module.register("MMM-AirTest", {
     })
     elementdiv_air.appendChild(subelementdiv_p2)
 
-    //p3버튼 시작
+    //p3버튼 시작, 뒤로가기 홈버튼
     var subelementdiv_p3 = document.createElement("p")
     subelementdiv_p3.innerHTML = "국내 국제를 선택해주세요 !"
     subelementdiv_p3.id = "p3_id"
-    subelementdiv_p3.className = "p3_class"
+    subelementdiv_p3.className = "backbutton_class"
     //p2 버튼 클릭시
     subelementdiv_p3.addEventListener("click", () => {
        //국내출발 국내도착 버튼이 뜨는 인터페이스일때
