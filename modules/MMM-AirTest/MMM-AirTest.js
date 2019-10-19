@@ -2,8 +2,8 @@ var AirTest;
 Module.register("MMM-AirTest", {
 
     defaults: {
-      state:0
-      
+      state:0,
+      statetable:0
     },
     start: function (){
         AirTest = this;
@@ -34,6 +34,7 @@ Module.register("MMM-AirTest", {
         subelementdiv_p1.innerHTML = "국내선 출발 운항정보"
         //p2버튼이 "국내 운항정보" -> "국내도착운항정보"로 text가 바뀐다.
         subelementdiv_p2.innerHTML = "국내선 도착 운항정보"
+        subelementdiv_p3.innerHTML = "뒤로가기"
         //국내 출발 도착 버튼이 뜨는 인터페이스일때 state=1
         AirTest.config.state=1;
        }
@@ -45,6 +46,7 @@ Module.register("MMM-AirTest", {
         //state는 0으로 초기화해준다
         //다음 이벤트발생시 초기화면으로 돌아간다
         AirTest.config.state=0;
+        AirTest.config.statetable=1;
        }
        //국제출발 국제도착 버튼이 뜨는 인터페이스일때
        //p1버튼(국제선 출발운항정보)을 클릭시
@@ -54,6 +56,7 @@ Module.register("MMM-AirTest", {
         //state는 0으로 초기화해준다
         //다음 이벤트발생시 초기화면으로 돌아간다
         AirTest.config.state=0;
+        AirTest.config.statetable=1;
        }
     })
     elementdiv_air.appendChild(subelementdiv_p1)
@@ -72,6 +75,7 @@ Module.register("MMM-AirTest", {
         subelementdiv_p1.innerHTML = "국제선 출발 운항정보"
         //p2버튼이 "국제 운항정보" -> "국제도착운항정보"로 text가 바뀐다.
         subelementdiv_p2.innerHTML = "국제선 도착 운항정보"
+        subelementdiv_p3.innerHTML = "뒤로가기"
         //국내 출발 도착 버튼이 뜨는 인터페이스일때 state=2
         AirTest.config.state=2;
        }
@@ -83,6 +87,7 @@ Module.register("MMM-AirTest", {
         //state는 0으로 초기화해준다
         //다음 이벤트발생시 초기화면으로 돌아간다
         AirTest.config.state=0;
+        AirTest.config.statetable=1;
        }
        //국제출발 국제도착 버튼이 뜨는 인터페이스일때
        //p1버튼(국제선 도착운항정보)을 클릭시
@@ -92,9 +97,49 @@ Module.register("MMM-AirTest", {
         //state는 0으로 초기화해준다
         //다음 이벤트발생시 초기화면으로 돌아간다
         AirTest.config.state=0;
+        AirTest.config.statetable=1;
        }
     })
     elementdiv_air.appendChild(subelementdiv_p2)
+
+    //p3버튼 시작
+    var subelementdiv_p3 = document.createElement("p")
+    subelementdiv_p3.innerHTML = "국내 국제를 선택해주세요 !"
+    subelementdiv_p3.id = "p3_id"
+    subelementdiv_p3.className = "p3_class"
+    //p2 버튼 클릭시
+    subelementdiv_p3.addEventListener("click", () => {
+       //국내출발 국내도착 버튼이 뜨는 인터페이스일때
+       //p2버튼(국내선 도착운항정보)을 클릭시
+      if(this.config.state==1){
+        //state는 0으로 초기화해준다
+        //다음 이벤트발생시 초기화면으로 돌아간다
+        AirTest.config.state=0;
+        this.updateDom();
+       }
+       //국제출발 국제도착 버튼이 뜨는 인터페이스일때
+       //p1버튼(국제선 도착운항정보)을 클릭시
+       else if(this.config.state==2){
+         //*************************국제선 도착 운항정보 python실행**************************
+        //AirTest.sendSocketNotification("AIRTESTpy")
+        //state는 0으로 초기화해준다
+        //다음 이벤트발생시 초기화면으로 돌아간다
+        AirTest.config.state=0;
+        this.updateDom();
+       }
+       else if(this.config.statetable==1){
+        //*************************국제선 도착 운항정보 python실행**************************
+       //AirTest.sendSocketNotification("AIRTESTpy")
+       //state는 0으로 초기화해준다
+       //다음 이벤트발생시 초기화면으로 돌아간다
+       AirTest.config.state=0;
+       this.config.statetable=0;
+       this.updateDom();
+      }
+    })
+    elementdiv_air.appendChild(subelementdiv_p3)
+
+    
     return elementdiv_air
   },
   
@@ -125,9 +170,33 @@ Module.register("MMM-AirTest", {
         elemk1.innerHTML = "실시간 국제 항공정보 !";
         li3.removeChild(tblidd);
         AirTest.config.state=0;
+        AirTest.config.statetable=0;
         
        }
-       
+       if(this.config.state==1){
+        this.config.state=0;
+        var li3 = document.getElementById("div_id");
+        var tblidd = document.getElementById("tblid")
+        var elemk = document.getElementById("p1_id")
+        elemk.innerHTML = "실시간 국내 운항정보 !";
+        var elemk1 = document.getElementById("p2_id")
+        elemk1.innerHTML = "실시간 국제 항공정보 !";
+        li3.removeChild(tblidd);
+        this.config.statetable=0;
+        
+       }
+       if(this.config.state==2){
+        AirTest.config.state=0;
+        var li3 = document.getElementById("div_id");
+        var tblidd = document.getElementById("tblid")
+        var elemk = document.getElementById("p1_id")
+        elemk.innerHTML = "실시간 국내 운항정보 !";
+        var elemk1 = document.getElementById("p2_id")
+        elemk1.innerHTML = "실시간 국제 항공정보 !";
+        li3.removeChild(tblidd);
+        AirTest.config.statetable=0;
+        
+       }
        console.log("sesesesese"+AirTest.config.state);
        
         //elemk2.innerHTML = "고객님의 예상나이는" + age + "살 입니다."; 
@@ -207,10 +276,12 @@ Module.register("MMM-AirTest", {
         
         console.log("payload1[0] " + payload1split);
         
-       var elemk = document.getElementById("p2_id");
-       var elemk2 = document.getElementById("p1_id");
-       elemk.innerHTML = "";
-       elemk2.innerHTML = payload1; 
+       var back_home = document.getElementById("p3_id");
+       var p1_button= document.getElementById("p1_id");
+       var p2_button= document.getElementById("p2_id");
+       back_home.innerHTML = "홈으로 이동";
+       p1_button.innerHTML = ""; 
+       p2_button.innerHTML = ""; 
        
        
        var body = document.getElementById("div_id")
