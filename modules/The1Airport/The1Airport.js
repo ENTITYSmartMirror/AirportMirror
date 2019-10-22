@@ -96,7 +96,7 @@ Module.register("The1Airport",{
 	},
     // Define required styles.
 	getStyles: function(){
-		return ["font-awesome.css", "MMM-Modulebar.css"];
+		return ["font-awesome.css", "MMM-Modulebar4.css"];
 	},
 
     // Override dom generator.
@@ -119,7 +119,7 @@ Module.register("The1Airport",{
         // Builds a uniqe indentity / button.
 		item.id = self.identifier + "_button_" + num;
         // Sets a class to all buttons.
-		item.className = "modulebar-button";
+		item.className = "modulebar-button_air";
         // Makes sure the width and height is at least the defined minimum.
 		item.style.minWidth = self.config.minWidth;
         item.style.minHeight = self.config.minHeight;

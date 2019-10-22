@@ -4,6 +4,7 @@
     overflow-y:scroll;
     width:1200px;
     height:800px;
+    
 }
 .Myth {
     border-bottom:1px solid white;
@@ -18,5 +19,127 @@
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
+    
 }
 
+.backbutton_class{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    background-color: #112233;
+    color:white;
+    width:655px;
+    text-align:center;
+    margin-left:250px;
+    
+}
+
+ 
+  
+  /* add default color for animation start  */
+  
+  
+  /* toggle this class */
+  
+  .color-bg-start {
+    background-color: rgb(140, 200, 255);
+  }
+  
+  
+  /* toggle class bg-animate-color */
+  
+  .bg-animate-color {
+    animation: random-bg .5s linear infinite ;
+  }
+  
+  
+  /* add animation to bg color  */
+  
+  @keyframes random-bg {
+    from {
+      filter: hue-rotate(0);
+    }
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+  .p_class1 {
+    /* change bg color to get different hues    */
+    background-color: rgb(103, 149, 248);
+    color: white;
+
+    border: none;
+    transition: all .3s ease;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    outline: none;
+    align-self: center;
+    cursor: pointer;
+    font-family: 'Jua', sans-serif;
+    font-size:55px;
+    width:655px;
+    text-align:center;
+    margin-left:250px;
+  }
+  
+  .p_class1:hover {
+    animation: random-bg .5s linear , grow 1300ms ease infinite;
+  }
+
+  .p_class1:active {
+    animation: random-bg .5s linear infinite, grow 1300ms ease infinite;
+  }
+  
+  .p_class2 {
+    /* change bg color to get different hues    */
+    background-color: rgb(103, 149, 248);
+    color: white;
+
+    border: none;
+    transition: all .3s ease;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    outline: none;
+    align-self: center;
+    cursor: pointer;
+    font-family: 'Jua', sans-serif;
+    font-size:55px;
+    width:655px;
+    text-align:center;
+    margin-left:250px;
+  }
+  
+  .p_class2:hover {
+    animation: random-bg .5s linear , grow 1300ms ease infinite;
+  }
+
+  .p_class2:active {
+    animation: random-bg .5s linear infinite, grow 1300ms ease infinite;
+  }
+
+  .start-fun {
+    background-color: #fff !important;
+    /* change color of button text when fun is started   */
+    color: salmon !important;
+  }
+  
+  /* pulsating effect on button */
+  @keyframes grow {
+    0% {
+      transform: scale(1);
+    }
+    14% {
+      transform: scale(1);
+    }
+    28% {
+      transform: scale(1);
+    }
+    42% {
+      transform: scale(1);
+    }
+    70% {
+      transform: scale(1);
+    }
+  }

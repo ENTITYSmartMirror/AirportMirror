@@ -7,26 +7,10 @@
  * MIT Licensed.                                     *
  *                                                   *
  *****************************************************/
+ @import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
 .modulebar-menu {
     display: flex;
     align-items: stretch;
-}
-
-.modulebar-button {
-    z-index: 1;
-    /* Border */
-    border-style: solid;
-    border-width: 2px;
-    border-color: #aaa;
-    border-radius: 15px;
-
-    /* as container */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin: 2px;
-    padding: 6px 6px;
 }
 
 .modulebar-picture {
@@ -38,3 +22,59 @@
 .modulebar-text {
     margin: -5px 0;
 }
+
+/* add default color for animation start  */
+  
+  
+  /* toggle this class */
+  
+  .color-bg-start {
+    background-color: rgb(140, 200, 255);
+  }
+  
+  
+  /* toggle class bg-animate-color */
+  
+  .bg-animate-color {
+    animation: random-bg .5s linear infinite ;
+  }
+  
+  
+  /* add animation to bg color  */
+  
+  @keyframes random-bg {
+    from {
+      filter: hue-rotate(0);
+    }
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+  .modulebar-button_air {
+    /* change bg color to get different hues    */
+    background-color: rgb(103, 149, 248);
+    color: white;
+
+    border: none;
+    transition: all .3s ease;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    outline: none;
+    align-self: center;
+    cursor: pointer;
+    font-family: 'Jua', sans-serif;
+    font-size:55px;
+    width:300px;
+    text-align:center;
+    margin-top:10px;
+  }
+  
+  .modulebar-button_air:hover {
+    animation: random-bg .5s linear , grow 1300ms ease infinite;
+  }
+
+  .modulebar-button_air:active {
+    animation: random-bg .5s linear infinite, grow 1300ms ease infinite;
+  }

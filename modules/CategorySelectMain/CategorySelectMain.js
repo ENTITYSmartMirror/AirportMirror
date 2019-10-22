@@ -58,7 +58,7 @@ Module.register("CategorySelectMain",{
 
     // Define required styles.
 	getStyles: function(){
-		return ["font-awesome.css", "MMM-Modulebar.css"];
+		return ["font-awesome.css", "CategorySelectMain.css"];
 	},
 
 	notificationReceived: function(notification, payload){
@@ -119,7 +119,7 @@ Module.register("CategorySelectMain",{
         // Builds a uniqe indentity / button.
 		item.id = self.identifier + "_button_" + num;
         // Sets a class to all buttons.
-		item.className = "modulebar-button";
+		item.className = "modulebar-button1";
         // Makes sure the width and height is at least the defined minimum.
 		item.style.minWidth = self.config.minWidth;
         item.style.minHeight = self.config.minHeight;

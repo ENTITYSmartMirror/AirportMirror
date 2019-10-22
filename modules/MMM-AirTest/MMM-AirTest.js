@@ -24,7 +24,7 @@ Module.register("MMM-AirTest", {
     var subelementdiv_p1 = document.createElement("p")
     subelementdiv_p1.innerHTML = "실시간 국내 운항정보 !"
     subelementdiv_p1.id = "p1_id"
-    subelementdiv_p1.className = "p_class"
+    subelementdiv_p1.className = "p_class1"
     //p1 버튼 클릭시
     subelementdiv_p1.addEventListener("click", () => {
       //초기화면은 state=0 이다.
@@ -65,7 +65,7 @@ Module.register("MMM-AirTest", {
     var subelementdiv_p2 = document.createElement("p")
     subelementdiv_p2.innerHTML = "실시간 국제 운항정보 !"
     subelementdiv_p2.id = "p2_id"
-    subelementdiv_p2.className = "p_class"
+    subelementdiv_p2.className = "p_class2"
     //p2 버튼 클릭시
     subelementdiv_p2.addEventListener("click", () => {
       //초기화면은 state=0 이다.

@@ -7,12 +7,14 @@
  * MIT Licensed.                                     *
  *                                                   *
  *****************************************************/
+ @import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
+
 .modulebar-menu {
     display: flex;
     align-items: stretch;
 }
 
-.modulebar-button {
+.modulebar-button1 {
     z-index: 1;
     /* Border */
     border-style: solid;
@@ -27,6 +29,8 @@
 
     margin: 2px;
     padding: 6px 6px;
+    background-color:#000000;
+    
 }
 
 .modulebar-picture {
@@ -37,4 +41,6 @@
 
 .modulebar-text {
     margin: -5px 0;
+    font-family: 'Jua', sans-serif;
+    color:white;
 }

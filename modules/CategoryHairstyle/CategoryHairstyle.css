@@ -13,7 +13,7 @@
     align-items: stretch;
 }
 
-.modulebar-button {
+.modulebar-button2 {
     z-index: 1;
     /* Border */
     border-style: solid;
@@ -31,6 +31,9 @@
 
     font-family: 'Jua', sans-serif;
     color: rgb(255, 255, 255);
+    background-color: #112233;
+    
+    
 }
 
 .modulebar-picture {
