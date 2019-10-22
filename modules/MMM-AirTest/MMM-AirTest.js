@@ -52,7 +52,7 @@ Module.register("MMM-AirTest", {
        //p1버튼(국제선 출발운항정보)을 클릭시
        else if(this.config.state==2){
          //*************************국제선 출발 운항정보 python실행**************************
-        //AirTest.sendSocketNotification("AIRTESTpy")
+        AirTest.sendSocketNotification("AIRTESTinternationalboardingpy")
         //state는 0으로 초기화해준다
         //다음 이벤트발생시 초기화면으로 돌아간다
         AirTest.config.state=0;
@@ -93,7 +93,7 @@ Module.register("MMM-AirTest", {
        //p1버튼(국제선 도착운항정보)을 클릭시
        else if(this.config.state==2){
          //*************************국제선 도착 운항정보 python실행**************************
-        //AirTest.sendSocketNotification("AIRTESTpy")
+        AirTest.sendSocketNotification("AIRTESTinternationalarrivedpy")
         //state는 0으로 초기화해준다
         //다음 이벤트발생시 초기화면으로 돌아간다
         AirTest.config.state=0;
