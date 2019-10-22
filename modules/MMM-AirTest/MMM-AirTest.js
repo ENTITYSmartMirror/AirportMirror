@@ -3,7 +3,8 @@ Module.register("MMM-AirTest", {
 
     defaults: {
       state:0,
-      statetable:0
+      statetable:0,
+      gate_state:0
     },
     start: function (){
         AirTest = this;
@@ -47,6 +48,7 @@ Module.register("MMM-AirTest", {
         //다음 이벤트발생시 초기화면으로 돌아간다
         AirTest.config.state=0;
         AirTest.config.statetable=1;
+        AirTest.config.gate_state=0;
        }
        //국제출발 국제도착 버튼이 뜨는 인터페이스일때
        //p1버튼(국제선 출발운항정보)을 클릭시
@@ -55,6 +57,7 @@ Module.register("MMM-AirTest", {
         AirTest.sendSocketNotification("AIRTESTinternationalboardingpy")
         //state는 0으로 초기화해준다
         //다음 이벤트발생시 초기화면으로 돌아간다
+        AirTest.config.gate_state=0;
         AirTest.config.state=0;
         AirTest.config.statetable=1;
        }
@@ -84,6 +87,7 @@ Module.register("MMM-AirTest", {
       else if(this.config.state==1){
         //*************************국내선 도착 운항정보 python실행**************************
         AirTest.sendSocketNotification("AIRTESTdomesticarrivedpy")
+        AirTest.config.gate_state=1;
         //state는 0으로 초기화해준다
         //다음 이벤트발생시 초기화면으로 돌아간다
         AirTest.config.state=0;
@@ -96,6 +100,7 @@ Module.register("MMM-AirTest", {
         AirTest.sendSocketNotification("AIRTESTinternationalarrivedpy")
         //state는 0으로 초기화해준다
         //다음 이벤트발생시 초기화면으로 돌아간다
+        AirTest.config.gate_state=1;
         AirTest.config.state=0;
         AirTest.config.statetable=1;
        }
@@ -238,6 +243,27 @@ Module.register("MMM-AirTest", {
         payload19=payloadcomma[18]
         payload20=payloadcomma[19]
         payload21=payloadcomma[20]
+        payload22=payloadcomma[21]
+        payload23=payloadcomma[22]        
+        payload24=payloadcomma[23]
+        payload25=payloadcomma[24]
+        payload26=payloadcomma[25]
+        payload27=payloadcomma[26]
+        payload28=payloadcomma[27]
+        payload29=payloadcomma[28]        
+        payload30=payloadcomma[29]
+        payload31=payloadcomma[30]
+        payload32=payloadcomma[31]
+        payload33=payloadcomma[32]
+        payload34=payloadcomma[33]        
+        payload35=payloadcomma[34]
+        payload36=payloadcomma[35]
+        payload37=payloadcomma[36]
+        payload38=payloadcomma[37]
+        payload39=payloadcomma[38]
+        payload40=payloadcomma[39]        
+        payload41=payloadcomma[40]
+
    
         //이걸로 인자를 이동시키고
         payload1split=payload1.toString().split(";")
@@ -261,7 +287,27 @@ Module.register("MMM-AirTest", {
         payload19split=payload19.toString().split(";")
         payload20split=payload20.toString().split(";")
         payload21split=payload21.toString().split(";")
-
+        payload22split=payload22.toString().split(";")
+        payload23split=payload23.toString().split(";")
+        payload24split=payload24.toString().split(";")
+        payload25split=payload25.toString().split(";")
+        payload26split=payload26.toString().split(";")
+        payload27split=payload27.toString().split(";")
+        payload28split=payload28.toString().split(";")
+        payload29split=payload29.toString().split(";")
+        payload30split=payload30.toString().split(";")
+        payload31split=payload31.toString().split(";")
+        payload32split=payload32.toString().split(";")
+        payload33split=payload33.toString().split(";")
+        payload34split=payload34.toString().split(";")
+        payload35split=payload35.toString().split(";")
+        payload36split=payload36.toString().split(";")
+        payload37split=payload37.toString().split(";")
+        payload38split=payload38.toString().split(";")
+        payload39split=payload39.toString().split(";")
+        payload40split=payload40.toString().split(";")
+        payload41split=payload41.toString().split(";")
+  
         //이렇게 나누면
         //payload1[0]=A
         //payload1[1]=B
@@ -301,22 +347,33 @@ Module.register("MMM-AirTest", {
        tbdy.appendChild(tdbyth);
        var tdbyth = document.createElement('th');
        tdbyth.className = "Myth";
+       tdbyth.innerHTML = "Boarding";
+       tbdy.appendChild(tdbyth);      
+       var tdbyth = document.createElement('th');
+       tdbyth.className = "Myth";
        tdbyth.innerHTML = "Arrived";
        tbdy.appendChild(tdbyth);
        var tdbyth = document.createElement('th');
        tdbyth.className = "Myth";
        tdbyth.innerHTML = "starttime";
        tbdy.appendChild(tdbyth); 
+
+       if(AirTest.config.gate_state==0){
        var tdbyth = document.createElement('th');
        tdbyth.className = "Myth";
        tdbyth.innerHTML = "gate";
        tbdy.appendChild(tdbyth); 
-       
-       
-       for (var i = 0; i < 20; i++) {
+       t=6;
+      }
+      if(AirTest.config.gate_state==1){
+        t=5;
+      }
+    
+
+       for (var i = 0; i < 42; i++) {
            var tr = document.createElement('tr');
-           for (var j = 0; j < 5; j++) {
-               if (i == 20 && j == 4) {
+           for (var j = 0; j < t; j++) {
+               if (i == 41 && j == t-1) {
                    break
                } else {
                    var td = document.createElement('td');
@@ -385,6 +442,67 @@ Module.register("MMM-AirTest", {
                    else if(i==20){
                     td.innerHTML=payload21split[j];
                    }
+                   else if(i==21){
+                    td.innerHTML=payload22split[j];
+                   }
+                   else if(i==22){
+                    td.innerHTML=payload23split[j];
+                   }
+                   else if(i==23){
+                    td.innerHTML=payload24split[j];
+                   }
+                   else if(i==24){
+                    td.innerHTML=payload25split[j];
+                   }
+                   else if(i==25){
+                    td.innerHTML=payload26split[j];
+                   }
+                   else if(i==26){
+                    td.innerHTML=payload27split[j];
+                   }
+                   else if(i==27){
+                    td.innerHTML=payload28split[j];
+                   }
+                   else if(i==28){
+                    td.innerHTML=payload29split[j];
+                   }
+                   else if(i==29){
+                    td.innerHTML=payload30split[j];
+                   }
+                   else if(i==30){
+                    td.innerHTML=payload31split[j];
+                   }
+                   else if(i==31){
+                    td.innerHTML=payload32split[j];
+                   }
+                   else if(i==32){
+                    td.innerHTML=payload33split[j];
+                   }
+                   else if(i==33){
+                    td.innerHTML=payload34split[j];
+                   }
+                   else if(i==34){
+                    td.innerHTML=payload35split[j];
+                   }
+                   else if(i==35){
+                    td.innerHTML=payload36split[j];
+                   }
+                   else if(i==36){
+                    td.innerHTML=payload37split[j];
+                   }
+                   else if(i==37){
+                    td.innerHTML=payload38split[j];
+                   }
+                   else if(i==38){
+                    td.innerHTML=payload39split[j];
+                   }
+                   else if(i==39){
+                    td.innerHTML=payload40split[j];
+                   }
+                   else if(i==40){
+                    td.innerHTML=payload41split[j];
+                   }
+
  
                    //i == 1 && j == 1 ? td.setAttribute('rowSpan', '2') : null;
                    tr.appendChild(td)
