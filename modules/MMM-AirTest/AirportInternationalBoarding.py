@@ -35,8 +35,8 @@ xmldoc = parse(var_url)
 
 for item in xmldoc.iterfind('body/items/item'):
     airFln = item.findtext('airFln')
-    airlineEnglish = item.findtext('airlineKorean')
-    arrivedKor = item.findtext('arrivedKor')
+    airlineEnglish = item.findtext('airlineEnglish')
+    arrivedKor = item.findtext('arrivedEng')
     std = item.findtext('std')
     gate = item.findtext('gate')
     if gate == None :

@@ -2240,6 +2240,13 @@
     "desc": "Run a SQL SELECT against a MySQL database and display the results in an HTML table."
   },
   {
+    "longname": "MMM-MyStudyLife",
+    "id": "ethanpartida/MMM-MyStudyLife",
+    "url": "https://github.com/ethanpartida/MMM-MyStudyLife",
+    "author": "Ethan Partida",
+    "desc": "Displays upcoming classes, tasks and exams from the [My Study Life](https://www.mystudylife.com/) app and website."
+  },
+  {
     "longname": "MMM-NearCompliments",
     "id": "semox/MMM-NearCompliments",
     "url": "https://github.com/semox/MMM-NearCompliments",
@@ -2982,6 +2989,13 @@
     "desc": "Triggers any specified rpi pins with different trigger notifications. All messages will be registered with the MMM-Remote Module automatically. It can also play sounds using MMM-Sounds module when a pin is toggled."
   },
   {
+    "longname": "MMM-SensorGateway",
+    "id": "mattileh/MMM-SensorGateway",
+    "url": "https://github.com/mattileh/MMM-SensorGateway",
+    "author": "Mattileh",
+    "desc": "This module enables having live sensor data without touching the Pi hardware by utilizing the BLE advertisment beacons from sensors and routing that live info into MagicMirror² platform"
+  },
+  {
     "longname": "Daily Pokemon",
     "id": "NolanKingdon/MMM-DailyPokemon",
     "url": "https://github.com/NolanKingdon/MMM-DailyPokemon",
@@ -3414,6 +3428,13 @@
     "url": "https://github.com/yohaybn/MMM-JewishDate",
     "author": "yohaybn",
     "desc": "MagicMirror Module - This module displays the current Jewish date."
+  },
+  {
+    "longname": "MMM-KudaGo",
+    "id": "polarbearjngl/MMM-KudaGo",
+    "url": "https://github.com/polarbearjngl/MMM-KudaGo",
+    "author": "polarbearjngl",
+    "desc": "Can show upcoming events (concerts, theater plays, exhibitions and etc.), that collected from [KudaGo](https://kudago.com/)."
   },
   {
     "longname": "MMM-Launch",
@@ -3960,6 +3981,13 @@
     "url": "https://github.com/bittiez/MMM-MWWordOfTheDay",
     "author": "bittiez",
     "desc": "Shows the word of the day from the Merriam Webster's dictionary."
+  },
+  {
+    "longname": "MMM-FunnyHolidays",
+    "id": "mattileh/MMM-FunnyHolidays",
+    "url": "https://github.com/mattileh/MMM-FunnyHolidays",
+    "author": "Mattileh",
+    "desc": "Shows Today's and Tomorrow's \"funny\"holidays around world (datasource www.webcal.fi)."
   },
   {
     "longname": "MMM-Nightscout",

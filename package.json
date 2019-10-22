@@ -62,7 +62,7 @@
     "express-ipfilter": "0.3.1",
     "feedme": "latest",
     "helmet": "^3.9.0",
-    "iconv-lite": "latest",
+    "iconv-lite": "github:ashtuchkin/iconv-lite",
     "mocha-logger": "^1.0.5",
     "moment": "latest",
     "request": "^2.83.0",

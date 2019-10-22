@@ -1,6 +1,7 @@
 var NodeHelper = require("node_helper");
 var {PythonShell} = require('python-shell');
 var socketTestpython;
+
 module.exports = NodeHelper.create({
   start: function() {
     socketTestpython=this;
