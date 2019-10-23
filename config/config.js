@@ -457,7 +457,7 @@ var config = {
 					"Slide 2": ["mm-hide-all","clock","CategoryHairstyle","CategorySelectMain"],
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
 					"Slide 3": ["MMM-AirTest"],
-					"Slide 4": ["FirstAirport-2F","CategoryChoiceAirport","MMM-EmbedYoutube1","MMM-EmbedYoutube2","FirstAirport-1F","mm-hide-all","clock","The1Airport"],
+					"Slide 4": ["FirstAirport-3F","FirstAirport-2F","CategoryChoiceAirport","MMM-EmbedYoutube1","MMM-EmbedYoutube2","FirstAirport-1F","mm-hide-all","clock","The1Airport"],
 					"Slide 5": ["MMM-Avinor"],
 					//"Slide 4": ["MMM-ImageSlideshow","MMM-ImageSlideshow1","MMM-ImageSlideshow2","MMM-EmbedYoutube1"],
 				},
@@ -478,7 +478,7 @@ var config = {
 			position: "middle_center",
 			header:"  1Airport ",
 			config: {
-				imagePaths: ["modules/MMM-BeforeAfter/before"]
+				imagePaths: ["modules/FirstAirport-1F/before"]
 			}
 		}, //41
 		{
@@ -486,14 +486,15 @@ var config = {
 			position: "middle_center",
 			header:"  2Airport ",
 			config: {
-				imagePaths: ["modules/MMM-BeforeAfter/before"]
+				imagePaths: ["modules/FirstAirport-2F/before"]
 			}
 		},//42
 		{
-			module: "The1Airport", 
-			position: "top_left",
-			classes: "default everyone", 
+			module: "FirstAirport-3F",
+			position: "middle_center",
+			header:"  2Airport ",
 			config: {
+				imagePaths: ["modules/FirstAirport-3F/before"]
 			}
 		},//43
 		{
@@ -504,6 +505,13 @@ var config = {
 			config: {
 			}
 		}, //44
+		{
+			module: "The1Airport", 
+			position: "top_left",
+			classes: "default everyone", 
+			config: {
+			}
+		},//45
 		{	
 			module: "currentweather",
 			position: "top_right",

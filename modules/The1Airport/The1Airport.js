@@ -36,7 +36,7 @@ Module.register("The1Airport",{
 												module: "FirstAirport-1F",
 												width:"50",
 												height:"50",
-												text:"1F",
+												text:"1층",
 												//img:"http://2.bp.blogspot.com/-HqSOKIIV59A/U8WP4WFW28I/AAAAAAAAT5U/qTSiV9UgvUY/s1600/icon.png",
 											},
 										"2": {
@@ -44,50 +44,16 @@ Module.register("The1Airport",{
 												//img:"https://image.flaticon.com/icons/svg/1628/1628000.svg",
 												width:"50",
 												height:"50",
-												text:"2F",
+												text:"2층",
 											},
 										"3": {
-											module: "MMM-EmbedYoutube1",
+											module: "FirstAirport-3F",
 											//img:"https://image.flaticon.com/icons/svg/254/254072.svg",
 											width:"50",
 											height:"50",
-											text:"3F",
+											text:"3층",
 										},
-										"4": {
-											module: "MMM-EmbedYoutube1",
-											//img:"https://image.flaticon.com/icons/svg/1040/1040232.svg",
-											width:"50",
-											height:"50",
-											text:"4F",
-										},
-										"5": {
-											module: "MMM-EmbedYoutube1",
-											img:"https://image.flaticon.com/icons/svg/861/861512.svg",
-											width:"50",
-											height:"50",
-											text:"스포츠",
-										},
-										"6": {
-											module: "MMM-EmbedYoutube1",
-											img:"https://image.flaticon.com/icons/svg/135/135644.svg",
-											width:"50",
-											height:"50",
-											text:"먹방",
-										},
-										"7": {
-											module: "MMM-EmbedYoutube1",
-											img:"https://image.flaticon.com/icons/svg/1626/1626000.svg",
-											width:"50",
-											height:"50",
-											text:"여행",
-										},
-										"8": {
-											module: "MMM-EmbedYoutube1",
-											img:"https://image.flaticon.com/icons/svg/356/356764.svg",
-											width:"50",
-											height:"50",
-											text:"유머",
-										},
+										
 											
             }
     },
@@ -252,7 +218,7 @@ Module.register("The1Airport",{
 	
 	notificationReceived: function(notification, payload) {
 		if(notification === 'Modules All Change'){
-			//this.hide()
+			this.hide()
 		}
 	}
 	
