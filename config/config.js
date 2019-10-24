@@ -458,8 +458,7 @@ var config = {
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
 					"Slide 3": ["MMM-AirTest"],
 					"Slide 4": ["SecondAirport-1F","SecondAirport-2F","SecondAirport-3F","FirstAirport-3F","FirstAirport-2F","CategoryChoiceAirport","FirstAirport-1F","mm-hide-all","clock","The1Airport","The2Airport"],
-					"Slide 5": ["MMM-Avinor"],
-					//"Slide 4": ["MMM-ImageSlideshow","MMM-ImageSlideshow1","MMM-ImageSlideshow2","MMM-EmbedYoutube1"],
+					"Slide 5": ["MMM-Remote-Control","ShowRemoteControl","mm-hide-all"],
 				},
 				keyBindings: { 
 					enabled: true,
@@ -676,6 +675,18 @@ var config = {
 			config:{
 			}
 			
+		},
+		{
+			module: "ShowRemoteControl", //24
+			position: "bottom_center",	// This can be any of the regions.
+			config: {
+				// See "Configuration options" for more information.
+					url: ["http://127.0.0.1:9000/remote.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
+					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
+					width: "1000", // width of iframe
+					height: "1000", // height of iframe
+					frameWidth: "600", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe
+				}
 		}			
 	]
 };
