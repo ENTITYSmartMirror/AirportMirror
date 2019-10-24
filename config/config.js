@@ -474,54 +474,6 @@ var config = {
 			
 		},
 		{
-			module: "FirstAirport-1F",
-			position: "middle_center",
-			header:"  1여객 1층 ",
-			config: {
-				imagePaths: ["modules/FirstAirport-1F/before"]
-			}
-		}, //41
-		{
-			module: "FirstAirport-2F",
-			position: "middle_center",
-			header:"  1여객 2층 ",
-			config: {
-				imagePaths: ["modules/FirstAirport-2F/before"]
-			}
-		},//42
-		{
-			module: "FirstAirport-3F",
-			position: "middle_center",
-			header:"  1여객 3층 ",
-			config: {
-				imagePaths: ["modules/FirstAirport-3F/before"]
-			}
-		},//43
-		{
-			module: "SecondAirport-1F",
-			position: "middle_center",
-			header:"  2여객 1층 ",
-			config: {
-				imagePaths: ["modules/SecondAirport-1F/before"]
-			}
-		}, //41
-		{
-			module: "SecondAirport-2F",
-			position: "middle_center",
-			header:"  2여객 2층 ",
-			config: {
-				imagePaths: ["modules/SecondAirport-2F/before"]
-			}
-		},//42
-		{
-			module: "SecondAirport-3F",
-			position: "middle_center",
-			header:"  2여객 3층 ",
-			config: {
-				imagePaths: ["modules/SecondAirport-3F/before"]
-			}
-		},//43
-		{
 			module: "CategoryChoiceAirport", 
 			position: "top_left", 
 			header:"공항 지도",
@@ -529,6 +481,54 @@ var config = {
 			config: {
 			}
 		}, //44
+		{
+			module: "FirstAirport-1F",
+			position: "lower_third",
+			header:"  1여객 1층 ",
+			config: {
+				imagePaths: ["modules/FirstAirport-1F/before"]
+			}
+		}, //41
+		{
+			module: "FirstAirport-2F",
+			position: "lower_third",
+			header:"  1여객 2층 ",
+			config: {
+				imagePaths: ["modules/FirstAirport-2F/before"]
+			}
+		},//42
+		{
+			module: "FirstAirport-3F",
+			position: "lower_third",
+			header:"  1여객 3층 ",
+			config: {
+				imagePaths: ["modules/FirstAirport-3F/before"]
+			}
+		},//43
+		{
+			module: "SecondAirport-1F",
+			position: "lower_third",
+			header:"  2여객 1층 ",
+			config: {
+				imagePaths: ["modules/SecondAirport-1F/before"]
+			}
+		}, //41
+		{
+			module: "SecondAirport-2F",
+			position: "lower_third",
+			header:"  2여객 2층 ",
+			config: {
+				imagePaths: ["modules/SecondAirport-2F/before"]
+			}
+		},//42
+		{
+			module: "SecondAirport-3F",
+			position: "lower_third",
+			header:"  2여객 3층 ",
+			config: {
+				imagePaths: ["modules/SecondAirport-3F/before"]
+			}
+		},//43
 		{
 			module: "The1Airport", 
 			position: "top_left",
@@ -543,6 +543,7 @@ var config = {
 			config: {
 			}
 		},//46
+		
 		{	
 			module: "currentweather",
 			position: "top_right",

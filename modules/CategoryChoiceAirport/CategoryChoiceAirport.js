@@ -98,26 +98,31 @@ Module.register("CategoryChoiceAirport",{
 								fetch(data.showUrl);
 								console.log("Visiting show URL: "+data.showUrl);
 							}
-							modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
+							//modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
 							// Prints in the console what just happend (adding the ID). 
 							console.log("sshowing "+modules[i].name+" ID: "+idnr[1]);
 							//한 프레임에 두가지이상의 모듈이 뜨지 않게 하기.
-							/*
+							
 							if (modules[i].name == 'The1Airport') {
 								console.log("Hiding opend "+ modules[i].name+" ID: "+idnr[1]+"button number"+num);
-								//modules[44].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								//modules[28].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								setTimeout(function(){
-									modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
-								},500);
+								
+								modules[41].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[42].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[43].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[45].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								
+								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
+								
 							}
-							else if (modules[i].name == 'MMM-2Airport') {
+							else if (modules[i].name == 'The2Airport') {
 								console.log("Hiding opend "+ modules[28].name+" ID: "+idnr[1]+"button number"+num);
-								modules[25].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								setTimeout(function(){
-									modules[42].show(self.config.animationSpeed, {force: self.config.allowForce});
-								},500);
-							}*/
+								modules[38].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[39].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[40].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[44].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
+								
+							}
 						}else{
 							// 모듈이 켜있는 상태일때 
 							modules[i].hide(self.config.animationSpeed, {force: self.config.allowForce});
