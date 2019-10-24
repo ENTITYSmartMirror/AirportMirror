@@ -14,7 +14,37 @@
     align-items: stretch;
 }
 
-.modulebar-button1 {
+/* add default color for animation start  */
+  
+  
+  /* toggle this class */
+  
+  .color-bg-start {
+    background-color: rgb(140, 200, 255);
+  }
+  
+  
+  /* toggle class bg-animate-color */
+  
+  .bg-animate-color {
+    animation: random-bg .5s linear infinite ;
+  }
+  
+  
+  /* add animation to bg color  */
+  
+  @keyframes random-bg {
+    from {
+      filter: hue-rotate(0);
+    }
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+  .modulebar-button1 {
+    /* change bg color to get different hues    */
+    
     z-index: 1;
     /* Border */
     border-style: solid;
@@ -29,10 +59,42 @@
 
     margin: 2px;
     padding: 6px 6px;
-    background-color:#000000;
-    
-}
 
+    font-family: 'Jua', sans-serif;
+    color: rgb(255, 255, 255);
+  }
+  
+  .modulebar-button1:hover {
+    animation: random-bg .5s linear , grow 1300ms ease ;
+  }
+
+  .modulebar-button1:active {
+    animation: random-bg .5s linear , grow 1300ms ease ;
+  }
+  .start-fun {
+    background-color: #fff !important;
+    /* change color of button text when fun is started   */
+    color: salmon !important;
+  }
+  
+  /* pulsating effect on button */
+  @keyframes grow {
+    0% {
+      transform: scale(1);
+    }
+    14% {
+      transform: scale(1);
+    }
+    28% {
+      transform: scale(1);
+    }
+    42% {
+      transform: scale(1);
+    }
+    70% {
+      transform: scale(1);
+    }
+  }
 .modulebar-picture {
     margin: 1px 1px;
 /*    width: 60px;*/

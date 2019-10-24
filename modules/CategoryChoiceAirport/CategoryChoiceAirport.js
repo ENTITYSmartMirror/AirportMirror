@@ -51,7 +51,7 @@ Module.register("CategoryChoiceAirport",{
 
     // Define required styles.
 	getStyles: function(){
-		return ["font-awesome.css", "MMM-Modulebar.css"];
+		return ["font-awesome.css", "ChoiceAirport.css"];
 	},
 
     // Override dom generator.

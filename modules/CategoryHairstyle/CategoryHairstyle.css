@@ -13,7 +13,37 @@
     align-items: stretch;
 }
 
-.modulebar-button2 {
+/* add default color for animation start  */
+  
+  
+  /* toggle this class */
+  
+  .color-bg-start {
+    background-color: rgb(140, 200, 255);
+  }
+  
+  
+  /* toggle class bg-animate-color */
+  
+  .bg-animate-color {
+    animation: random-bg .5s linear infinite ;
+  }
+  
+  
+  /* add animation to bg color  */
+  
+  @keyframes random-bg {
+    from {
+      filter: hue-rotate(0);
+    }
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+  .modulebar-button2 {
+    /* change bg color to get different hues    */
+    
     z-index: 1;
     /* Border */
     border-style: solid;
@@ -31,10 +61,15 @@
 
     font-family: 'Jua', sans-serif;
     color: rgb(255, 255, 255);
-    background-color: #112233;
-    
-    
-}
+  }
+  
+  .modulebar-button2:hover {
+    animation: random-bg .5s linear , grow 1300ms ease infinite;
+  }
+
+  .modulebar-button2:active {
+    animation: random-bg .5s linear infinite, grow 1300ms ease infinite;
+  }
 
 .modulebar-picture {
     margin: 1px 1px;
@@ -125,6 +160,30 @@
 }
 
 .FirstAirport-2F header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.FirstAirport-3F header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.SecondAirport-1F header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.SecondAirport-2F header{
+    font-family: 'Jua', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+
+.SecondAirport-3F header{
     font-family: 'Jua', sans-serif;
     font-size: 55px;
     color: rgb(255, 255, 255);

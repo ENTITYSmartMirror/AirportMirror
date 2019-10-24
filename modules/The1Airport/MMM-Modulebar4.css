@@ -72,9 +72,9 @@
   }
   
   .modulebar-button_air:hover {
-    animation: random-bg .5s linear , grow 1300ms ease infinite;
+    animation: random-bg .5s linear , grow 1300ms ease ;
   }
 
   .modulebar-button_air:active {
-    animation: random-bg .5s linear infinite, grow 1300ms ease infinite;
+    animation: random-bg .5s linear , grow 1300ms ease ;
   }
