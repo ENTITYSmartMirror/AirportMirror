@@ -111,7 +111,12 @@ Module.register('MMM-Carousel', {
             }
             this.sendNotification("REGISTER_API", api);
         }
-
+        if (notification === "only_camera") {
+            this.hide();
+        }
+        if (notification === "show_camera") {
+            this.show();
+        }
         if (this.keyHandler && this.keyHandler.validate(notification, payload)) { return; }
 
         if (notification === "CAROUSEL_NEXT") {
