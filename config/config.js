@@ -457,7 +457,7 @@ var config = {
 					"Slide 2": ["mm-hide-all","clock","CategoryHairstyle","CategorySelectMain"],
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
 					"Slide 3": ["MMM-AirTest"],
-					"Slide 4": ["FirstAirport-3F","FirstAirport-2F","CategoryChoiceAirport","MMM-EmbedYoutube1","MMM-EmbedYoutube2","FirstAirport-1F","mm-hide-all","clock","The1Airport"],
+					"Slide 4": ["SecondAirport-1F","SecondAirport-2F","SecondAirport-3F","FirstAirport-3F","FirstAirport-2F","CategoryChoiceAirport","FirstAirport-1F","mm-hide-all","clock","The1Airport","The2Airport"],
 					"Slide 5": ["MMM-Avinor"],
 					//"Slide 4": ["MMM-ImageSlideshow","MMM-ImageSlideshow1","MMM-ImageSlideshow2","MMM-EmbedYoutube1"],
 				},
@@ -476,7 +476,7 @@ var config = {
 		{
 			module: "FirstAirport-1F",
 			position: "middle_center",
-			header:"  1Airport ",
+			header:"  1여객 1층 ",
 			config: {
 				imagePaths: ["modules/FirstAirport-1F/before"]
 			}
@@ -484,7 +484,7 @@ var config = {
 		{
 			module: "FirstAirport-2F",
 			position: "middle_center",
-			header:"  2Airport ",
+			header:"  1여객 2층 ",
 			config: {
 				imagePaths: ["modules/FirstAirport-2F/before"]
 			}
@@ -492,9 +492,33 @@ var config = {
 		{
 			module: "FirstAirport-3F",
 			position: "middle_center",
-			header:"  2Airport ",
+			header:"  1여객 3층 ",
 			config: {
 				imagePaths: ["modules/FirstAirport-3F/before"]
+			}
+		},//43
+		{
+			module: "SecondAirport-1F",
+			position: "middle_center",
+			header:"  2여객 1층 ",
+			config: {
+				imagePaths: ["modules/SecondAirport-1F/before"]
+			}
+		}, //41
+		{
+			module: "SecondAirport-2F",
+			position: "middle_center",
+			header:"  2여객 2층 ",
+			config: {
+				imagePaths: ["modules/SecondAirport-2F/before"]
+			}
+		},//42
+		{
+			module: "SecondAirport-3F",
+			position: "middle_center",
+			header:"  2여객 3층 ",
+			config: {
+				imagePaths: ["modules/SecondAirport-3F/before"]
 			}
 		},//43
 		{
@@ -512,6 +536,13 @@ var config = {
 			config: {
 			}
 		},//45
+		{
+			module: "The2Airport", 
+			position: "top_left",
+			classes: "default everyone", 
+			config: {
+			}
+		},//46
 		{	
 			module: "currentweather",
 			position: "top_right",
@@ -618,7 +649,7 @@ var config = {
 			}
 		},
 		{
-			module: 'MMM-ImageSlideshow',
+			module: 'MMM-ImageSlideshow', 
 			position: 'bottom_left',
 			config: {
 				imagePaths: ['modules/CategoryChoiceAfrica']

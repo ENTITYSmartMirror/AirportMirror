@@ -10,8 +10,8 @@
  */
 
 //var request = require('request');
-
-Module.register("CategoryChoiceAirport",{
+var The2Airport;
+Module.register("The2Airport",{
 	
 	requiresVersion: "2.1.0",
 	
@@ -27,31 +27,42 @@ Module.register("CategoryChoiceAirport",{
         // The location of the symbol relative to the text. Options: left, right, top or bottom
         picturePlacement: "left",
         // The direction of the bar. Options: row, column, row-reverse or column-reverse
-        direction: "row",
+        direction: "column",
 		// The speed of the hide and show animation.
-		animationSpeed: 500,
+		animationSpeed: 1000,
         // The default button 1. Add your buttons in the config.
         buttons: {
-                    "1": {
-	                  		module: "The1Airport",
-												img:"https://image.flaticon.com/icons/svg/2077/2077099.svg",
+										"1": {
+												module: "SecondAirport-1F",
 												width:"50",
 												height:"50",
-												text:"제1여객터미널",
-                          },
-										"2": {
-												module: "The2Airport",
-												img:"https://image.flaticon.com/icons/svg/2077/2077099.svg",
-												width:"50",
-												height:"50",
-												text:"제2여객터미널",
+												text:"1층",
+												//img:"http://2.bp.blogspot.com/-HqSOKIIV59A/U8WP4WFW28I/AAAAAAAAT5U/qTSiV9UgvUY/s1600/icon.png",
 											},
+										"2": {
+												module: "SecondAirport-2F",
+												//img:"https://image.flaticon.com/icons/svg/1628/1628000.svg",
+												width:"50",
+												height:"50",
+												text:"2층",
+											},
+										"3": {
+											module: "SecondAirport-3F",
+											//img:"https://image.flaticon.com/icons/svg/254/254072.svg",
+											width:"50",
+											height:"50",
+											text:"3층",
+										},
+										
+											
             }
     },
-
+	start(){
+		The2Airport=this;
+	},
     // Define required styles.
 	getStyles: function(){
-		return ["font-awesome.css", "MMM-Modulebar.css"];
+		return ["font-awesome.css", "MMM-Modulebar4.css"];
 	},
 
     // Override dom generator.
@@ -64,67 +75,82 @@ Module.register("CategoryChoiceAirport",{
 		for (var num in this.config.buttons) {
 			menu.appendChild(this.createButton(this, num, this.config.buttons[num], this.config.picturePlacement));
         }
-
         return menu;
     },
 
-	// 버튼 생성
+	// Creates the buttons.
     createButton: function (self, num, data, placement) {
-		// span Element 생성
+		// Creates the span elemet to contain all the buttons.
 		var item = document.createElement("span");
-        // 모듈 id 설정
+        // Builds a uniqe indentity / button.
 		item.id = self.identifier + "_button_" + num;
-        // 모든 모듈 클래스 지정
-		item.className = "modulebar-button";
-		//최소의 넓이 높이 지정.
+        // Sets a class to all buttons.
+		item.className = "modulebar-button_air";
+        // Makes sure the width and height is at least the defined minimum.
 		item.style.minWidth = self.config.minWidth;
         item.style.minHeight = self.config.minHeight;
-		// 매직미러에 로드된 모든 모듈들을 호출
+		// Collects all modules loaded in MagicMirror.
 		var modules = MM.getModules();
-		// 클릭시
+		// When a button is clicked, the module either gets hidden or shown depending on current module status.
 		item.addEventListener("click", function () {
-			// 모든 모듈체크
-			for (var i = 1; i < modules.length; i++) {
-				// 현재 모듈 확인
+			// Lists through all modules for testing.
+			for (var i = 0; i < modules.length; i++) {
+				// Check if the curent module is the one.
 				if (modules[i].name === data.module) {
-					var idnr = modules[i].data.identifier.split("_");
-					console.log("idnr : "+idnr+"idnum"+data.idnum);
+					// Splits out the module number of the module with the same name.
+					var idnr = modules[i].data.identifier.split("_");					
+					// Checks if idnum is set in config.js. If it is, it only hides that module, if not hides all modules with the same name.
 					if (idnr[1] == data.idnum || data.idnum == null) {
-						// 모듈이 숨겨져있는 상태일때
+						// Check if the module is hidden.
 						if (modules[i].hidden) {
-							// Showurl 설정 확인
+							// Check if there is a "showURL" defined.
 							if (data.showUrl != null) {
-								//Show url
+								// Visiting the show URL.
 								fetch(data.showUrl);
+								// Prints the visited hideURL.
 								console.log("Visiting show URL: "+data.showUrl);
+								
 							}
+							// add code
+							/*
+							if(num==1){
+								The2Airport.sendNotification('PLAYLISTCHANGE',"YCcE9oGkOw8_롤");			
+									} 
+							else	if(num==2){
+										The2Airport.sendNotification('PLAYLISTCHANGE',"ScSn235gQx0_뮤직비디오");			
+											} 
+							else	if(num==3){
+								The2Airport.sendNotification('PLAYLISTCHANGE',"KUiouwhozkQ_영화");			
+									} 
+							else	if(num==4){
+								The2Airport.sendNotification('PLAYLISTCHANGE',"L0oei9OH7Yo_뉴스");			
+									}
+							else	if(num==5){
+								The2Airport.sendNotification('PLAYLISTCHANGE',"Bxg1CqqkzE0_스포츠");			
+									}
+							else	if(num==6){
+								The2Airport.sendNotification('PLAYLISTCHANGE',"egyB02dbJKE_먹방");			
+									}
+							else	if(num==7){
+								The2Airport.sendNotification('PLAYLISTCHANGE',"Vw39vVf2HCI_해외여행");			
+									}
+							else	if(num==8){
+								The2Airport.sendNotification('PLAYLISTCHANGE',"MFWtM11WJn0_몰카");			
+									}
+							*/		
+							// 
 							modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
 							// Prints in the console what just happend (adding the ID). 
-							console.log("sshowing "+modules[i].name+" ID: "+idnr[1]);
-							//한 프레임에 두가지이상의 모듈이 뜨지 않게 하기.
-							/*
-							if (modules[i].name == 'The1Airport') {
-								console.log("Hiding opend "+ modules[i].name+" ID: "+idnr[1]+"button number"+num);
-								//modules[44].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								//modules[28].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								setTimeout(function(){
-									modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
-								},500);
-							}
-							else if (modules[i].name == 'MMM-2Airport') {
-								console.log("Hiding opend "+ modules[28].name+" ID: "+idnr[1]+"button number"+num);
-								modules[25].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								setTimeout(function(){
-									modules[42].show(self.config.animationSpeed, {force: self.config.allowForce});
-								},500);
-							}*/
+							console.log("Showing "+modules[i].name+" ID: "+idnr[1]);
 						}else{
-							// 모듈이 켜있는 상태일때 
 							modules[i].hide(self.config.animationSpeed, {force: self.config.allowForce});
-							console.log("Hiding 1Airport"+modules[i].name+" ID: "+idnr[1]);
-							// hideURL이 설정되 있을 때
+							// Prints in the console what just happend (adding the ID). 
+							console.log("Hiding "+modules[i].name+" ID: "+idnr[1]);
+							// Check if there is a "hideURL" defined.
 							if (data.hideUrl != null) {
+								// Visiting the the URL.
 								fetch(data.hideUrl);
+								// Prints the visited hideURL.
 								console.log("Visiting hide URL: "+data.hideUrl);
 							}
 						}
@@ -132,8 +158,7 @@ Module.register("CategoryChoiceAirport",{
 				}
 			}
 		});
-
-		// 버튼 배열
+		// Fixes the aligning.
         item.style.flexDirection = {
             "right"  : "row-reverse",
             "left"   : "row",
@@ -190,6 +215,13 @@ Module.register("CategoryChoiceAirport",{
 		// All done. :)
         return item;
 	},
+	
+	notificationReceived: function(notification, payload) {
+		if(notification === 'Modules All Change'){
+			//this.hide()
+		}
+	}
+	
 });	
 
 

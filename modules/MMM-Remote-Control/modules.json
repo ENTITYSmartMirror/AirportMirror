@@ -3605,13 +3605,6 @@
     "desc": "All types of pets for adoption. Cat, dog, bird, horse, rabbit, reptile, smallfurry, barnyard."
   },
   {
-    "longname": "MMM-PlexDeck",
-    "id": "RobertShippey/MMM-PlexDeck",
-    "url": "https://github.com/RobertShippey/MMM-PlexDeck",
-    "author": "RobertShippey",
-    "desc": "Show \"On Deck\" titles from your local Plex Media Server"
-  },
-  {
     "longname": "MMM-PlexNowPlaying",
     "id": "glitch452/MMM-PlexNowPlaying",
     "url": "https://github.com/glitch452/MMM-PlexNowPlaying",
