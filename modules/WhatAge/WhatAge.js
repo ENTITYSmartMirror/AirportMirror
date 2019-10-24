@@ -402,6 +402,15 @@ Module.register("WhatAge", {
 			this.config.a=0;
 			
 		}
+		if(notification =="only_camera")
+		{
+			this.hide();
+			
+		}
+		if (notification === "show_camera") {
+            this.show();
+        }
+		
 /*
 		if(notification === "LOADINGAFTER"){
 			console.log("this a ", this.config.a)

@@ -69,6 +69,14 @@ Module.register("MMM-Testpython", {
           
         })
       break;
+      case "only_camera":
+        this.hide();
+
+      break;
+      case "show_camera":
+        this.show();
+        //this.Module.position="top_right"
+      break;
       }
   },
   socketNotificationReceived: function(notification, payload) {
