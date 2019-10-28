@@ -368,8 +368,17 @@ var config = {
 					hidden : "true",
 			}
 		},
+		{
+			module: "MMM-EmbedYoutube1",  //28
+			position: "top_right",	
+			config: {
+				video_id: "X13sr1Rv-CM",
+				searchlist1: "베이징",
+				loop: true
+			}
+		},
 		{ 
-			module: "CategorySelectMain", //28
+			module: "CategorySelectMain", //29
 			position: "top_left", // This can be any of the regions.
 			
 			classes: "default everyone", // Optional
@@ -380,16 +389,6 @@ var config = {
 		},
 		
 
-		//1
-		{
-			module: "MMM-EmbedYoutube1",  //29
-			position: "top_right",	
-			config: {
-				video_id: "aizhVEOx-q0",
-				searchlist1: "베이징",
-				loop: true
-			}
-		},
 
 		{
 			module: "updatenotification",

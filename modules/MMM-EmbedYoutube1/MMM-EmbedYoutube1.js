@@ -24,7 +24,7 @@ Module.register("MMM-EmbedYoutube1", {
 		video_id : "r6A7Fsci7Ds",
 		playlist: "",
 		
-		searchlist1: "베이징"
+		searchlist1: "중국 여행"
 	},
 	getDom: function () {
 		var wrapper = document.createElement("div");
@@ -55,6 +55,11 @@ Module.register("MMM-EmbedYoutube1", {
 		+ this.config.height 
 		+ "\" src=\"https://www.youtube.com/embed/" 
 		+ videoId + "&"+ params +"\" frameborder=\"0\" allowfullscreen></iframe>";
+		
+		setTimeout(function(){
+			this.updateDom()
+		},5000);
+		
 		return wrapper;
 	},
 	notificationReceived: function(notification, payload) {
