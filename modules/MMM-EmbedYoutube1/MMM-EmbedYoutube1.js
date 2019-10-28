@@ -23,6 +23,7 @@ Module.register("MMM-EmbedYoutube1", {
 		showinfo : false,
 		video_id : "r6A7Fsci7Ds",
 		playlist: "",
+		num:1,
 		
 		searchlist1: "중국 여행"
 	},
@@ -55,9 +56,11 @@ Module.register("MMM-EmbedYoutube1", {
 		+ this.config.height 
 		+ "\" src=\"https://www.youtube.com/embed/" 
 		+ videoId + "&"+ params +"\" frameborder=\"0\" allowfullscreen></iframe>";
+		console.log("numnumnumnum"+this.config.num)
 		
 		setTimeout(function(){
 			this.updateDom()
+			
 		},5000);
 		
 		return wrapper;
