@@ -400,21 +400,21 @@ var config = {
 
 
 		{
-			module: "updatenotification",
+			module: "updatenotification", //31
 			position: "top_bar"
 		},
 		{
-			module: "MMM-Testpython",
+			module: "MMM-Testpython", //32
 			position: "bottom_center",
 			config:{
 			}
 			
 		},
 		{
-			module: "MMM-Dynamic-Modules",
+			module: "MMM-Dynamic-Modules", //33
 		},
 		{
-			module: "MMM-Remote-Control",
+			module: "MMM-Remote-Control", //34
 			position: "center",
 			
 			config: {
@@ -425,7 +425,7 @@ var config = {
 			}
 		},
 		{
-			module: "MMM-darksky-hourly",
+			module: "MMM-darksky-hourly", //35
 			position: "top_left",  // This can be any of the regions.
 			config: {
 				// See "Configuration options" for more information.
@@ -436,7 +436,7 @@ var config = {
 			}
 		},
 		{
-			module: "MMM-Carousel",
+			module: "MMM-Carousel", //36
 			position: "bottom_bar", // Required only for navigation controls
 			config: {
 				ignoreModules: ["alert"],
@@ -464,23 +464,23 @@ var config = {
 			
 		},
 		{
-			module: "CategoryChoiceAirport", 
+			module: "CategoryChoiceAirport", //37
 			position: "top_bar", 
 			header:"공항 지도",
 			classes: "default everyone",
 			config: {
 			}
-		}, //35
+		}, 
 		{
-			module: "FirstAirport-1F",
+			module: "FirstAirport-1F", //38
 			position: "lower_third",
 			header:"  1여객 1층 ",
 			config: {
 				imagePaths: ["modules/FirstAirport-1F/before"]
 			}
-		}, //36
+		}, 
 		{
-			module: "FirstAirport-2F",
+			module: "FirstAirport-2F", //39
 			position: "lower_third",
 			header:"  1여객 2층 ",
 			config: {
@@ -488,7 +488,7 @@ var config = {
 			}
 		},//37
 		{
-			module: "FirstAirport-3F",
+			module: "FirstAirport-3F", //40
 			position: "lower_third",
 			header:"  1여객 3층 ",
 			config: {
@@ -496,7 +496,7 @@ var config = {
 			}
 		},//38
 		{
-			module: "SecondAirport-1F",
+			module: "SecondAirport-1F", //41
 			position: "lower_third",
 			header:"  2여객 1층 ",
 			config: {
@@ -504,7 +504,7 @@ var config = {
 			}
 		}, //39
 		{
-			module: "SecondAirport-2F",
+			module: "SecondAirport-2F", //42
 			position: "lower_third",
 			header:"  2여객 2층 ",
 			config: {
@@ -512,7 +512,7 @@ var config = {
 			}
 		},//40
 		{
-			module: "SecondAirport-3F",
+			module: "SecondAirport-3F", //43
 			position: "lower_third",
 			header:"  2여객 3층 ",
 			config: {
@@ -520,14 +520,14 @@ var config = {
 			}
 		},//41
 		{
-			module: "The1Airport", 
+			module: "The1Airport",  //44
 			position: "top_bar",
 			classes: "default everyone", 
 			config: {
 			}
 		},//42
 		{
-			module: "The2Airport", 
+			module: "The2Airport",  //45
 			position: "top_bar",
 			classes: "default everyone", 
 			config: {

@@ -142,27 +142,33 @@ Module.register("The2Airport",{
 							if (modules[i].name == 'SecondAirport-1F') {
 								console.log("Hiding opend "+ modules[i].name+" ID: "+idnr[1]+"button number"+num);
 								//modules[40].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[41].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								modules[42].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[43].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								
-								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
+								setTimeout(function(){
+									modules[41].show(self.config.animationSpeed, {force: self.config.allowForce});
+								},500);
+								
 								
 							}
 							else if (modules[i].name == 'SecondAirport-2F') {
 								console.log("Hiding opend "+ modules[28].name+" ID: "+idnr[1]+"button number"+num);
-								modules[40].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[41].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								//modules[41].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[42].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[43].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								setTimeout(function(){
+									modules[42].show(self.config.animationSpeed, {force: self.config.allowForce});
+								},500);
 								
 							}
 							else if (modules[i].name == 'SecondAirport-3F') {
 								console.log("Hiding opend "+ modules[28].name+" ID: "+idnr[1]+"button number"+num);
-								modules[40].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								modules[41].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[42].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								//modules[42].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
-								
+								setTimeout(function(){
+									modules[43].show(self.config.animationSpeed, {force: self.config.allowForce});
+								},500);
 							}
 							
 						}else{

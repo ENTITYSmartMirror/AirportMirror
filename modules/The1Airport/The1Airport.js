@@ -29,7 +29,7 @@ Module.register("The1Airport",{
         // The direction of the bar. Options: row, column, row-reverse or column-reverse
         direction: "column",
 		// The speed of the hide and show animation.
-		animationSpeed: 1000,
+		animationSpeed: 500,
         // The default button 1. Add your buttons in the config.
         buttons: {
 										"1": {
@@ -114,26 +114,35 @@ Module.register("The1Airport",{
 							if (modules[i].name == 'FirstAirport-1F') {
 								console.log("Hiding opend "+ modules[i].name+" ID: "+idnr[1]+"button number"+num);
 								//modules[37].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[38].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								modules[39].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[40].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								
-								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
+								setTimeout(function(){
+									modules[38].show(self.config.animationSpeed, {force: self.config.allowForce});
+								},500);
+								
 								
 							}
 							else if (modules[i].name == 'FirstAirport-2F') {
 								console.log("Hiding opend "+ modules[28].name+" ID: "+idnr[1]+"button number"+num);
-								modules[37].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[38].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								//modules[38].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[39].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[40].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								
+								setTimeout(function(){
+									modules[39].show(self.config.animationSpeed, {force: self.config.allowForce});
+								},500);
 								
 							}
 							else if (modules[i].name == 'FirstAirport-3F') {
 								console.log("Hiding opend "+ modules[28].name+" ID: "+idnr[1]+"button number"+num);
-								modules[37].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								modules[38].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[39].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								//modules[39].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
+								
+								setTimeout(function(){
+									modules[40].show(self.config.animationSpeed, {force: self.config.allowForce});
+								},500);
 								
 							}
 							
