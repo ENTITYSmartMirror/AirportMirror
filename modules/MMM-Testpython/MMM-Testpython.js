@@ -16,13 +16,13 @@ Module.register("MMM-Testpython", {
     element.id="divid1"
     element.font = 4
     var subElement = document.createElement("p")
-    subElement.innerHTML = "제가 알려드립니다! "
+    subElement.innerHTML = "내 얼굴나이는 몇살일까요?"
     subElement.id = "clickid1"
     subElement.className = "click"
     subElement.style.fontSize = "2em"
     element.appendChild(subElement)
     var subelement2 = document.createElement("p")
-    subelement2.innerHTML = "당신의 관광지를!"
+    subelement2.innerHTML = ""
     subelement2.id = "showage"
     subelement2.className = "showage"
     subelement2.style.fontSize = "2em"

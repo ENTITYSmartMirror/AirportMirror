@@ -628,7 +628,7 @@ var config = {
 		},
 		{
 			module: 'camera',
-			position: 'bottom_center',
+			position: 'lower_third',
 			config: {
 				selfieInterval: 3,  // Time interval in seconds before the photo will be taken.
 				emailConfig: {
@@ -643,7 +643,7 @@ var config = {
 		{
 			module: "WhatAge",
 			position: "upper_third",
-			header:"어디를 갈지 고민이신가요?",
+			header:"내가 가는 나라의 핫플레이스는?",
 			config: {
 				imagePaths: ["modules/WhatAge/Button"]
 			}
