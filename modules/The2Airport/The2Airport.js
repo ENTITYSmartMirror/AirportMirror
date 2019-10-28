@@ -139,9 +139,32 @@ Module.register("The2Airport",{
 									}
 							*/		
 							// 
-							modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
-							// Prints in the console what just happend (adding the ID). 
-							console.log("Showing "+modules[i].name+" ID: "+idnr[1]);
+							if (modules[i].name == 'SecondAirport-1F') {
+								console.log("Hiding opend "+ modules[i].name+" ID: "+idnr[1]+"button number"+num);
+								//modules[39].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[40].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[41].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								
+								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
+								
+							}
+							else if (modules[i].name == 'SecondAirport-2F') {
+								console.log("Hiding opend "+ modules[28].name+" ID: "+idnr[1]+"button number"+num);
+								modules[39].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								//modules[40].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[41].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
+								
+							}
+							else if (modules[i].name == 'SecondAirport-3F') {
+								console.log("Hiding opend "+ modules[28].name+" ID: "+idnr[1]+"button number"+num);
+								modules[39].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[40].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								//modules[41].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
+								
+							}
+							
 						}else{
 							modules[i].hide(self.config.animationSpeed, {force: self.config.allowForce});
 							// Prints in the console what just happend (adding the ID). 
