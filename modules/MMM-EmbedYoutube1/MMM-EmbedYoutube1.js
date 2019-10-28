@@ -7,7 +7,7 @@
  * By Nitipoom Unrrom (aka nitpum) https://nitpum.com
  * MIT Licensed.
  */
-
+var EmbedYoutube1;
 Module.register("MMM-EmbedYoutube1", {
 	defaults: {
 		autoplay: false,
@@ -23,9 +23,13 @@ Module.register("MMM-EmbedYoutube1", {
 		showinfo : false,
 		video_id : "r6A7Fsci7Ds",
 		playlist: "",
-		num:1,
+		num : 1,
 		
 		searchlist1: "중국 여행"
+	},
+
+	start(){
+		EmbedYoutube1 = this;
 	},
 	getDom: function () {
 		var wrapper = document.createElement("div");
@@ -56,20 +60,102 @@ Module.register("MMM-EmbedYoutube1", {
 		+ this.config.height 
 		+ "\" src=\"https://www.youtube.com/embed/" 
 		+ videoId + "&"+ params +"\" frameborder=\"0\" allowfullscreen></iframe>";
-		console.log("numnumnumnum"+this.config.num)
 		
-		setTimeout(function(){
-			this.updateDom()
-			
-		},5000);
+		if (this.config.num === 16){
+			this.config.num = 1;
+		 }
+   
+		 switch (this.config.num){
+			case 1 : 
+			this.config.video_id="X13sr1Rv-CM";
+			this.config.searchlist1="베이징";
+			break;
+   
+			case 2 : 
+			this.config.video_id="TsphoCUqIR8";
+			this.config.searchlist1="중국 여행";
+			break;
+   
+			case 3 : 
+			this.config.video_id="QYtJ6HBooPE";
+			this.config.searchlist1="중국 여행";
+			break;
+   
+			case 4 : 
+			this.config.video_id="YCcE9oGkOw8";
+			this.config.searchlist1="롤";
+			break;
+   
+			case 5 : 
+			this.config.video_id="YCcE9oGkOw8";
+			this.config.searchlist1="롤";
+			break;
+   
+			case 6 : 
+			this.config.video_id="YCcE9oGkOw8";
+			this.config.searchlist1="롤";
+			break;
+   
+			case 7 : 
+			this.config.video_id="YCcE9oGkOw8";
+			this.config.searchlist1="롤";
+			break;
+   
+			case 8 : 
+			this.config.video_id="YCcE9oGkOw8";
+			this.config.searchlist1="롤";
+			break;
+   
+			case 9 : 
+			this.config.video_id="YCcE9oGkOw8";
+			this.config.searchlist1="롤";
+			break;
+   
+			case 10 : 
+			this.config.video_id="YCcE9oGkOw8";
+			this.config.searchlist1="롤";
+			break;
+   
+			case 11 : 
+			this.config.video_id="YCcE9oGkOw8";
+			this.config.searchlist1="롤";
+			break;
+   
+			case 12 : 
+			this.config.video_id="YCcE9oGkOw8";
+			this.config.searchlist1="롤";
+			break;
+   
+			case 13 : 
+			this.config.video_id="YCcE9oGkOw8";
+			this.config.searchlist1="롤";
+			break;
+   
+			case 14 : 
+			this.config.video_id="YCcE9oGkOw8";
+			this.config.searchlist1="롤";
+			break;
+   
+			case 15 : 
+			this.config.video_id="YCcE9oGkOw8";
+			this.config.searchlist1="롤";
+			break;
+   
+			default :
+			break;
+		 }
+		 
+		 this.config.num += 1;
+   
+		 setTimeout(function(){
+			EmbedYoutube1.updateDom();
+		 },10000);
 		
 		return wrapper;
 	},
 	notificationReceived: function(notification, payload) {
 		Log.info(this.name + " - received notification: " + notification);
-		
-		
-		
+
 		if(notification === "PLAYLISTCHANGE"){
 			var payload1=payload.split("_");
 			console.log("thisconfigid : "+payload)

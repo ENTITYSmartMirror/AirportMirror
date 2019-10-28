@@ -13,7 +13,7 @@ Module.register("Asia-China",{
                                 frameWidth: "1500",
 				width:"100%",
                                 updateInterval: 0.5 * 60 * 1000,
-                                url: ["http://s3.us-east-2.amazonaws.com/beautymirror.com/demo/index.html"],
+                                url: ["https://s3.us-east-2.amazonaws.com/beautymirror.com/demo/jeju3.html"],
                                 scrolling: "yes"
 		},
 

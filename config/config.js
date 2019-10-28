@@ -113,7 +113,7 @@ var config = {
 			hide : "true",
 			config: {
 				// See "Configuration options" for more information.
-					url: ["http://s3.us-east-2.amazonaws.com/beautymirror.com/demo/jeju1.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
+					url: ["http://s3.us-east-2.amazonaws.com/beautymirror.com/demo/jeju10.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
 					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
 					width: "1000", // width of iframe
 					height: "1180", // height of iframe
@@ -126,7 +126,7 @@ var config = {
 			hide : "true",
 			config: {
 				// See "Configuration options" for more information.
-					url: ["http://s3.us-east-2.amazonaws.com/beautymirror.com/demo/jeju2.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
+					url: ["http://s3.us-east-2.amazonaws.com/beautymirror.com/demo/jeju20.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
 					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
 					width: "1000", // width of iframe
 					height: "1180", // height of iframe
@@ -139,7 +139,7 @@ var config = {
 			hide : "true",
 			config: {
 				// See "Configuration options" for more information.
-					url: ["http://s3.us-east-2.amazonaws.com/beautymirror.com/demo/china.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
+					url: ["http://s3.us-east-2.amazonaws.com/beautymirror.com/demo/china_2.html"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
 					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
 					width: "1000", // width of iframe
 					height: "1180", // height of iframe

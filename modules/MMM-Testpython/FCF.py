@@ -9,19 +9,18 @@ import cv2
 cap = cv2.VideoCapture(0)
 
 ret, frame = cap.read()
-cv2.imwrite('C:/BeautyM/modules/MMM-Testpython/CognitiveFace/CognitiveFace.jpg', frame)
+cv2.imwrite('C:/AirportHelper/modules/MMM-Testpython/CognitiveFace/CognitiveFace.jpg', frame)
 
 cap.release()
 cv2.destroyAllWindows()
 
-subscription_key = "2ad26e5076914e9ca6ab0e80877d3e4a"
+subscription_key = "e90829078be54f04832525fddedf00b4"
 
-image_path = os.path.join('C:/BeautyM/modules/MMM-Testpython/CognitiveFace/CognitiveFace.jpg')
+image_path = os.path.join('C:/AirportHelper/modules/MMM-Testpython/CognitiveFace/CognitiveFace.jpg')
 
 assert subscription_key
 
-face_api_url = 'https://koreacentral.api.cognitive.microsoft.com/face/v1.0/detect'
-
+face_api_url = 'https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect'
 image_data = open(image_path, "rb")
 
 headers = {'Content-Type': 'application/octet-stream',
