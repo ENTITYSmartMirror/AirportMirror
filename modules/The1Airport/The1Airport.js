@@ -36,7 +36,7 @@ Module.register("The1Airport",{
 												module: "FirstAirport-1F",
 												width:"50",
 												height:"50",
-												text:"1층",
+												text:"국내1층",
 												//img:"http://2.bp.blogspot.com/-HqSOKIIV59A/U8WP4WFW28I/AAAAAAAAT5U/qTSiV9UgvUY/s1600/icon.png",
 											},
 										"2": {
@@ -44,14 +44,14 @@ Module.register("The1Airport",{
 												//img:"https://image.flaticon.com/icons/svg/1628/1628000.svg",
 												width:"50",
 												height:"50",
-												text:"2층",
+												text:"국내2층",
 											},
 										"3": {
 											module: "FirstAirport-3F",
 											//img:"https://image.flaticon.com/icons/svg/254/254072.svg",
 											width:"50",
 											height:"50",
-											text:"3층",
+											text:"국내3층",
 										},
 										
 											
@@ -111,37 +111,32 @@ Module.register("The1Airport",{
 								console.log("Visiting show URL: "+data.showUrl);
 								
 							}
-							// add code
-							/*
-							if(num==1){
-								The1Airport.sendNotification('PLAYLISTCHANGE',"YCcE9oGkOw8_롤");			
-									} 
-							else	if(num==2){
-										The1Airport.sendNotification('PLAYLISTCHANGE',"ScSn235gQx0_뮤직비디오");			
-											} 
-							else	if(num==3){
-								The1Airport.sendNotification('PLAYLISTCHANGE',"KUiouwhozkQ_영화");			
-									} 
-							else	if(num==4){
-								The1Airport.sendNotification('PLAYLISTCHANGE',"L0oei9OH7Yo_뉴스");			
-									}
-							else	if(num==5){
-								The1Airport.sendNotification('PLAYLISTCHANGE',"Bxg1CqqkzE0_스포츠");			
-									}
-							else	if(num==6){
-								The1Airport.sendNotification('PLAYLISTCHANGE',"egyB02dbJKE_먹방");			
-									}
-							else	if(num==7){
-								The1Airport.sendNotification('PLAYLISTCHANGE',"Vw39vVf2HCI_해외여행");			
-									}
-							else	if(num==8){
-								The1Airport.sendNotification('PLAYLISTCHANGE',"MFWtM11WJn0_몰카");			
-									}
-							*/		
-							// 
-							modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
-							// Prints in the console what just happend (adding the ID). 
-							console.log("Showing "+modules[i].name+" ID: "+idnr[1]);
+							if (modules[i].name == 'FirstAirport-1F') {
+								console.log("Hiding opend "+ modules[i].name+" ID: "+idnr[1]+"button number"+num);
+								//modules[39].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[40].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[41].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								
+								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
+								
+							}
+							else if (modules[i].name == 'FirstAirport-2F') {
+								console.log("Hiding opend "+ modules[28].name+" ID: "+idnr[1]+"button number"+num);
+								modules[39].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								//modules[40].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[41].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
+								
+							}
+							else if (modules[i].name == 'FirstAirport-3F') {
+								console.log("Hiding opend "+ modules[28].name+" ID: "+idnr[1]+"button number"+num);
+								modules[39].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[40].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								//modules[41].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
+								
+							}
+							
 						}else{
 							modules[i].hide(self.config.animationSpeed, {force: self.config.allowForce});
 							// Prints in the console what just happend (adding the ID). 

@@ -36,7 +36,7 @@ Module.register("The2Airport",{
 												module: "SecondAirport-1F",
 												width:"50",
 												height:"50",
-												text:"1층",
+												text:"국제1층",
 												//img:"http://2.bp.blogspot.com/-HqSOKIIV59A/U8WP4WFW28I/AAAAAAAAT5U/qTSiV9UgvUY/s1600/icon.png",
 											},
 										"2": {
@@ -44,14 +44,14 @@ Module.register("The2Airport",{
 												//img:"https://image.flaticon.com/icons/svg/1628/1628000.svg",
 												width:"50",
 												height:"50",
-												text:"2층",
+												text:"국제2층",
 											},
 										"3": {
 											module: "SecondAirport-3F",
 											//img:"https://image.flaticon.com/icons/svg/254/254072.svg",
 											width:"50",
 											height:"50",
-											text:"3층",
+											text:"국제3층",
 										},
 										
 											

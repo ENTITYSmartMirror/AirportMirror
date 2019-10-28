@@ -106,20 +106,20 @@ Module.register("CategoryChoiceAirport",{
 							if (modules[i].name == 'The1Airport') {
 								console.log("Hiding opend "+ modules[i].name+" ID: "+idnr[1]+"button number"+num);
 								
-								modules[41].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[42].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								modules[43].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[45].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[39].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[40].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[41].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								
 								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
 								
 							}
 							else if (modules[i].name == 'The2Airport') {
 								console.log("Hiding opend "+ modules[28].name+" ID: "+idnr[1]+"button number"+num);
+								modules[42].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[36].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[37].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								modules[38].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[39].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[40].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[44].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
 								
 							}

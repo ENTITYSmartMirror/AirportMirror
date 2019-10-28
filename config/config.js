@@ -391,23 +391,6 @@ var config = {
 			}
 		},
 */
-		//2	
-		{
-			module: "CategoryChoiceEntMenu", //26
-			position: "top_left", 
-			header:"공항 지도",
-			classes: "default everyone",
-			config: {
-			}
-		},
-		//3
-		{
-			module: "CategoryChoiceYoutube", //27
-			position: "top_left",
-			classes: "default everyone", 
-			config: {
-			}
-		},
 		{
 			module: "updatenotification",
 			position: "top_bar"
@@ -474,12 +457,12 @@ var config = {
 		},
 		{
 			module: "CategoryChoiceAirport", 
-			position: "top_left", 
+			position: "top_right", 
 			header:"공항 지도",
 			classes: "default everyone",
 			config: {
 			}
-		}, //44
+		}, //35
 		{
 			module: "FirstAirport-1F",
 			position: "lower_third",
@@ -487,7 +470,7 @@ var config = {
 			config: {
 				imagePaths: ["modules/FirstAirport-1F/before"]
 			}
-		}, //41
+		}, //36
 		{
 			module: "FirstAirport-2F",
 			position: "lower_third",
@@ -495,7 +478,7 @@ var config = {
 			config: {
 				imagePaths: ["modules/FirstAirport-2F/before"]
 			}
-		},//42
+		},//37
 		{
 			module: "FirstAirport-3F",
 			position: "lower_third",
@@ -503,7 +486,7 @@ var config = {
 			config: {
 				imagePaths: ["modules/FirstAirport-3F/before"]
 			}
-		},//43
+		},//38
 		{
 			module: "SecondAirport-1F",
 			position: "lower_third",
@@ -511,7 +494,7 @@ var config = {
 			config: {
 				imagePaths: ["modules/SecondAirport-1F/before"]
 			}
-		}, //41
+		}, //39
 		{
 			module: "SecondAirport-2F",
 			position: "lower_third",
@@ -519,7 +502,7 @@ var config = {
 			config: {
 				imagePaths: ["modules/SecondAirport-2F/before"]
 			}
-		},//42
+		},//40
 		{
 			module: "SecondAirport-3F",
 			position: "lower_third",
@@ -527,21 +510,21 @@ var config = {
 			config: {
 				imagePaths: ["modules/SecondAirport-3F/before"]
 			}
-		},//43
+		},//41
 		{
 			module: "The1Airport", 
-			position: "top_left",
+			position: "top_right",
 			classes: "default everyone", 
 			config: {
 			}
-		},//45
+		},//42
 		{
 			module: "The2Airport", 
-			position: "top_left",
+			position: "bottom_right",
 			classes: "default everyone", 
 			config: {
 			}
-		},//46
+		},//43
 		
 		{	
 			module: "currentweather",
