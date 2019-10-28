@@ -167,13 +167,14 @@ Module.register("CategoryChoiceAsia",{
 							}
 								if (modules[i].name == 'Asia-China') {
 									
-									for(var num=1; num<18; num++ ){
+									for(var num=1; num<30; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 									}
 									console.log("Showing "+modules[4].name+" ID: "+idnr[1]);	
 									setTimeout(function(){
 										modules[10].show(self.config.animationSpeed, {force: self.config.allowForce});
+										modules[29].show(self.config.animationSpeed, {force: self.config.allowForce});
 									},500);
 								}
 							
