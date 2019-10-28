@@ -147,7 +147,7 @@ var config = {
 			}
 		},
 		{
-			module: "ManCutPomade",
+			module: "ManCutPomade", //11
 			position: "bottom_left",	// This can be any of the regions.
 			hide : "true",
 			config: {
@@ -160,7 +160,7 @@ var config = {
 			}
 		},
 		{
-			module: "ManPermPart",
+			module: "ManPermPart", //12
 			position: "bottom_left",	// This can be any of the regions.
 			hide : "true",
 			config: {
@@ -173,7 +173,7 @@ var config = {
 			}
 		},
 		{
-			module: "ManPermRegent",
+			module: "ManPermRegent", //13
 			position: "bottom_left",	// This can be any of the regions.
 			hide : "true",
 			config: {
@@ -186,7 +186,7 @@ var config = {
 			}
 		},
 		{
-			module: "ManPermIron",
+			module: "ManPermIron", //14
 			position: "bottom_left",	// This can be any of the regions.
 			hide : "true",
 			config: {
@@ -199,7 +199,7 @@ var config = {
 			}
 		},
 		{
-			module: "WomanCutLayered",
+			module: "WomanCutLayered", //15
 			position: "bottom_left",	// This can be any of the regions.
 			hide : "true",
 			config: {
@@ -212,7 +212,7 @@ var config = {
 			}
 		},
 		{
-			module: "WomanCutBob",
+			module: "WomanCutBob", //16
 			position: "bottom_left",	// This can be any of the regions.
 			hide : "true",
 			config: {
@@ -225,7 +225,7 @@ var config = {
 			}
 		},
 		{
-			module: "WomanCutShort",
+			module: "WomanCutShort", //17
 			position: "bottom_left",	// This can be any of the regions.
 			hide : "true",
 			config: {
@@ -238,7 +238,7 @@ var config = {
 			}
 		},
 		{
-			module: "WomanCutHime",
+			module: "WomanCutHime", //18
 			position: "bottom_left",	// This can be any of the regions.
 			hide : "true",
 			config: {
@@ -251,7 +251,7 @@ var config = {
 			}
 		},
 		{
-			module: "WomanPermGlam",
+			module: "WomanPermGlam", //19
 			position: "bottom_left",	// This can be any of the regions.
 			hide : "true",
 			config: {
@@ -264,7 +264,7 @@ var config = {
 			}
 		},
 		{
-			module: "WomanPermBody",
+			module: "WomanPermBody", //20
 			position: "bottom_left",	// This can be any of the regions.
 			hide : "true",
 			config: {
@@ -277,7 +277,7 @@ var config = {
 			}
 		},
 		{
-			module: "WomanPermHippie",
+			module: "WomanPermHippie", //21
 			position: "bottom_left",	// This can be any of the regions.
 			hide : "true",
 			config: {
@@ -290,7 +290,7 @@ var config = {
 			}
 		},
 		{
-			module: "Man10s",
+			module: "Man10s", //22
 			position: "bottom_left",	// This can be any of the regions.
 			visible : "true",
 			config: {
@@ -303,7 +303,7 @@ var config = {
 			}
 		},
 		{
-			module: "Man20s",
+			module: "Man20s", //23
 			position: "bottom_left",	// This can be any of the regions.
 			visible : "true",
 			config: {
@@ -316,7 +316,7 @@ var config = {
 			}
 		},
 		{
-			module: "Man30s",
+			module: "Man30s", //24
 			position: "bottom_left",	// This can be any of the regions.
 			visible : "false",
 			config: {
@@ -329,7 +329,7 @@ var config = {
 			}
 		},
 		{
-			module: "Man40s",
+			module: "Man40s", //25
 			position: "bottom_left",	// This can be any of the regions.
 			visible : "false",
 			config: {
@@ -342,7 +342,7 @@ var config = {
 			}
 		},
 		{
-			module: "Man50s",
+			module: "Man50s", //26
 			position: "bottom_left",	// This can be any of the regions.
 			visible : "false",
 			config: {
@@ -355,7 +355,7 @@ var config = {
 			}
 		},
 		{
-			module: "Woman10s",
+			module: "Woman10s", //27
 			position: "bottom_left",	// This can be any of the regions.
 			visible : "false",
 			config: {
@@ -369,7 +369,7 @@ var config = {
 			}
 		},
 		{ 
-			module: "CategorySelectMain", //24
+			module: "CategorySelectMain", //28
 			position: "top_left", // This can be any of the regions.
 			
 			classes: "default everyone", // Optional
@@ -381,16 +381,16 @@ var config = {
 		
 
 		//1
-		/*{
-			module: "MMM-EmbedYoutube1",  //25
-			position: "top_center",	
+		{
+			module: "MMM-EmbedYoutube1",  //29
+			position: "top_right",	
 			config: {
 				video_id: "aizhVEOx-q0",
 				searchlist1: "베이징",
 				loop: true
 			}
 		},
-*/
+
 		{
 			module: "updatenotification",
 			position: "top_bar"
