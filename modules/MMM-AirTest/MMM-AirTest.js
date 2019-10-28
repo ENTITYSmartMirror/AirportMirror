@@ -1,4 +1,4 @@
-var AirTest;
+﻿var AirTest;
 Module.register("MMM-AirTest", {
 
     defaults: {
@@ -28,11 +28,6 @@ Module.register("MMM-AirTest", {
     subelementdiv_p1.className = "p_class1"
     //p1 버튼 클릭시
     subelementdiv_p1.addEventListener("click", () => {
-      var audioFile = new Audio('modules/MMM-AirTest/decision22.mp3');
-
-      audioFile.play();
-    audioFile.currentTime = 0;
-      
       //초기화면은 state=0 이다.
       //초기화면에서 p1버튼(실시간 국내 운항정보) 클릭시
       if(this.config.state==0){
