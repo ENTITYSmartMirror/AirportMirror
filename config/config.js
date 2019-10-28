@@ -439,7 +439,7 @@ var config = {
 					"Slide 2": ["mm-hide-all","clock","CategoryHairstyle","CategorySelectMain"],
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
 					"Slide 3": ["MMM-AirTest"],
-					"Slide 4": ["SecondAirport-1F","SecondAirport-2F","SecondAirport-3F","FirstAirport-3F","FirstAirport-2F","CategoryChoiceAirport","FirstAirport-1F","mm-hide-all","clock","The1Airport","The2Airport"],
+					"Slide 4": ["SecondAirport-1F","SecondAirport-2F","SecondAirport-3F","FirstAirport-3F","FirstAirport-2F","CategoryChoiceAirport","FirstAirport-1F","mm-hide-all","The1Airport","The2Airport"],
 					"Slide 5": ["MMM-Remote-Control","ShowRemoteControl","mm-hide-all"],
 				},
 				keyBindings: { 
@@ -456,7 +456,7 @@ var config = {
 		},
 		{
 			module: "CategoryChoiceAirport", 
-			position: "top_right", 
+			position: "top_bar", 
 			header:"공항 지도",
 			classes: "default everyone",
 			config: {
@@ -512,14 +512,14 @@ var config = {
 		},//41
 		{
 			module: "The1Airport", 
-			position: "top_right",
+			position: "top_bar",
 			classes: "default everyone", 
 			config: {
 			}
 		},//42
 		{
 			module: "The2Airport", 
-			position: "bottom_right",
+			position: "top_bar",
 			classes: "default everyone", 
 			config: {
 			}

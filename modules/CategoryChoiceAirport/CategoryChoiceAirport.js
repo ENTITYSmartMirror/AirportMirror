@@ -21,15 +21,15 @@ Module.register("CategoryChoiceAirport",{
         // Determines if the border around the buttons should be shown.
         showBorder: false,
         // The minimum width for all the buttons.
-        minWidth: "0px",
+        minWidth: "450px",
         // The minimum height for all the buttons.
         minHeight: "0px",
         // The location of the symbol relative to the text. Options: left, right, top or bottom
-        picturePlacement: "left",
+        picturePlacement: "top",
         // The direction of the bar. Options: row, column, row-reverse or column-reverse
         direction: "row",
 		// The speed of the hide and show animation.
-		animationSpeed: 500,
+		animationSpeed: 600,
         // The default button 1. Add your buttons in the config.
         buttons: {
                     "1": {
@@ -106,20 +106,20 @@ Module.register("CategoryChoiceAirport",{
 							if (modules[i].name == 'The1Airport') {
 								console.log("Hiding opend "+ modules[i].name+" ID: "+idnr[1]+"button number"+num);
 								
-								modules[43].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[39].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[44].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								modules[40].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[41].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[39].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[38].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								
 								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
 								
 							}
 							else if (modules[i].name == 'The2Airport') {
 								console.log("Hiding opend "+ modules[28].name+" ID: "+idnr[1]+"button number"+num);
-								modules[42].hide(self.config.animationSpeed, {force: self.config.allowForce});
-								modules[36].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[43].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								modules[37].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								modules[38].hide(self.config.animationSpeed, {force: self.config.allowForce});
+								modules[39].hide(self.config.animationSpeed, {force: self.config.allowForce});
 								modules[i].show(self.config.animationSpeed, {force: self.config.allowForce});
 								
 							}
