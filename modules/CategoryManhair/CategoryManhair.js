@@ -9,6 +9,7 @@
  * MIT Licensed.
  */
 var CategoryManhair;
+var age='no';
 //var request = require('request');
 
 Module.register("CategoryManhair",{
@@ -161,7 +162,7 @@ Module.register("CategoryManhair",{
 							
 								if (modules[i].name == 'jeju-2') {
 
-									if (age === 'teen'){
+									if (age === 'teen' || age === 'no'){
 										for(var num=1; num<30; num++ ){
 										console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 										modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
@@ -263,6 +264,7 @@ Module.register("CategoryManhair",{
 		if(notification === 'adult'){
 			age = 'adult';
 		}
+
 	}
 });	
 
