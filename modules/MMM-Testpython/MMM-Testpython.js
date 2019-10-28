@@ -55,8 +55,10 @@ Module.register("MMM-Testpython", {
 			  var age = payload3[1];
         var elemk = document.getElementById("clickid1")
         var elemk2 = document.getElementById("showage");
-        elemk.innerHTML = "여기를 클릭하면 나이에 따른 여행코스를 추천해드립니다.";
-        elemk2.innerHTML = "고객님의 예상나이는" + age + "살 입니다."; 
+        elemk.style.fontSize="1.9em"
+        elemk2.style.fontSize="1.4em"
+        elemk.innerHTML = "고객님의 예상나이는" + age + "살 입니다.";
+        elemk2.innerHTML = "두번째페이지를 눌러주시면 나이에 맞는 관광명소를 제공해드립니다"; 
         if (age < 20){
           this.sendNotification("teen");
         }

@@ -298,6 +298,9 @@ Module.register("WhatAge", {
 					image.id="imgid";
 					// if set to make grayscale, flag the class set in the .css file
 					image.addEventListener("click", () => {
+						var audioFile = new Audio('modules/WhatAge/sound.m4a');
+						audioFile.play();
+						audioFile.currentTime = 0;
 						console.log(" image click !!!!!");
 						this.config.a=3;
 						WhatAge.sendNotification("camera_stop");

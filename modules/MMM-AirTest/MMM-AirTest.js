@@ -1,4 +1,4 @@
-var AirTest;
+﻿var AirTest;
 Module.register("MMM-AirTest", {
 
     defaults: {
