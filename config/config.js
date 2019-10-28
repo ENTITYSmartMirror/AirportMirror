@@ -117,7 +117,7 @@ var config = {
 					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
 					width: "1000", // width of iframe
 					height: "1180", // height of iframe
-					frameWidth: "980", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe		
+					frameWidth: "1120", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe		
 			}
 		},
 		{
@@ -130,7 +130,7 @@ var config = {
 					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
 					width: "1000", // width of iframe
 					height: "1180", // height of iframe
-					frameWidth: "980", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe		
+					frameWidth: "1120", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe		
 			}
 		},
 		{
@@ -143,7 +143,7 @@ var config = {
 					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
 					width: "1000", // width of iframe
 					height: "1180", // height of iframe
-					frameWidth: "980", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe		
+					frameWidth: "1120", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe		
 			}
 		},
 		{
@@ -377,8 +377,17 @@ var config = {
 				loop: true
 			}
 		},
+		{
+			module: "MMM-EmbedYoutube2",  //29
+			position: "top_right",	
+			config: {
+				video_id: "-rxVy7NpZAk",
+				searchlist1: "제주도 여행",
+				loop: true
+			}
+		},
 		{ 
-			module: "CategorySelectMain", //29
+			module: "CategorySelectMain", //30
 			position: "top_left", // This can be any of the regions.
 			
 			classes: "default everyone", // Optional

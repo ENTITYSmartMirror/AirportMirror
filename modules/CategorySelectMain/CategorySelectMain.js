@@ -150,7 +150,7 @@ Module.register("CategorySelectMain",{
 								// Prints the visited hideURL.
 								console.log("Visiting hide URL: "+data.hideUrl);
 							}
-							for (var k = 1; k < 18; k++){
+							for (var k = 1; k < 30; k++){
 								console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[1]);
 								modules[k].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 							}
@@ -164,7 +164,7 @@ Module.register("CategorySelectMain",{
 								console.log("Visiting show URL: "+data.showUrl);
 							}
 							if (modules[i].name === 'Man20s') {
-								for (var k = 1; k < 18; k++){
+								for (var k = 1; k < 30; k++){
 									console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[1]);
 									modules[k].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 								}
@@ -194,7 +194,7 @@ Module.register("CategorySelectMain",{
 								}					
 							}
 							if (modules[i].name === 'Man10s') {
-								for (var k = 1; k < 10; k++){
+								for (var k = 1; k < 30; k++){
 									console.log("Hiding opend "+ modules[k].name+" ID: "+idnr[1]);
 									modules[k].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 								}

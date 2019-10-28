@@ -7,6 +7,7 @@
  * By Nitipoom Unrrom (aka nitpum) https://nitpum.com
  * MIT Licensed.
  */
+var EmbedYoutube2;
 Module.register("MMM-EmbedYoutube2", {
 	defaults: {
 		autoplay: false,
@@ -14,16 +15,21 @@ Module.register("MMM-EmbedYoutube2", {
 		controls : true,
 		disablekb: false,
 		fs: true,
-		height: 400,
+		height: 480,
 		width: 600,
 		loop: false,
 		modestbranding: false,
 		rel : false,
 		showinfo : false,
-		video_id : "",
+		video_id : "r6A7Fsci7Ds",
 		playlist: "",
+		num : 1,
 		
-		searchlist1: "롤"
+		searchlist1: "중국 여행"
+	},
+
+	start(){
+		EmbedYoutube2 = this;
 	},
 	getDom: function () {
 		var wrapper = document.createElement("div");
@@ -54,11 +60,21 @@ Module.register("MMM-EmbedYoutube2", {
 		+ this.config.height 
 		+ "\" src=\"https://www.youtube.com/embed/" 
 		+ videoId + "&"+ params +"\" frameborder=\"0\" allowfullscreen></iframe>";
+		
 		return wrapper;
-	}/*
+	},
 	notificationReceived: function(notification, payload) {
-		if(notification === "DOM_OBJECTS_CREATED"){
-			this.hide()
+		Log.info(this.name + " - received notification: " + notification);
+
+		if(notification === "PLAYLISTCHANGE"){
+			var payload1=payload.split("_");
+			console.log("thisconfigid : "+payload)
+			this.config.video_id=payload1[0]
+			this.config.searchlist1=payload1[1]
+			console.log("thisconfigid : "+this.config.searchlist1)
+			this.updateDom()
+
+			console.log("thisconfigid : "+this.config.video_id)
 		}
-	}*/
+	}
 });

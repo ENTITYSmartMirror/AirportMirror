@@ -167,7 +167,7 @@ Module.register("CategoryChoiceAsia",{
 							}
 								if (modules[i].name == 'Asia-China') {
 									
-									for(var num=1; num<29; num++ ){
+									for(var num=1; num<30; num++ ){
 									console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 									modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 									}

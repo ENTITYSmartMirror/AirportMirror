@@ -162,24 +162,26 @@ Module.register("CategoryManhair",{
 								if (modules[i].name == 'jeju-2') {
 
 									if (age === 'teen'){
-										for(var num=1; num<18; num++ ){
+										for(var num=1; num<30; num++ ){
 										console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 										modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 										}
 										console.log("Showing "+modules[4].name+" ID: "+idnr[1]);	
 										setTimeout(function(){
 											modules[8].show(self.config.animationSpeed, {force: self.config.allowForce});
+											modules[29].show(self.config.animationSpeed, {force: self.config.allowForce});
 										},500);
 									}
 
 									if (age === 'adult'){
-										for(var num=1; num<18; num++ ){
+										for(var num=1; num<30; num++ ){
 										console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 										modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 										}
 										console.log("Showing "+modules[4].name+" ID: "+idnr[1]);	
 										setTimeout(function(){
 											modules[9].show(self.config.animationSpeed, {force: self.config.allowForce});
+											modules[29].show(self.config.animationSpeed, {force: self.config.allowForce});
 										},500);
 									}
 								}
