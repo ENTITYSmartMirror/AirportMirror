@@ -66,6 +66,26 @@ Module.register("MMM-EmbedYoutube1", {
 	notificationReceived: function(notification, payload) {
 		Log.info(this.name + " - received notification: " + notification);
 
+		if(notification === "jeju is clicked"){
+			this.config.video_id="-rxVy7NpZAk"
+			this.config.searchlist1="제주여행"
+
+			this.updateDom()
+		}
+
+		if(notification === "china is clicked"){
+			this.config.video_id="X13sr1Rv-CM"
+			this.config.searchlist1="중국여행"
+
+			this.updateDom()
+		}
+
+		if(notification === "Modules All Change"){
+			this.config.video_id="TGLMBIIKT4Y"
+
+			this.updateDom()
+		}
+
 		if(notification === "PLAYLISTCHANGE"){
 			var payload1=payload.split("_");
 			console.log("thisconfigid : "+payload)

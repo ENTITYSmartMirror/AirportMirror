@@ -29,7 +29,7 @@ Module.register("The2Airport",{
         // The direction of the bar. Options: row, column, row-reverse or column-reverse
         direction: "column",
 		// The speed of the hide and show animation.
-		animationSpeed: 1000,
+		animationSpeed: 500,
         // The default button 1. Add your buttons in the config.
         buttons: {
 										"1": {

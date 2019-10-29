@@ -88,6 +88,10 @@ Module.register("CategorySelectMain",{
 			module1 = 'Modulebar2 is Clicked';
 			Log.info(module1 + " adadadadad : " + notification);
 		}
+		else if (notification === 'china is clicked') {
+			module1 = 'Modulebar3 is Clicked';
+			Log.info(module1 + " adadadadad : " + notification);
+		}
 		else if (notification === 'Modulebar2 is Clicked') {
 			module1 = 'Modulebar2 is Clicked';
 			Log.info(module1 + " adadadadad : " + notification);
@@ -191,7 +195,14 @@ Module.register("CategorySelectMain",{
 									setTimeout(function(){
 										modules[3].show(self.config.animationSpeed, {force: self.config.allowForce});
 									},500);
-								}					
+								}
+								else if (module1 === 'Modulebar3 is Clicked'){
+									console.log("Showing2 "+modules[4].name+" ID: "+idnr[1]);	
+									module1 = 'Modulebar2 is Clicked';
+										setTimeout(function(){
+											modules[4].show(self.config.animationSpeed, {force: self.config.allowForce});
+										},500);
+									}								
 							}
 							if (modules[i].name === 'Man10s') {
 								for (var k = 1; k < 30; k++){
@@ -203,6 +214,7 @@ Module.register("CategorySelectMain",{
 								modules[1].show(self.config.animationSpeed, {force: self.config.allowForce});
 								},500);								
 							}
+							CategorySelectMain.sendNotification("Modules All Change");
 						}					
 					}
 				}

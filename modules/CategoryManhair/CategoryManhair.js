@@ -167,11 +167,16 @@ Module.register("CategoryManhair",{
 										console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 										modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 										}
+										
 										console.log("Showing "+modules[4].name+" ID: "+idnr[1]);	
+										
 										setTimeout(function(){
 											modules[8].show(self.config.animationSpeed, {force: self.config.allowForce});
-											modules[29].show(self.config.animationSpeed, {force: self.config.allowForce});
+											modules[28].show(self.config.animationSpeed, {force: self.config.allowForce});
 										},500);
+										CategoryManhair.sendNotification("jeju is clicked");
+										CategoryManhair.sendNotification("CategoryManhair is Clicked");
+						
 									}
 
 									if (age === 'adult'){
@@ -179,18 +184,20 @@ Module.register("CategoryManhair",{
 										console.log("Hiding opend "+ modules[num].name+" ID: "+idnr[1]);
 										modules[num].hide(self.config.animationSpeed, {force: self.config.allowForce});	
 										}
+										
 										console.log("Showing "+modules[4].name+" ID: "+idnr[1]);	
+										
 										setTimeout(function(){
 											modules[9].show(self.config.animationSpeed, {force: self.config.allowForce});
-											modules[29].show(self.config.animationSpeed, {force: self.config.allowForce});
+											modules[28].show(self.config.animationSpeed, {force: self.config.allowForce});
 										},500);
+										CategoryManhair.sendNotification("jeju is clicked");
+										CategoryManhair.sendNotification("CategoryManhair is Clicked");
+						}
 									}
 								}
-
-							CategoryManhair.sendNotification("CategoryManhair is Clicked");
 							
-							console.log(age);
-						}
+							
 					}
 				}
 			}

@@ -165,6 +165,7 @@ Module.register("CategoryChoiceAsia",{
 								// Prints the visited hideURL.
 								console.log("Visiting show URL: "+data.showUrl);
 							}
+
 								if (modules[i].name == 'Asia-China') {
 									
 									for(var num=1; num<30; num++ ){
@@ -176,9 +177,10 @@ Module.register("CategoryChoiceAsia",{
 										modules[10].show(self.config.animationSpeed, {force: self.config.allowForce});
 										modules[28].show(self.config.animationSpeed, {force: self.config.allowForce});
 									},500);
+									CategoryChoiceAsia.sendNotification("china is clicked");
 								}
 							
-							CategoryChoiceAsia.sendNotification("CategoryChoiceAsia is Clicked");
+							
 						}
 					}
 				}
