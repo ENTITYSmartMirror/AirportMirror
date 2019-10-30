@@ -444,12 +444,12 @@ var config = {
 				showPageIndicators: true,
 				showPageControls: true,
 				slides: {
-					main: ["mm-hide-all","WhatAge","MMM-Dynamic-Modules","clock","MMM-Testpython","camera","MMM-Snow"],
-					"Slide 2": ["mm-hide-all","clock","CategoryHairstyle","CategorySelectMain","MMM-Snow"],
+					main: ["mm-hide-all","WhatAge","MMM-Dynamic-Modules","clock","MMM-Testpython","camera"],
+					"Slide 2": ["mm-hide-all","clock","CategoryHairstyle","CategorySelectMain"],
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
 					"Slide 3": ["MMM-AirTest"],
 					"Slide 4": ["SecondAirport-1F","SecondAirport-2F","SecondAirport-3F","FirstAirport-3F","FirstAirport-2F","CategoryChoiceAirport","FirstAirport-1F","mm-hide-all","The1Airport","The2Airport"],
-					"Slide 5": ["MMM-Remote-Control","ShowRemoteControl","mm-hide-all"],
+					"Slide 5": ["MMM-Remote-Control","ShowRemoteControl","mm-hide-all","MMM-Snow"],
 				},
 				keyBindings: { 
 					enabled: true,
