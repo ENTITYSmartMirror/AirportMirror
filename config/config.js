@@ -444,7 +444,7 @@ var config = {
 				showPageIndicators: true,
 				showPageControls: true,
 				slides: {
-					main: ["mm-hide-all","WhatAge","MMM-Dynamic-Modules","clock","MMM-Testpython","camera"],
+					main: ["mm-hide-all","WhatAge","MMM-Dynamic-Modules","clock","MMM-Testpython","camera","MMM-DeleteImage"],
 					"Slide 2": ["mm-hide-all","clock","CategoryHairstyle","CategorySelectMain"],
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
 					"Slide 3": ["MMM-AirTest"],
