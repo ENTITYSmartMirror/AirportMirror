@@ -192,6 +192,7 @@ Module.register("WhatAge", {
 			console.log("fufufufufu 1: " + payload);
 			
 			this.sendNotification("agecomplete",payload);
+			this.sendNotification("camera_start");
 			console.log("fufufufufufufufufu");
 		}
 		
