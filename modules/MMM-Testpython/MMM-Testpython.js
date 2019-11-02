@@ -55,21 +55,30 @@ Module.register("MMM-Testpython", {
 			  var age = payload3[1];
         var elemk = document.getElementById("clickid1")
         var elemk2 = document.getElementById("showage");
-        elemk.style.fontSize="1.9em"
-        elemk2.style.fontSize="1.4em"
-        elemk.innerHTML = "고객님의 예상나이는" + age + "살 입니다.";
-        elemk2.innerHTML = "두번째페이지를 눌러주시면 나이에 맞는 관광명소를 제공해드립니다"; 
-        if (age < 20){
-          this.sendNotification("teen");
+        if(payload=="notFind"){
+          console.log("fuckyou notFind")
+          elemk.innerHTML = "다시 눌러주세요!";
+          elemk2.innerHTML = "얼굴인식실패!"; 
         }
-        else {
-          this.sendNotification("adult");
-        }
-        elemk.addEventListener("click", () => {
-          //Testpythons.sendNotification("gotoairport")
-          console.log("airairairair")
-          
+        else if(payload!="notFind"){
+          elemk.style.fontSize="1.9em"
+          elemk2.style.fontSize="1.4em"
+          elemk.innerHTML = "고객님의 예상나이는" + age + "살 입니다.";
+          elemk2.innerHTML = "두번째페이지를 눌러주시면 나이에 맞는 관광명소를 제공해드립니다";
+            if (age < 20){
+              this.sendNotification("teen");
+            }
+            else {
+              this.sendNotification("adult");
+            }
+            elemk.addEventListener("click", () => {
+              //Testpythons.sendNotification("gotoairport")
+              console.log("airairairair")
+              
         })
+        } 
+        
+        
       break;
       case "only_camera":
         this.hide();

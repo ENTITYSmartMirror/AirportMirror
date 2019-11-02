@@ -9,14 +9,14 @@ import cv2
 cap = cv2.VideoCapture(0)
 
 ret, frame = cap.read()
-cv2.imwrite('C:/AirportHelper/modules/WhatAge/face.jpg', frame)
+cv2.imwrite('C:/AirportHelper/modules/WhatAge/Button/cognitiveface.jpg', frame)
 
 cap.release()
 cv2.destroyAllWindows()
 
 subscription_key = "e90829078be54f04832525fddedf00b4"
 
-image_path = os.path.join('C:/AirportHelper/modules/WhatAge/face.jpg')
+image_path = os.path.join('C:/AirportHelper/modules/WhatAge/Button/cognitiveface.jpg')
 
 assert subscription_key
 
@@ -43,19 +43,21 @@ image = Image.open(BytesIO(image_read))
 
 plt.figure(figsize=(8, 8))
 ax = plt.imshow(image, alpha=1)
-for face in faces:
-    fr = face["faceRectangle"]
-    fa = face["faceAttributes"]
-    origin = (fr["left"], fr["top"])
-    p = patches.Rectangle(
-        origin, fr["width"], fr["height"], fill=False, linewidth=2, color='dodgerblue')
-    ax.axes.add_patch(p)
-    plt.text(origin[0], origin[1], "%s, %d"%(fa["gender"].capitalize(), fa["age"]),
-             fontsize=20, weight="bold", va="bottom", color='dodgerblue')
-_ = plt.axis("off")
 
-fig = plt.gcf()
-fig.savefig('C:/AirportHelper/modules/WhatAge/Button/cognitiveface.jpg')
-
-print(fa["gender"])
-print(fa["age"])
+try:
+    for face in faces:
+        fr = face["faceRectangle"]
+        fa = face["faceAttributes"]
+        origin = (fr["left"], fr["top"])
+        p = patches.Rectangle(
+            origin, fr["width"], fr["height"], fill=False, linewidth=2, color='dodgerblue')
+        ax.axes.add_patch(p)
+        plt.text(origin[0], origin[1], "%s, %d"%(fa["gender"].capitalize(), fa["age"]),
+                 fontsize=20, weight="bold", va="bottom", color='dodgerblue')
+    _ = plt.axis("off")
+    fig = plt.gcf()
+    fig.savefig('C:/AirportHelper/modules/WhatAge/Button/cognitiveface.jpg')
+    print(fa["gender"])
+    print(fa["age"])
+except Exception as e:
+    print("notFind")

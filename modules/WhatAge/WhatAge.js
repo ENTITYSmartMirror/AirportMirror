@@ -192,6 +192,14 @@ Module.register("WhatAge", {
 			console.log("fufufufufu 1: " + payload);
 			
 			this.sendNotification("agecomplete",payload);
+			if(payload=="notFind")
+			{
+				this.config.a=0;
+			}
+			else if(payload!="notFind")
+			{
+				this.config.a=1;
+			}
 			this.sendNotification("camera_start");
 			console.log("fufufufufufufufufu");
 		}
