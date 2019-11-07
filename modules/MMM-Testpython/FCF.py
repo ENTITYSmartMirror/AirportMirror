@@ -14,13 +14,13 @@ cv2.imwrite('C:/AirportHelper/modules/MMM-Testpython/CognitiveFace/CognitiveFace
 cap.release()
 cv2.destroyAllWindows()
 
-subscription_key = "e90829078be54f04832525fddedf00b4"
+subscription_key = "62114331d85f48c99c133b2ac9027967"
 
 image_path = os.path.join('C:/AirportHelper/modules/MMM-Testpython/CognitiveFace/CognitiveFace.jpg')
 
 assert subscription_key
 
-face_api_url = 'https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect'
+face_api_url = 'https://pay.cognitiveservices.azure.com/face/v1.0/detectt'
 image_data = open(image_path, "rb")
 
 headers = {'Content-Type': 'application/octet-stream',
