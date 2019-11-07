@@ -449,7 +449,7 @@ var config = {
 					//main: ["clock","currentweather","weatherforecast","MMM-Globe","newsfeed","mm-hide-all","clock","MMM-Avinor"],
 					"Slide 3": ["MMM-AirTest"],
 					"Slide 4": ["SecondAirport-1F","SecondAirport-2F","SecondAirport-3F","FirstAirport-3F","FirstAirport-2F","CategoryChoiceAirport","FirstAirport-1F","mm-hide-all","The1Airport","The2Airport"],
-					"Slide 5": ["MMM-Remote-Control","ShowRemoteControl","mm-hide-all","MMM-Snow"],
+					"Slide 5": ["MMM-Remote-Control","ShowRemoteControl","mm-hide-all"],
 				},
 				keyBindings: { 
 					enabled: true,
@@ -678,14 +678,7 @@ var config = {
 					height: "1000", // height of iframe
 					frameWidth: "600", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe
 				}
-		},
-		{
-			module: "MMM-Snow", //24
-			position: "fullscreen_above",	// This can be any of the regions.
-			config: {
-				theme:"winter"
-				}
-		}		
+		}
 	]
 };
 
