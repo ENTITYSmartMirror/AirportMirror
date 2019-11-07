@@ -678,6 +678,15 @@ var config = {
 					height: "1000", // height of iframe
 					frameWidth: "600", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe
 				}
+		},
+		{
+			module:"CHANGE_CLOCK"
+		},
+		{
+			module:"CHANGE_WEATHER"
+		},
+		{
+			module:"CHANGE_NEWSFEED"
 		}
 	]
 };
